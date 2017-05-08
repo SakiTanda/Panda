@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="image/logo1.ico" />
+  <title>Freshness</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Freshness</h1>
+    <p>Let's search how to save food with Freshness</p>
+	<form name="search1" method="post" action="index.php" id="searchBar">
+                <input type="text" name="searchText" id="searchText"  size="30" required>
+                <input type="submit" value="Search" class="btn btn-primary">
+            </form>
+	
+  </div>
+</div>
+  
+<div class="container">  
+  <h2 class="text-center">Or search by category:</h2>  
+  <div class="row"> 
+    <div class="col-sm-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading"><a href="#">Meat</a></div>
+        <div class="panel-body"><a href="#">
+		<img src="image/meat.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading"><a href="#">Vegetable</a></div>
+        <div class="panel-body"><a href="#">
+		<img src="image/vege.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading"><a href="#">Dairy</a></div>
+        <div class="panel-body"><a href="#">
+		<img src="image/dairy.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+
+<footer class="container-fluid text-center">
+<div id="conFooter">
+            <a href="#" id="conAboutus">About Us</a>
+			
+            <p>Copyright &copy; 2017 Test company</p>
+</div>
+</footer>
+
+</body>
+</html>

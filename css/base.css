@@ -6,9 +6,7 @@
     border: 0;
     width: 100%;
     height: 100%;
-    color: #24A259;
-    background-color: #F6F6F6;
-    font-family:'Arial';
+    font-family:'Candara';
 }
 
 /* navigation bar */
@@ -18,10 +16,10 @@
     margin: 0;
     padding: 2px 0;
     width: 100%;
-    height: 80px;
+    height: 85px;
 	text-align:center;
 	background-color:white;
-	border-bottom: #e3493b 5px solid;
+	border-bottom:3px solid;
 }
 #navCon {
 	margin:0 auto auto auto;
@@ -289,35 +287,44 @@
 /*Setting color according to Food category*/
 /**color_set - food name & Method header, tdcolor_set - background color of the summary table,
 letter_color - letter color of the summary table**/
-#vegiContent .color_set{
+#color_con_vegi .color_set{
 	background-color: #00a368;
 }
-#vegiContent .tdcolor_set{
-	background-color: #b3ffb3;
+#color_con_vegi .tdcolor_set{
+	background-color: #ABE1C7;
 }
-#vegiContent .letter_color {
-	color:;
+#color_con_vegi .letter_color {
+	color:#339966;
 }
-#meatContent .color_set{
+#color_con_vegi .border_color {
+	color:#339966;
+}
+#color_con_meat .color_set{
     background-color: #e3493b;
 }
-#meatContent .tdcolor_set{
-    background-color: #ffb3b3;
+#color_con_meat .tdcolor_set{
+    background-color: #ffe6e6;
 }
-#meatContent .letter_color {
+#color_con_meat .letter_color {
 	color:#cc0000;
 }
-#dailyContent .color_set{
-     background-color: #6599ff;
-} 
-#dailyContent .tdcolor_set{
-    background-color: #4dd2ff;
+#color_con_meat .border_color {
+	color:#e3493b;
 }
-#dailyContent .letter_color {
-	color:#0066cc;
+#color_con_daily .color_set{
+    background-color: #6599ff;
+} 
+#color_con_daily .tdcolor_set{
+    background-color: #e0eaff;
+}
+#color_con_daily .letter_color {
+	color: #3c5d99;
+}
+#color_con_daily .border_color {
+	color:#6599ff;
 }
 .methodHeader {
-	width:46%;
+	width:56%;
 	padding:0 10px 0 10px;
 	font-size: 20px;
     color: white;  

@@ -21,7 +21,7 @@
     height: 80px;
 	text-align:center;
 	background-color:white;
-	border-bottom:green 5px solid;
+	border-bottom: #e3493b 5px solid;
 }
 #navCon {
 	margin:0 auto auto auto;
@@ -38,8 +38,7 @@
     cursor: pointer;
 }
 #logoLabel img {
-	width:140%;
-	height:80px;
+	height:85px;
 }
 #searchText {
 	margin:26px 20px 0 0;
@@ -52,7 +51,7 @@
 	font-size:20px;
 	font-weight:bold;
 	color:white;
-	background-color:#ff9933;
+	background-color:#00a368;
 	border-radius:10px;	
 }
 #categoryButton {
@@ -230,7 +229,6 @@
 	font-weight:bold;
 	text-align:center;
 	color:white;
-    background-color:#24A259;
 }
 
 /*content.html - short summary*/
@@ -292,7 +290,7 @@
 /**color_set - food name & Method header, tdcolor_set - background color of the summary table,
 letter_color - letter color of the summary table**/
 #vegiContent .color_set{
-	background-color: #24A259;
+	background-color: #00a368;
 }
 #vegiContent .tdcolor_set{
 	background-color: #b3ffb3;
@@ -301,16 +299,16 @@ letter_color - letter color of the summary table**/
 	color:;
 }
 #meatContent .color_set{
-    background-color: #ff6666;
+    background-color: #e3493b;
 }
 #meatContent .tdcolor_set{
     background-color: #ffb3b3;
 }
 #meatContent .letter_color {
-	color:red;
+	color:#cc0000;
 }
 #dailyContent .color_set{
-     background-color: #0099ff;
+     background-color: #6599ff;
 } 
 #dailyContent .tdcolor_set{
     background-color: #4dd2ff;

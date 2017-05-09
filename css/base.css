@@ -1,0 +1,391 @@
+/******************************************** for common components ********************************************/
+/* body */
+#mainBodyStyle {
+    margin:0;
+    padding:0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    color: #24A259;
+    background-color: #F6F6F6;
+    font-family:'Arial';
+}
+
+/* navigation bar */
+#mainNav {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+    height: 80px;
+	text-align:center;
+	background-color:white;
+	border-bottom:green 5px solid;
+}
+#navCon {
+	margin:0 auto auto auto;
+}
+#logoLabel{
+    float: left;
+    padding: 0;
+    margin: 0 0 0 10%;
+    text-decoration: none;
+    font-family: Comic Sans MS;
+    font-weight: 700;
+    font-size: 50px;
+    color: green;
+    cursor: pointer;
+}
+#searchText {
+	margin:26px 20px 0 0;
+	height:30px;
+	font-size:18px;
+}
+#searchButton {
+	width:100px;
+	height:40px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	background-color:#ff9933;
+	border-radius:10px;	
+}
+#categoryButton {
+	width:110px;
+	height:30px;
+	margin:0 0 0 30px;
+	padding:10px;
+	font-size:26px;
+	font-weight:bold;
+	color:white;
+	background-color:#ffc34d;
+	border-radius:30px;
+}
+/* footer */
+#conFooter {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+}
+#conAboutus {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: initial;
+    text-decoration: none;
+}
+#conFooter p{
+    padding: 1px 0 0 0;
+}
+
+/******************************************** components of each pages ********************************************/
+/* header */
+#searchHeader {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 140px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 21px;
+    background-color: #F6F6F6;
+}
+#or {
+    margin: 5px 0 5px 0;
+    font-size: 18px;
+    font-family: Comic Sans MS;
+}
+
+/* search conditional panel (hiding) */
+#searchPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    z-index: 1;
+    opacity:0.9;
+}
+#closeButton img {
+    float: left;
+    margin: 20px 0 0 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#searchConditionalTable {
+    margin: auto;
+    padding-top: 30px;
+    width: 600px;
+    font-size: 25px;
+}
+#searchConditionalTable td {
+    width: 25%;
+    color: white;
+}
+#searchConditionalTable div {
+    padding-top: 15px;
+    color: #97A7A7;
+}
+#searchConditionalTable input {
+    margin: 10px 0 30px 0;
+}
+
+/* search content */
+#searchContent {
+    width:80%;
+    margin: auto;
+    margin-top: 200px;
+}
+#resultTable {
+    margin: auto;
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+#resultTable td {
+    text-align: left;
+    padding-left: 10px;
+    color: white;
+    background-color: #24A259;
+    border: 3px solid #24A259;
+}
+#resultTable tr:nth-of-type(1) td {
+    color: green;
+    border: 0;
+    background-color: #F6F6F6;
+}
+#resultTable .tdMeat {
+    color: white;
+    background-color: #D94720;
+    border-color: #D94720;
+}
+#resultTable .tdFish {
+    color: white;
+    background-color: #0089D1; 
+    border-color: #0089D1;
+}
+#resultTable .tdDaily {
+    color: white;
+    background-color: #FBAB20; 
+    border-color: #FBAB20;
+}
+#resultTable td img {
+    width: 100px;
+}
+.foodLink {
+    color: white;
+    cursor: pointer;
+}
+
+/* content (food detail) */
+#foodContent {
+    width:80%;
+    margin: auto;
+    margin-top: 100px;
+}
+/**
+#vegiContent {
+    color: #24A259;
+}
+#meatContent {
+    color: #24A259;
+}
+#fishContent {
+    color: #24A259;
+}
+#dailyContent {
+    color: #24A259;
+}
+**/
+#foodTitle {
+	width:20%;
+	text-align:center;
+    font-size: 30px;
+    font-weight:bold;
+    color:white;
+}
+.foodHeader {
+	width:40%;
+    font-size: 30px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+    background-color:#24A259;
+}
+
+/*content.html - short summary*/
+
+#conResultTable {
+	margin:10px auto 20px auto;
+    width: 60%;
+    font-size: 22px;
+	border-collapse: collapse;
+	border-radius:10px;
+}
+#conResultTable td {
+    text-align: left;
+    padding-left: 10px;
+    
+}
+#conResultTable tr:nth-child(even) {
+	background-color:white;
+}
+
+/*content.html - Preservation methods*/
+#methodTable {
+    margin: auto;
+	padding:15px 0 15px 0;
+    width: 80%;
+	height:80%;
+    margin-top: 20px;
+	border:2px solid;
+	border-radius:10px;
+    
+}
+#methodTable tr {
+	height:30%;
+}
+#methodTable li {
+	list-style:decimal;
+	line-height:30px;
+}
+#methodTable .tdright {
+	width:50%;
+	text-align:center;
+}
+#methodTable img {
+    width: 80%;
+    height: 160px;
+}
+#methodTable .tdleft {
+	padding:0;
+	vertical-align:top;
+}
+#methodTable .methodCon {
+	width:80%;
+	font-size:18px;
+	padding-left:10px;
+	border:2px solid;
+}
+
+/*Setting color according to Food category*/
+/**color_set - food name & Method header, tdcolor_set - background color of the summary table,
+letter_color - letter color of the summary table**/
+#vegiContent .color_set{
+	background-color: #24A259;
+}
+#vegiContent .tdcolor_set{
+	background-color: #b3ffb3;
+}
+#vegiContent .letter_color {
+	color:;
+}
+#meatContent .color_set{
+    background-color: #ff6666;
+}
+#meatContent .tdcolor_set{
+    background-color: #ffb3b3;
+}
+#meatContent .letter_color {
+	color:red;
+}
+#dailyContent .color_set{
+     background-color: #0099ff;
+} 
+#dailyContent .tdcolor_set{
+    background-color: #4dd2ff;
+}
+#dailyContent .letter_color {
+	color:#0066cc;
+}
+.methodHeader {
+	width:46%;
+	padding:0 10px 0 10px;
+	font-size: 20px;
+    color: white;  
+}
+
+/******************************************** shared class ********************************************/
+.navButton {
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    background: #24A259;
+    vertical-align: middle;
+    width: 125px;
+    text-align: center;
+    text-decoration: none;  
+    color: white;
+    cursor: pointer;
+}
+.verticalTop {
+    vertical-align: top;
+}
+.verticalMiddle {
+    vertical-align: middle;
+}
+.image-hover {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.floatLeft {
+    float: left;
+}
+.floatclear {
+    clear:left;
+}
+.spaceForFooter {
+    margin-top: 130px;
+}
+
+/******************************************** animation ********************************************/
+/* animation */
+.navButton:hover, #loginLabel:hover, #contents .panel img:hover, #closeButton img:hover {
+    opacity: 0.5;
+}
+/******************************************** responsible design ********************************************/
+/* responsible design */
+@media screen and (max-width: 768px){
+    .navButton { 
+        width: 23%;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    #loginLabel{
+        margin-top: 0;
+        margin-right: 40px;
+        font-size: 17px;
+    }
+    #searchHeader div {  }
+    #searchPanel { height: 300px; }
+    #searchConditionalTable {
+        width: 250px;
+        display: block;
+        padding-top: 30px;
+        padding-left: 100px;
+    } 
+    #searchConditionalTable tr { display: inline; }
+    #searchConditionalTable td {
+        display: inline-block;
+        width: 70%;
+    }
+    #searchContent { width: 90% }
+    #foodContent { width:90%; }
+}   

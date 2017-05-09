@@ -1,7 +1,6 @@
-.row img{height:200px;
-        }
 
 
+		
 #conFooter {
     position: fixed;
     bottom: 0;
@@ -22,7 +21,24 @@
 #logopic { width:10%;
 height:10%;}
 
-.panel-heading a { font-size:20px;}
 
 #contact_form { padding-left:23%;
 padding-right:23%}
+
+#cMeat {border: 2px solid #e3493b;}
+
+#cVege { border: 2px solid #00a368;}
+
+#cDairy {
+    border: 2px solid #6599ff;    
+}
+
+.img-responsive{ padding:5px;}
+.col-xs-6 {padding:5px;}
+
+
+
+
+
+
+

@@ -25,43 +25,53 @@
 	margin:0 auto auto auto;
 }
 #logoLabel{
-    float: left;
+	float:left;
     padding: 0;
     margin: 0 0 0 10%;
     text-decoration: none;
-    font-family: Comic Sans MS;
-    font-weight: 700;
-    font-size: 50px;
-    color: green;
     cursor: pointer;
 }
 #logoLabel img {
 	height:85px;
 }
 #searchText {
-	margin:26px 20px 0 0;
+	float:left;
+	margin:24px 20px 0 50px ;
 	height:30px;
 	font-size:18px;
 }
 #searchButton {
+	float:left;
 	width:100px;
 	height:40px;
+	margin-top:20px;
 	font-size:20px;
 	font-weight:bold;
 	color:white;
 	background-color:#00a368;
 	border-radius:10px;	
+	cursor: pointer;
 }
 #categoryButton {
+	float: left;
 	width:110px;
 	height:30px;
-	margin:0 0 0 30px;
+	margin:14px 0 0 30px;
 	padding:10px;
 	font-size:26px;
 	font-weight:bold;
 	color:white;
 	background-color:#ffc34d;
 	border-radius:30px;
+	cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+	box-shadow: 2px 2px 1px #888888;
+}
+#categoryButton:hover {
+   background: #FAFF69;
+   text-decoration: none;
+}
 }
 /* footer */
 #conFooter {
@@ -79,8 +89,8 @@
     background-color: black;
 }
 #conAboutus {
-    margin: 0;
-    padding: 0;
+    margin: 0 10px 0 0 ;
+    padding: 0 0 0 10px;
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -92,25 +102,6 @@
 }
 
 /******************************************** components of each pages ********************************************/
-/* header */
-#searchHeader {
-    position: fixed;
-    top: 50px;
-    width: 100%;
-    height: 140px;
-    margin: 0;
-    padding: 10px 0 0 0;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    font-size: 21px;
-    background-color: #F6F6F6;
-}
-#or {
-    margin: 5px 0 5px 0;
-    font-size: 18px;
-    font-family: Comic Sans MS;
-}
 
 /* search conditional panel (hiding) */
 #searchPanel {
@@ -147,107 +138,51 @@
     margin: 10px 0 30px 0;
 }
 
-/* search content */
-#searchContent {
-    width:80%;
-    margin: auto;
-    margin-top: 200px;
-}
-#resultTable {
-    margin: auto;
-    width: 100%;
-    font-size: 25px;
-    margin-bottom: 40px;
-}
-#resultTable td {
-    text-align: left;
-    padding-left: 10px;
-    color: white;
-    background-color: #24A259;
-    border: 3px solid #24A259;
-}
-#resultTable tr:nth-of-type(1) td {
-    color: green;
-    border: 0;
-    background-color: #F6F6F6;
-}
-#resultTable .tdMeat {
-    color: white;
-    background-color: #D94720;
-    border-color: #D94720;
-}
-#resultTable .tdFish {
-    color: white;
-    background-color: #0089D1; 
-    border-color: #0089D1;
-}
-#resultTable .tdDaily {
-    color: white;
-    background-color: #FBAB20; 
-    border-color: #FBAB20;
-}
-#resultTable td img {
-    width: 100px;
-}
-.foodLink {
-    color: white;
-    cursor: pointer;
-}
-
-/* content (food detail) */
+/**** content (food detail) ****/
+/*content header*/
 #foodContent {
     width:80%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 110px;
 }
-/**
-#vegiContent {
-    color: #24A259;
-}
-#meatContent {
-    color: #24A259;
-}
-#fishContent {
-    color: #24A259;
-}
-#dailyContent {
-    color: #24A259;
-}
-**/
+
 #foodTitle {
 	width:20%;
 	text-align:center;
     font-size: 30px;
     font-weight:bold;
     color:white;
+	border-radius:5px;
 }
-.foodHeader {
+#conHeader {
 	width:40%;
     font-size: 30px;
 	font-weight:bold;
 	text-align:center;
 	color:white;
+	border-radius:5px;
 }
 
-/*content.html - short summary*/
+/*short summary table*/
 
 #conResultTable {
 	margin:10px auto 20px auto;
     width: 60%;
-    font-size: 22px;
+    font-size: 26px;
 	border-collapse: collapse;
 	border-radius:10px;
 }
 #conResultTable td {
     text-align: left;
     padding-left: 10px;
+	border-bottom: 2px solid;
     
 }
 #conResultTable tr:nth-child(even) {
 	background-color:white;
 }
 
-/*content.html - Preservation methods*/
+/*Preservation methods*/
 #methodTable {
     margin: auto;
 	padding:15px 0 15px 0;
@@ -261,11 +196,14 @@
 #methodTable tr {
 	height:30%;
 }
+#methodTable ul {
+	margin:10px 0 0 0;
+}
 #methodTable li {
 	list-style:decimal;
 	line-height:30px;
 }
-#methodTable .tdright {
+#methodTable .tdleft {
 	width:50%;
 	text-align:center;
 }
@@ -273,20 +211,27 @@
     width: 80%;
     height: 160px;
 }
-#methodTable .tdleft {
+#methodTable .tdright {
 	padding:0;
 	vertical-align:top;
 }
 #methodTable .methodCon {
 	width:80%;
-	font-size:18px;
+	font-size:22px;
 	padding-left:10px;
-	border:2px solid;
 }
-
+.methodHeader {
+	width:56%;
+	padding:0 10px 0 10px;
+	font-size: 24px;
+    color: white;  
+	border-radius:5px;
+}
 /*Setting color according to Food category*/
-/**color_set - food name & Method header, tdcolor_set - background color of the summary table,
-letter_color - letter color of the summary table**/
+/**color_set - food name & Method header, 
+tdcolor_set - background color of the summary table,
+letter_color - letter color of the summary table,
+border_color - border color of nav bar **/
 #color_con_vegi .color_set{
 	background-color: #00a368;
 }
@@ -323,42 +268,11 @@ letter_color - letter color of the summary table**/
 #color_con_daily .border_color {
 	color:#6599ff;
 }
-.methodHeader {
-	width:56%;
-	padding:0 10px 0 10px;
-	font-size: 20px;
-    color: white;  
-}
 
 /******************************************** shared class ********************************************/
-.navButton {
-    margin: 0;
-    padding: 10px 10px 10px 10px;
-    display: inline-block;
-    background: #24A259;
-    vertical-align: middle;
-    width: 125px;
-    text-align: center;
-    text-decoration: none;  
-    color: white;
-    cursor: pointer;
-}
+
 .verticalTop {
     vertical-align: top;
-}
-.verticalMiddle {
-    vertical-align: middle;
-}
-.image-hover {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.floatLeft {
-    float: left;
-}
-.floatclear {
-    clear:left;
 }
 .spaceForFooter {
     margin-top: 130px;

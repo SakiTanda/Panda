@@ -12,16 +12,20 @@
 
     <!-- Body section -->
     <body id="mainBodyStyle">
+		<!--change color by this id -->
 		<div id="color_con_meat">
-        <!-- Navi -->
+        
+		<!-- Navi -->
         <nav id="mainNav" class="border_color">
             <div id="navCon">
                 <a href="index.html" id="logoLabel"><img src="images/logo6.png"></a>
+				
 				<form name="search1" method="post" action="list.html" id="searchBar">
-					<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?" required>
+					<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
 					<input type="submit" id="searchButton" value="Search">
-					<a class="navButton" id="categoryButton">Category</a>
+					<a id="categoryButton">Category</a>
 				</form>   
+			
 			</div>
         </nav>
                     
@@ -42,20 +46,17 @@
                         <td>Freezer</td>
                         <td>2 weeks</td>
                     </tr>
-					<tr>
-						<td>Room temperature</td>
-						<td> 3 - 4 days</td>
-					</tr>
                 </table>
 				
                 <!-- preservation methods -->
-                <div class="foodHeader color_set">Preservation Methods</div>
-                <table id="methodTable" class="letter_color">
+                <div id="conHeader" class="color_set">Preservation Methods</div>
+                
+				<table id="methodTable" class="letter_color">
                     <tr>
-                        <td class="tdright">
+                        <td class="tdleft">
                             <img src="images/lettus1.jpg" alt="method1">
                         </td>
-                        <td class="tdleft">
+                        <td class="tdright">
 							<div class="methodHeader color_set">Refrigerator</div>
                             <div class="methodCon letter_color">
 								<ul>
@@ -68,10 +69,10 @@
                     </tr>
                    
                     <tr>
-                        <td class="tdright">
+                        <td class="tdleft">
                             <img src="images/lettus2.jpg" alt="method2">
                         </td>
-                        <td class="tdleft">
+                        <td class="tdright">
 							<div class="methodHeader color_set">Freezer</div>
 							<div class="methodCon letter_color">
 								<ul>
@@ -83,25 +84,11 @@
                         </td>
                     </tr>
 					
-					<tr>
-                        <td class="tdright">
-                            <img src="images/lettus1.jpg" alt="method1">
-                        </td>
-                        <td class="tdleft">
-							<div class="methodHeader color_set">Room temperature</div>
-							<div class="methodCon letter_color">
-								<ul>
-									<li>Wash and dry</li>
-									<li>Put into a plastic bag</li>
-									<li>Put into refridgerator</li>
-								</ul>
-							</div>
-                        </td>
-                    </tr>
                 </table>
             </div>
         </div>
      </div>   
+	 
 		<!-- search panel (hiding) -->
         <div id="searchPanel">
             <a id="closeButton"><img src="images/close.png" alt="close"></a>
@@ -127,6 +114,7 @@
         </div>
                 
     </body>
+	
 	<script>            
         $(document).ready(function() {
             

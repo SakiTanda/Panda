@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Freshness</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html" >Freshness</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">Meat</a></li>
+        <li><a href="#">Vegetable</a></li>
+        <li><a href="#">Dairy</a></li>
+		<li><a href="#">About us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Freshness</h1>
+	<img src="image/logo1.png" alt="Logo" id="logopic"></a>	
+    
+  </div>
+</div>
+  
+<div class="container text-center">  
+  <h2>What is Freshness</h2>
+  <p>Some text</p>  
+   <h2 class="text-center">Feature of Freshness</h2>
+   <p>Some text</p>  
+   <h2 class="text-center">Our Team</h2>
+   <p>Some text</p><br>  
+     <p><span class="glyphicon glyphicon-map-marker"></span>Vancouver, Canada</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1 1234567891</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> what@gmail.com</p>
+</div><br>
+
+<div id = "contact_form">
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="text-center">
+      <p>Contact us and give us your opinions</p>
+      
+    </div>
+    <div class="text-center">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+<div id="conFooter">
+            <a href="#" id="conAboutus">About Us</a>
+			
+            <p>Copyright &copy; 2017 Test company</p>
+</div>
+</footer>
+</body>
+</html>

@@ -37,6 +37,10 @@
     color: green;
     cursor: pointer;
 }
+#logoLabel img {
+	width:140%;
+	height:80px;
+}
 #searchText {
 	margin:26px 20px 0 0;
 	height:30px;

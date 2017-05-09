@@ -11,16 +11,10 @@
   <script src="js/bootstrap.min.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
+    
     
     /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
+ 
   </style>
 </head>
 <body>
@@ -32,7 +26,7 @@
  
     <nav id="TitleArea">
             <div>
-                <a href="index.html" id="logoIndex"><img class="img-responsive" src="image/logo9.png" alt="logo" width="680" height="160"></a>
+                <a href="index.html" id="logoIndex"><img class="img-responsive" src="images/logo9.png" alt="logo" width="680" height="160"></a>
             </div>
         </nav>
 	<form name="search1" method="post" action="index.php" id="searchBar">
@@ -45,25 +39,29 @@
   
 <div class="container">  
   <h4 class="text-center">Or search by category:</h4>  
+  <form action="index.php" method="post">
   <div class="row"> 
     <div class="col-xs-6 col-md-4">
-        <a href="#">
-		<img src="image/meat.jpg" class="img-responsive" style="width:100%" alt="Image" id = "cMeat"></a>
-      
-    </div>
+               
+        
+		 <input type="image" src="images/meat.jpg" alt="SubmitImg" style="width:100%" id = "cMeat" class="img-responsive" name = "category" value = "meat">
+		<!--<img src="images/meat.jpg" class="img-responsive" style="width:100%" alt="Image" id = "cMeat">-->
+      </div>
+   
     <div class="col-xs-6 col-md-4"> 
 
-        <a href="#">
-		<img src="image/vege.jpg" class="img-responsive" style="width:100%" alt="Image" id = "cVege"></a>
+        
+ <input type="image" src="images/vege.jpg" alt="SubmitImg" style="width:100%" id = "cVege" class="img-responsive" name = "category" value = "vege">
      
     </div>
     <div class="col-xs-6 col-md-4"> 
 
-        <a href="#">
-		<img src="image/dairy.jpg" class="img-responsive" style="width:100%" alt="Image" id = "cDairy"></a>
+       
+ <input type="image" src="images/dairy.jpg" alt="SubmitImg" style="width:100%" id = "cDairy" class="img-responsive" name = "category" value = "dairy">
       
     </div>
   </div>
+  </form>
 </div><br>
 
 

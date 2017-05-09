@@ -267,6 +267,51 @@ border_color - border color of nav bar **/
 	color:#6599ff;
 }
 
+/**** affiliate page ****/
+#affiliatedTitle {
+    padding: 30px 0;
+    text-align: center;
+    font-family: Papyrus;
+    font-size: 25px;
+    font-weight: 900;
+}
+#affiliatedTable {
+    margin: auto;
+	display: block;
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+#affiliatedTable tr {
+	border: 1px solid red;
+}
+#affiliatedTable td {
+}
+#affiliatedTable td:nth-of-type(1) {
+    width: 30%;
+}
+#affiliatedTable td:nth-of-type(3) {
+    width: 50%;
+}
+#affiliatedTable td img {
+    width: 150px;
+}
+
+#affiliatedTable .affiliatedSubTable tr:nth-of-type(1) {
+    height: 100px;
+}
+#affiliatedTable .affiliatedSubTable tr:nth-of-type(2) {
+    height: 20px;
+}
+#affiliatedTable .affiliatedSubTable tr:nth-of-type(3) {
+    height: 100px;
+}
+#affiliatedTable .affiliatedSubTable img {
+    height: 100px;
+}
+
+.red {
+  color: #e3493b;  
+} 
 /******************************************** shared class ********************************************/
 
 .verticalTop {

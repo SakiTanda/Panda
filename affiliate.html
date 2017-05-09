@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head section -->
+    <head>
+        <title>Freshness</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="css/base.css">
+    </head>
+
+    <!-- Body section -->
+    <body id="mainBodyStyle">
+        <!--change color by this id -->
+        <div id="color_con_meat">
+        
+        <!-- Navi -->
+        <nav id="mainNav" class="border_color">
+            <div id="navCon">
+                <a href="index.html" id="logoLabel"><img src="images/logo6.png"></a>
+                
+                <form name="search1" method="post" action="list.html" id="searchBar">
+                    <input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
+                    <input type="submit" id="searchButton" value="Search">
+                    <a id="categoryButton">Category</a>
+                </form>   
+            
+            </div>
+        </nav>
+                    
+        <!-- contents -->
+        <div id="foodContent">
+            <div id="dailyContent">
+               
+               <!-- title -->
+                <div id="affiliatedTitle">There are recommended <span class="red">affiliated apps</span> here!</div>
+               
+               <!-- apps table -->
+                <table id="affiliatedTable">
+                     <tr>
+                        <td>
+                            <a href="#"><img src="app-images/Pocket Pantry.png" alt="app1" class="image-hover"></a>
+                        </td>
+                        <td>
+                            <span class="titleLeft">Pocket Pantry</span>
+                        </td>
+                        <td>
+                            <p class="textLeft">Application designed to help you plan meals, automatically create grocery lists and reduce waste.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><img src="app-images/E-fridge.png" alt="app1" class="image-hover"></a>
+                        </td>
+                        <td>
+                            <span class="titleLeft">E-fridge</span>
+                        </td>
+                        <td>
+                            <p class="textLeft">Application designed to help you plan meals, automatically create grocery lists and reduce waste.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><img src="app-images/take2-logo.png" alt="app1" class="image-hover"></a>
+                        </td>
+                        <td>
+                            <span class="titleLeft">Take2</span>
+                        </td>
+                        <td>
+                            <p class="textLeft">Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. Take 2 provide recipes for ingredient pairs.</p>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+     </div>   
+     
+        <!-- search panel (hiding) -->
+        <div id="searchPanel">
+            <a id="closeButton"><img src="images/close.png" alt="close"></a>
+            <table id="searchConditionalTable">
+                <tr class="verticalTop">
+                    <td>
+                        <label for="cv1"><input type="radio" name="category" id="cv1" value="vegi">Vegitables</label><br>
+                        <label for="cm1"><input type="radio" name="category" id="cm1" value="meat">Meats</label><br>
+                    </td>
+                    <td>
+                        <label for="cd1"><input type="radio" name="category" id="cd1" value="daily">Daily foods</label><br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- footer -->
+        <div class="spaceForFooter"></div>
+        <div id="conFooter">
+            <a href="aboutus.html" id="conAboutus">About Freshness</a>
+            <a href="aboutus.html" id="conAboutus">Contact Us</a>
+            <p>Copyright &copy; 2017 Test company</p>
+        </div>
+                
+    </body>
+    
+    <script>            
+        $(document).ready(function() {
+            
+            // open the conditional panel
+            $('#categoryButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cv1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cm1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cf1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cd1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            $('#info').click(function() {
+                $('#test').slideToggle();
+            });
+        });
+    </script>
+
+</html>

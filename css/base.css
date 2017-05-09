@@ -480,7 +480,7 @@ border_color - border color of nav bar **/
     #searchPanel { height: 160px; }
     #searchConditionalTable {
         width: 250px;
-		font-size:20px;
+		font-size:16px;
         display: block;
         padding-top: 10px;
         padding-left: 100px;
@@ -488,5 +488,5 @@ border_color - border color of nav bar **/
 	#searchConditionalTable tr { display: inline; }
     #searchConditionalTable td {
         display: inline-block;
-        width: 70%;
+        width: 50%;
     }

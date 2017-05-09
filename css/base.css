@@ -72,11 +72,9 @@
    background: #FAFF69;
    text-decoration: none;
 }
-}
+
 /* footer */
 #conFooter {
-    position: fixed;
-    bottom: 0;
     margin: 0;
     padding: 15px;
     width: 100%;
@@ -88,7 +86,7 @@
     color: white;
     background-color: black;
 }
-#conAboutus {
+.conAboutus {
     margin: 0 10px 0 0 ;
     padding: 0 0 0 10px;
     color: white;
@@ -274,6 +272,16 @@ border_color - border color of nav bar **/
 .verticalTop {
     vertical-align: top;
 }
+.verticalMiddle {
+    vertical-align: middle;
+}
+
+.floatLeft {
+    float: left;
+}
+.floatclear {
+    clear:left;
+}
 .spaceForFooter {
     margin-top: 130px;
 }
@@ -289,11 +297,6 @@ border_color - border color of nav bar **/
     .navButton { 
         width: 23%;
         font-weight: bold;
-        font-size: 17px;
-    }
-    #loginLabel{
-        margin-top: 0;
-        margin-right: 40px;
         font-size: 17px;
     }
     #searchHeader div {  }

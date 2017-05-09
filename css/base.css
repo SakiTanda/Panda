@@ -22,24 +22,29 @@
 	border-bottom:3px solid;
 }
 #navCon {
-	margin:0 auto auto auto;
+	margin:0 auto auto 10%;
 }
-#navLogo{
+#navLogo {
     padding: 0;
     cursor: pointer;
 }
-#logoLabel img {
+#navLogo img {
 	height:85px;
+}
+#navSearch {
+	width:60%;
+	
 }
 #searchText {
 	float:left;
 	height:30px;
+	margin-left:15px;
 	font-size:18px;
 }
 #searchButton {
-	float:left;
 	width:100px;
 	height:40px;
+	margin-left:15px;
 	font-size:20px;
 	font-weight:bold;
 	color:white;
@@ -47,10 +52,10 @@
 	border-radius:10px;	
 	cursor: pointer;
 }
-
+#navCategory {
+	width:20%;
+}
 #categoryButton {
-	float: left;
-	width:110px;
 	height:30px;
 	padding:10px;
 	font-size:26px;
@@ -461,12 +466,15 @@ border_color - border color of nav bar **/
 #glassIcon_img:hover {
 	background-color:black;
 }
+#navCategory {
+	width:20%;
+}
 #categoryButton {
-	width:70px;
+	width:100%;
 	height:20px;
-	margin:0 0 0 30px;
+	margin-left:40px;
 	padding:6px;
-	font-size:18px;
+	font-size:12px;
 }
 /**** content (food detail) ****/
 /*content header*/
@@ -546,7 +554,8 @@ border_color - border color of nav bar **/
 #searchConditionalTable input {
     margin: 10px 0 10px 0;
 }
-#closeButton img {
+#closeButton2 img {
 	height:30px;
 	width:30px;
+	visibility:hidden;
 }

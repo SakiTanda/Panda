@@ -6,6 +6,9 @@ Application designed to help you plan meals, automatically create grocery lists 
 
 E-fridge:
 
-take-2:Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. 
+Take 2:
+Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. 
 Take 2 provide recipes for ingredient pairs.
-test
+
+Wasted:
+http://students.bcitdev.com/A00989687/forAffiliates/WASTED.html#

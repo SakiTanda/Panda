@@ -1,0 +1,12 @@
+.mobiletable{
+	display:none;
+}
+
+@media screen and (max-width: 768px){
+	#pctable{
+		display:none;
+	}
+	.mobiletable{
+		display:block;
+	}	
+}

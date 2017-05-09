@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food List</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/xin.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" height="100%"><img class="img-responsive" src="images/logo6.png" width="174" height="100%"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Meat</a></li>
+        <li><a href="#">Vegetables</a></li>
+        <li><a href="#">Dairy</a></li>
+		<li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Food List</h2> 
+  <!--pc table -->
+  <div class="table-responsive">
+  <table class="table table-bordered" id="pctable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Picture</th>
+        <th>Preservation</th>
+		<th>Period</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan=3>Tomato</td>
+        <td rowspan=3><img class="img-responsive" src="image/meat.jpg"></td>
+        <td>refrigerator</td> 
+		<td>3 - 4 days</td>
+	  </tr>
+	  <tr>
+		<td>Freezer</td> 
+		<td>2 weeks</td>
+	  </tr>
+	  <tr>
+		<td>room temperature</td> 
+		<td>3 - 4 days</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  <!--mobile version table-->
+  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+	  <div class="row">
+	    <div class="col-xs-10 col-sm-10 col-md-10">Tomato</div>
+		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          +
+        </a></div>
+		</div>
+      </h4>
+    </div>
+	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="table-responsive">
+			<table class="table table-bordered" id="mobiletable">
+				<thead>
+				  <tr>
+					
+					<th>Picture</th>
+					<th>Preservation</th>
+					<th>Period</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					
+					<td rowspan=3><img class="img-responsive" src="image/meat.jpg"></td>
+					<td>refrigerator</td> 
+					<td>3 - 4 days</td>
+				  </tr>
+				  <tr>
+					<td>Freezer</td> 
+					<td>2 weeks</td>
+				  </tr>
+				  <tr>
+					<td>room temperature</td> 
+					<td>3 - 4 days</td>
+				  </tr>
+				  
+				</tbody>
+			  </table>
+		</div>
+	  </div>
+    </div>
+  </div>
+ </div>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

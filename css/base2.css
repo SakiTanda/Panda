@@ -1,0 +1,298 @@
+/******************************************** for common components ********************************************/
+/* body */
+#mainBodyStyle {
+    margin:0;
+    padding:0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    color: #24A259;
+    background-color: #F6F6F6;
+    font-family: Arial;
+}
+
+/* navigation bar */
+#mainNav {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+    height: 50px;
+    background-color: #F6F6F6;
+}
+#logoLabel{
+    float: left;
+    padding: 0;
+    margin: 0 0 0 40px;
+    text-decoration: none;
+    font-family: Comic Sans MS;
+    font-weight: 700;
+    font-size: 30px;
+    color: green;
+    cursor: pointer;
+}
+#loginLabel{
+    float: right;
+    padding-top: 5px;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+/* footer */
+#conFooter {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+}
+#conAboutus {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: initial;
+    text-decoration: none;
+}
+#conFooter p{
+    padding: 1px 0 0 0;
+}
+
+/******************************************** components of each pages ********************************************/
+/* header */
+#searchHeader {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 21px;
+    background-color: #F6F6F6;
+}
+#or {
+    margin: 5px 0 5px 0;
+    font-size: 18px;
+    font-family: Comic Sans MS;
+}
+
+/* search conditional panel (hiding) */
+#searchPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.8;
+}
+#closeButton img {
+    float: left;
+    margin: 20px 0 0 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#searchConditionalTable {
+    margin: auto;
+    padding-top: 30px;
+    width: 600px;
+    font-size: 25px;
+}
+#searchConditionalTable td {
+    width: 25%;
+    color: white;
+}
+#searchConditionalTable div {
+    padding-top: 15px;
+    color: #97A7A7;
+}
+#searchConditionalTable input {
+    margin: 10px 0 30px 0;
+}
+
+/* search content */
+#searchContent {
+    width:80%;
+    margin: auto;
+    margin-top: 110px;
+}
+#resultTable {
+    margin: auto;
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+#resultTable td {
+    text-align: left;
+    padding-left: 10px;
+    color: white;
+    background-color: #24A259;
+    border: 3px solid #24A259;
+}
+#resultTable td {
+    width: 50%;
+}
+#resultTable td:nth-of-type(4n) {
+}
+#resultTable tr:nth-of-type(1) td {
+}
+#resultTable .tdMeat {
+    color: white;
+    background-color: #D94720;
+    border-color: #D94720;
+}
+#resultTable .tdFish {
+    color: white;
+    background-color: #0089D1; 
+    border-color: #0089D1;
+}
+#resultTable .tdDaily {
+    color: white;
+    background-color: #FBAB20; 
+    border-color: #FBAB20;
+}
+.foodLink {
+    color: white;
+    cursor: pointer;
+}
+#info {
+    cursor: pointer;
+}
+#test {
+    display: none;
+
+}
+#test td{
+    background-color: black;
+}
+
+/* content (food detail) */
+#foodContent {
+    width:70%;
+    margin: auto;
+    margin-top: 70px;
+}
+#vegiContent {
+    color: #24A259;
+}
+#meatContent {
+    color: #24A259;
+}
+#fishContent {
+    color: #24A259;
+}
+#dailyContent {
+    color: #24A259;
+}
+#foodTitle {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.foodHeader {
+    font-size: 30px;
+    border-bottom: 3px solid;
+}
+#methodTable {
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+    color: black;
+}
+#methodTable img {
+    width: 150px;
+    height: 100px;
+}
+.methodHeader {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    background-color: #24A259;
+}
+
+/******************************************** shared class ********************************************/
+.navButton {
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    background: #24A259;
+    vertical-align: middle;
+    width: 125px;
+    text-align: center;
+    text-decoration: none;  
+    color: white;
+    cursor: pointer;
+}
+.verticalTop {
+    vertical-align: top;
+}
+.verticalMiddle {
+    vertical-align: middle;
+}
+.image-hover {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.floatLeft {
+    float: left;
+}
+.floatclear {
+    clear:left;
+}
+.spaceForFooter {
+    margin-top: 130px;
+}
+
+/******************************************** animation ********************************************/
+/* animation */
+.navButton:hover, #loginLabel:hover, #contents .panel img:hover, #closeButton img:hover {
+    opacity: 0.5;
+}
+/******************************************** responsible design ********************************************/
+/* responsible design */
+@media screen and (max-width: 768px){
+    .navButton { 
+        width: 20%;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    #loginLabel{
+        margin-top: 0;
+        margin-right: 40px;
+        font-size: 17px;
+    }
+    #searchHeader div {  }
+    #searchPanel { height: 300px; }
+    #searchConditionalTable {
+        width: 250px;
+        display: block;
+        padding-top: 30px;
+        padding-left: 100px;
+    } 
+    #searchConditionalTable tr { display: inline; }
+    #searchConditionalTable td {
+        display: inline-block;
+        width: 70%;
+    }
+    #searchContent { width: 90% }
+    #foodContent { width:90%; }
+}   

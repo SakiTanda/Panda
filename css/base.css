@@ -63,7 +63,6 @@
 	color:white;
 	background-color:#ffc34d;
 	border-radius:30px;
-	cursor: pointer;
     text-decoration: none;
     cursor: pointer;
 	box-shadow: 2px 2px 1px #888888;
@@ -75,6 +74,8 @@
 
 /* footer */
 #conFooter {
+    position: fixed;
+    bottom: 0;
     margin: 0;
     padding: 15px;
     width: 100%;
@@ -86,7 +87,7 @@
     color: white;
     background-color: black;
 }
-.conAboutus {
+#conAboutus {
     margin: 0 10px 0 0 ;
     padding: 0 0 0 10px;
     color: white;
@@ -272,16 +273,6 @@ border_color - border color of nav bar **/
 .verticalTop {
     vertical-align: top;
 }
-.verticalMiddle {
-    vertical-align: middle;
-}
-
-.floatLeft {
-    float: left;
-}
-.floatclear {
-    clear:left;
-}
 .spaceForFooter {
     margin-top: 130px;
 }
@@ -293,25 +284,209 @@ border_color - border color of nav bar **/
 }
 /******************************************** responsible design ********************************************/
 /* responsible design */
-@media screen and (max-width: 768px){
-    .navButton { 
-        width: 23%;
-        font-weight: bold;
-        font-size: 17px;
-    }
-    #searchHeader div {  }
-    #searchPanel { height: 300px; }
+@media screen and (max-width: 1080px){
+/* navigation bar */
+#mainNav {
+    height: 70px;
+}
+#logoLabel {
+    padding: 0;
+    margin: 0 0 0 4%;
+}
+#logoLabel img {
+	height:72px;
+}
+#searchText {
+	margin:24px 20px 0 50px ;
+	height:30px;
+	font-size:18px;
+}
+#searchButton {
+	float:left;
+	width:100px;
+	height:40px;
+	margin-top:20px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	background-color:#00a368;
+	border-radius:10px;	
+	cursor: pointer;
+}
+#categoryButton {
+	width:90px;
+	height:26px;
+	margin:16px 0 0 60px;
+	padding:6px;
+	font-size:20px;
+}
+/**** content (food detail) ****/
+/*content header*/
+#foodContent {
+    margin-top: 80px;
+}
+#foodTitle {
+	width:40%;
+    font-size: 22px;
+}
+#conHeader {
+	width:86%;
+    font-size: 20px;
+}
+
+/*short summary table*/
+
+#conResultTable {
+	margin:10px auto 10px auto;
+    width: 80%;
+    font-size: 18px;
+}
+#conResultTable td {
+    padding-left: 16px;
+}
+
+/*Preservation methods*/
+#methodTable {
+    margin: 5px auto 0 auto ;
+	padding:15px 0 15px 0;
+    width: 90%;
+	height:80%;
+}
+#methodTable ul {
+	margin:5px 0 0 0;
+	padding:0;
+}
+#methodTable li {
+	line-height:14px;
+	margin-bottom:8px;
+}
+#methodTable .tdleft {
+	width:50%;
+}
+#methodTable img {
+    width: 96%;
+    height: 140px;
+}
+#methodTable .tdright {
+	padding:0 0 0 30px;
+}
+#methodTable .methodCon {
+	width:80%;
+	font-size:16px;
+	padding-left:0;
+}
+.methodHeader {
+	margin:0;
+	width:76%;
+	padding:0 10px 0 10px;
+	font-size: 16px;
+}
+/*Hiding search panel*/
+    #searchPanel { height: 160px; }
     #searchConditionalTable {
         width: 250px;
+		font-size:20px;
         display: block;
-        padding-top: 30px;
+        padding-top: 10px;
         padding-left: 100px;
     } 
-    #searchConditionalTable tr { display: inline; }
+@media screen and (max-width: 768px){
+/* navigation bar */
+#mainNav {
+    height: 60px;
+}
+#logoLabel {
+    padding: 0;
+    margin: 0 0 0 4%;
+}
+#logoLabel img {
+	height:60px;
+}
+#searchText {
+	display:none;
+}
+#searchButton {
+	display:none;
+}
+#categoryButton {
+	width:70px;
+	height:20px;
+	margin:16px 0 0 60px;
+	padding:6px;
+	font-size:18px;
+}
+/**** content (food detail) ****/
+/*content header*/
+#foodContent {
+    margin-top: 80px;
+}
+#foodTitle {
+	width:40%;
+    font-size: 22px;
+}
+#conHeader {
+	width:86%;
+    font-size: 20px;
+}
+
+/*short summary table*/
+
+#conResultTable {
+	margin:10px auto 10px auto;
+    width: 90%;
+    font-size: 18px;
+}
+#conResultTable td {
+    padding-left: 16px;
+}
+
+/*Preservation methods*/
+#methodTable {
+    margin: 5px auto 0 auto ;
+	padding:10px 0 10px 0;
+    width: 100%;
+	height:80%;
+}
+#methodTable ul {
+	margin:5px 0 0 0;
+	padding:0;
+}
+#methodTable li {
+	line-height:14px;
+	margin-bottom:8px;
+}
+#methodTable .tdleft {
+	width:50%;
+}
+#methodTable img {
+    width: 100%;
+    height: 120px;
+}
+#methodTable .tdright {
+	padding:0 0 0 30px;
+}
+#methodTable .methodCon {
+	width:80%;
+	font-size:14px;
+	padding-left:0;
+}
+.methodHeader {
+	margin:0;
+	width:76%;
+	padding:0 10px 0 10px;
+	font-size: 16px;
+}
+/*Hiding search panel*/
+    #searchPanel { height: 160px; }
+    #searchConditionalTable {
+        width: 250px;
+		font-size:20px;
+        display: block;
+        padding-top: 10px;
+        padding-left: 100px;
+    } 
+	#searchConditionalTable tr { display: inline; }
     #searchConditionalTable td {
         display: inline-block;
         width: 70%;
     }
-    #searchContent { width: 90% }
-    #foodContent { width:90%; }
-}   

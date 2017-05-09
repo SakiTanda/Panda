@@ -1,0 +1,7 @@
+Freshness:
+Freshness provides the food preservation methods for you to keep the food fresh as long as you can.
+
+Pocket Pantry:
+Application designed to help you plan meals, automatically create grocery lists and reduce waste
+
+E-fridge:

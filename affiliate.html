@@ -15,65 +15,69 @@
         <!--change color by this id -->
         <div id="color_con_meat">
         
-        <!-- Navi -->
+ 		<!-- Navi -->
         <nav id="mainNav" class="border_color">
-            <div id="navCon">
-                <a href="index.html" id="logoLabel"><img src="images/logo6.png"></a>
-                
-                <form name="search1" method="post" action="list.html" id="searchBar">
-                    <input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
-                    <input type="submit" id="searchButton" value="Search">
-                    <a id="categoryButton">Category</a>
-                </form>   
-            
-            </div>
+			<table id="navCon">
+				<tr>
+					<td id="navLogo">
+						<a href="index.html"><img src="images/logo6.png" alt="applogo"></a>
+					</td>
+					
+					<td id="navSearch">
+						<form name="search1" method="post" action="list.php" id="searchBar">
+							<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
+							<input type="submit" id="searchButton" value="Search">
+						</form>
+					</td>
+					
+					<td id="navCategory">
+						<a id="categoryButton">Category</a>
+						<a><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
+						
+					</td>
+				
+				</tr>
+					
+						
+			</table>
+			
         </nav>
                     
         <!-- contents -->
-        <div id="foodContent">
-            <div id="dailyContent">
-               
-               <!-- title -->
-                <div id="affiliatedTitle">There are recommended <span class="red">affiliated apps</span> here!</div>
-               
-               <!-- apps table -->
-                <table id="affiliatedTable">
-                     <tr>
-                        <td>
-                            <a href="#"><img src="app-images/Pocket Pantry.png" alt="app1" class="image-hover"></a>
-                        </td>
-                        <td>
-                            <span class="titleLeft">Pocket Pantry</span>
-                        </td>
-                        <td>
-                            <p class="textLeft">Application designed to help you plan meals, automatically create grocery lists and reduce waste.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="app-images/E-fridge.png" alt="app1" class="image-hover"></a>
-                        </td>
-                        <td>
-                            <span class="titleLeft">E-fridge</span>
-                        </td>
-                        <td>
-                            <p class="textLeft">Application designed to help you plan meals, automatically create grocery lists and reduce waste.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="app-images/take2-logo.png" alt="app1" class="image-hover"></a>
-                        </td>
-                        <td>
-                            <span class="titleLeft">Take2</span>
-                        </td>
-                        <td>
-                            <p class="textLeft">Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. Take 2 provide recipes for ingredient pairs.</p>
-                        </td>
-                    </tr>
-                </table>
-                
-            </div>
+        <div id="affiliatedContent">               
+           <!-- title -->
+            <div id="affiliatedTitle">There are recommended <span class="red">affiliated apps</span> here!</div>
+           
+           <!-- apps table -->
+            <table id="affiliatedTable">
+                 <tr>
+                    <td>
+                        <a href="#"><img src="app-images/Pocket Pantry.png" alt="app1" class="image-hover"></a>
+                    </td>
+                    <td>
+                        <span class="titleApp">Pocket Pantry</span>
+                        <p class="textLeft">Application designed to help you plan meals, create grocery lists and reduce waste.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#"><img src="app-images/Food smart.jpg" alt="app1" class="image-hover"></a>
+                    </td>
+                    <td>
+                        <span class="titleApp">Food smart</span>
+                        <p class="textLeft">Food Smart can keep the grocey item on track(days left to expire), we have tracking list and provide report for period of time.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#"><img src="app-images/take2-logo.png" alt="app1" class="image-hover"></a>
+                    </td>
+                    <td>
+                        <span class="titleApp">Take2</span>
+                        <p class="textLeft">Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. Take 2 provide recipes for ingredient pairs.</p>
+                    </td>
+                </tr>
+            </table>
         </div>
      </div>   
      
@@ -88,6 +92,7 @@
                     </td>
                     <td>
                         <label for="cd1"><input type="radio" name="category" id="cd1" value="daily">Daily foods</label><br>
+						<input type="submit" id="searchSubmit" value="Search">
                     </td>
                 </tr>
             </table>

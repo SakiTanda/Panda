@@ -1,11 +1,30 @@
 Freshness:
 Freshness provides the food preservation methods for you to keep the food fresh as long as you can.
+------------------------------------------------------------------------
 
 Pocket Pantry:
-Application designed to help you plan meals, automatically create grocery lists and reduce waste
+Application designed to help you plan meals, create grocery lists and reduce waste
 
-E-fridge:
 
-take-2:Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. 
+Food smart: 
+Food Smart can keep the grocey item on track(days left to expire), we have tracking list and provide report for period of time.
+
+Take 2:
+Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. 
 Take 2 provide recipes for ingredient pairs.
-test
+
+
+--------------------------------------------------------------------------
+*E-fridge(Victor):
+Reducing food waste by starting to manage your food in the fridge.
+
+*Wasted(Simran):
+http://students.bcitdev.com/A00989687/forAffiliates/WASTED.html#
+Web app that tracks what food you have on hand and reminds you when it's about to go bad
+
+*group 10 aka EcoList(Cameron):
+a meal planner and shopping list app
+
+
+*FridgeMates(Kenny):
+Web app to keep track of leftover meals inside of multiple fridges a user has access to.

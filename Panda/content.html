@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Head section -->
+    <head>
+        <title>Freshness</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="css/base.css">
+    </head>
+
+    <!-- Body section -->
+    <body id="mainBodyStyle">
+		<div id="color_con_meat">
+        <!-- Navi -->
+        <nav id="mainNav" class="border_color">
+            <div id="navCon">
+                <a href="index.html" id="logoLabel"><img src="images/logo6.png"></a>
+				<form name="search1" method="post" action="list.html" id="searchBar">
+					<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?" required>
+					<input type="submit" id="searchButton" value="Search">
+					<a class="navButton" id="categoryButton">Category</a>
+				</form>   
+			</div>
+        </nav>
+                    
+        <!-- contents -->
+        <div id="foodContent">
+            <div id="dailyContent">
+               
+			   <!-- title -->
+                <div id="foodTitle" class="color_set">Lettus</div>
+               
+			   <!-- summary table -->
+                <table id="conResultTable" class="tdcolor_set letter_color">
+                     <tr>
+                        <td width="50%">Refrigerator</td>
+                        <td>1 week</td>
+                    </tr>
+                    <tr>
+                        <td>Freezer</td>
+                        <td>2 weeks</td>
+                    </tr>
+					<tr>
+						<td>Room temperature</td>
+						<td> 3 - 4 days</td>
+					</tr>
+                </table>
+				
+                <!-- preservation methods -->
+                <div class="foodHeader color_set">Preservation Methods</div>
+                <table id="methodTable" class="letter_color">
+                    <tr>
+                        <td class="tdright">
+                            <img src="images/lettus1.jpg" alt="method1">
+                        </td>
+                        <td class="tdleft">
+							<div class="methodHeader color_set">Refrigerator</div>
+                            <div class="methodCon letter_color">
+								<ul>
+									<li>Wash and dry</li>
+									<li>Put into a plastic bag</li>
+									<li>Put into refridgerator</li>
+								</ul>
+							</div>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="tdright">
+                            <img src="images/lettus2.jpg" alt="method2">
+                        </td>
+                        <td class="tdleft">
+							<div class="methodHeader color_set">Freezer</div>
+							<div class="methodCon letter_color">
+								<ul>
+									<li>Wash and dry</li>
+									<li>Put into a plastic bag</li>
+									<li>Put into refridgerator</li>
+								</ul>
+							</div>
+                        </td>
+                    </tr>
+					
+					<tr>
+                        <td class="tdright">
+                            <img src="images/lettus1.jpg" alt="method1">
+                        </td>
+                        <td class="tdleft">
+							<div class="methodHeader color_set">Room temperature</div>
+							<div class="methodCon letter_color">
+								<ul>
+									<li>Wash and dry</li>
+									<li>Put into a plastic bag</li>
+									<li>Put into refridgerator</li>
+								</ul>
+							</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     </div>   
+		<!-- search panel (hiding) -->
+        <div id="searchPanel">
+            <a id="closeButton"><img src="images/close.png" alt="close"></a>
+            <table id="searchConditionalTable">
+                <tr class="verticalTop">
+                    <td>
+                        <input type="radio" name="category" id="cv1" value="vegi">Vegitables<br>
+                        <input type="radio" name="category" id="cm1" value="meat">Meats<br>
+                    </td>
+                    <td>
+                        <input type="radio" name="category" id="cd1" value="daily">Daily foods<br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+		
+        <!-- footer -->
+        <div class="spaceForFooter"></div>
+        <div id="conFooter">
+            <a href="aboutus.html" id="conAboutus">About Freshness</a>
+			<a href="aboutus.html" id="conAboutus">Contact Us</a>
+            <p>Copyright &copy; 2017 Test company</p>
+        </div>
+                
+    </body>
+	<script>            
+        $(document).ready(function() {
+            
+            // open the conditional panel
+            $('#categoryButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cv1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cm1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cf1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            $('#cd1').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            $('#info').click(function() {
+                $('#test').slideToggle();
+            });
+        });
+    </script>
+
+</html>

@@ -1,23 +1,31 @@
 #conFooter {
-    position: fixed;
+      position: fixed;
     bottom: 0;
     margin: 0;
-    left:0;
-	right:0;
-	
+    padding: 15px;
     width: 100%;
-    height: 50px;
+    height:50px;
     text-align: center;
-    font-size: 15px;
+    font-size: 10px;
     font-style: italic;
     font-weight: 400;
     color: white;
     background-color: black;
 }
 
+#footerTable {
+    margin: auto;
+    padding-right: 15px;
+    width: 50%;
+}
+
+#footerTable td{
+    width: 30%;
+}
+
 #conAboutus {
-    margin: 0;
-    padding: 0;
+margin: 0 10px 0 0 ;
+    padding: 0 0 0 10px;
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -27,7 +35,7 @@
 }
 
 #conFooter p{
-    padding: 1px 0 0 0;
+	 padding: 1px 0 0 0;
 }
 
 footer img {

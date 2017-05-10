@@ -23,6 +23,20 @@
 .pc-title-dairy td{
 	background-color:#6599ff;
 }
+ a:visited {
+	color:white;	
+}
+a:link {
+	color:white;	
+}
+a:hover {
+	color:white;	
+}
+a:active {
+	color:white;	
+}
+
+
 #pctable img{
 	width:100%
 	

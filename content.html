@@ -121,7 +121,7 @@
         </form>
 		
 		<!-- search bar (for mobile:hiding)-->
-		<form name="search3" method="post" action="list.php" id="searchBarMobile">
+        <form name="search3" method="post" action="list.php" id="searchPanel2">
 			<a id="closeButton2"><img src="images/close.png" alt="close"></a>
 				<table>
 					<tr>
@@ -131,8 +131,8 @@
 						</td>
 					</tr>
 				</table>
-		</form>
-		
+        </form>
+
         <!-- footer -->
         <div class="spaceForFooter"></div>
         <div id="conFooter">
@@ -171,23 +171,23 @@
             $('#info').click(function() {
                 $('#test').slideToggle();
             });
-        });
-		
-		$(document).ready(function() {
+
             //Hidden search bar for mobile
             // open the conditional panel
             $('#search_Mobile').click(function() {
-                $('#searchPanel').slideToggle();
+                $('#searchPanel2').slideToggle();
             });
             
             // close the conditional panel
             $('#closeButton2').click(function() {
-                $('#search_Mobile').slideToggle();
+                $('#searchPanel2').slideToggle();
             });
             $('#searchButtonMobile').click(function() {
-                $('#search_Mobile').slideToggle();
+                $('#searchPanel2').slideToggle();
             });
+
         });
+        
     </script>
 
 </html>

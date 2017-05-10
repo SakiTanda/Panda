@@ -334,12 +334,15 @@ border_color - border color of nav bar **/
 #color_con_daily .border_color {
 	color:#6599ff;
 }
+.border_color_common {
+    color: #aaaaaa;
+}
 
 /**** affiliate page ****/
 #affiliatedContent {
     width:80%;
     margin: auto;
-    margin-top: 110px;
+    margin-top: 80px;
 }
 #affiliatedTitle {
     padding: 40px 0;

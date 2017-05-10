@@ -20,10 +20,11 @@ Reducing food waste by starting to manage your food in the fridge.
 
 *Wasted(Simran):
 http://students.bcitdev.com/A00989687/forAffiliates/WASTED.html#
-
+Web app that tracks what food you have on hand and reminds you when it's about to go bad
 
 *group 10 aka EcoList(Cameron):
 a meal planner and shopping list app
 
 
-*Kenny:
+*FridgeMates(Kenny):
+Web app to keep track of leftover meals inside of multiple fridges a user has access to.

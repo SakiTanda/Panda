@@ -5,35 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food List</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrapxin.min.css">
   <link rel="stylesheet" href="css/xin.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#" height="100%"><img class="img-responsive" src="images/logo6.png" width="174" height="100%"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Meat</a></li>
-        <li><a href="#">Vegetables</a></li>
-        <li><a href="#">Dairy</a></li>
-		<li><a href="#">About Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div id="mainBodyStyle">
+		<!--change color by this id -->
+		<div id="color_con_daily">
+		<!-- Navi -->
+        <nav id="mainNav" class="border_color_common">
+			<table id="navCon">
+				<tr>
+					<td id="navLogo">
+						<a href="index.html"><img src="images/logo6.png" alt="applogo"></a>
+					</td>
+					
+					<td id="navSearch">
+						<form name="search1" method="post" action="list.php" id="searchBar">
+							<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
+							<input type="submit" id="searchButton" value="Search">
+						</form>
+					</td>
+					
+					<td id="navCategory">
+						<a id="categoryButton">Category</a>
+						<a id="search_Mobile"><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
+						
+					</td>
+				
+				</tr>
+					
+						
+			</table>
+			
+        </nav>
+	</div>
+</div>
 
-<div class="container">
+<div class="container" id="container-xin">
+
+<!-- Body section -->
+    
+
+
   <h2>Food List</h2> 
   <!--pc table -->
   <div class="table-responsive">
@@ -222,20 +238,15 @@
     </div>
   </div>
  </div>
-
-
-
-
-
-
-<footer class="container-fluid text-center">
-<div id="conFooter">
-    <a href="#" id="conAboutus">About Us</a>
-	<p>Copyright &copy; 2017 Test company</p>
 </div>
-</footer>
-
-
+        <!-- footer -->
+        <div class="spaceForFooter">
+        <div id="conFooter" class="conFooter">
+            <a href="aboutus.html" id="conAboutus">About Freshness</a>
+			<a href="aboutus.html" id="conAboutus">Contact Us</a>
+            <p>Copyright &copy; 2017 Test company</p>
+        </div>
+		</div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/xin.js"></script>

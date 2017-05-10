@@ -1,3 +1,6 @@
+#container-xin{
+	margin-top:80px;
+}
 .mobiletable{
 	display:none;
 }
@@ -56,4 +59,620 @@
 	#accordion .panel .titldairy{
 		background-color:#6599ff;
 	}
+}
+/*******************haruna css**************************/
+/******************************************** for common components ********************************************/
+/* body */
+#mainBodyStyle {
+    margin:0;
+    padding:0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-family:'Candara';
+}
+
+/* navigation bar */
+#mainNav {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+    height: 85px;
+	text-align:center;
+	background-color:white;
+	border-bottom:3px solid;
+}
+#navCon {
+	margin:0 auto auto auto;
+}
+#navLogo {
+	width:20%;
+    padding: 0;
+    cursor: pointer;
+}
+#navLogo img {
+	height:85px;
+}
+#navSearch {
+	width:60%;
+	
+}
+#searchText {
+	width:60%;
+	height:30px;
+	margin-left:15px;
+	font-size:18px;
+}
+#searchButton {
+	width:20%;
+	height:40px;
+	margin-left:15px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	background-color:#00a368;
+	border-radius:10px;	
+	cursor: pointer;
+}
+#navCategory {
+	width:20%;
+}
+#categoryButton {
+	width:20%;
+	height:30px;
+	padding:10px;
+	font-size:26px;
+	font-weight:bold;
+	color:white;
+	background-color:#ffc34d;
+	border-radius:30px;
+    text-decoration: none;
+    cursor: pointer;
+	box-shadow: 2px 2px 1px #888888;
+}
+#categoryButton:hover {
+   background: #FAFF69;
+   text-decoration: none;
+}
+
+#glassIcon_img {/*for mobile(hidden)*/
+	float:right;
+	display:none;
+}
+/* footer */
+#conFooter {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+	height: 70px;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+}
+#conAboutus {
+    margin: 0 10px 0 0 ;
+    padding: 0 0 0 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: initial;
+    text-decoration: none;
+}
+#conFooter p{
+    padding: 1px 0 0 0;
+}
+
+/******************************************** components of each pages ********************************************/
+
+/* search conditional panel (hiding) */
+#searchPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    z-index: 1;
+    opacity:0.9;
+}
+#closeButton img {
+    float: left;
+    margin: 10px 0 0 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#searchConditionalTable {
+    margin: auto;
+    padding-top: 30px;
+    width: 600px;
+    font-size: 30px;
+}
+#searchConditionalTable td {
+    width: 25%;
+    color: white;
+}
+#searchConditionalTable div {
+    padding-top: 15px;
+    color: #97A7A7;
+}
+#searchConditionalTable .spaceForSearchPanel {
+	height:30px;
+}
+#searchConditionalTable input {
+    margin: 10px 0 30px 0;
+}
+#searchSubmit {
+	width:40%;
+	height:36px;
+	margin-top:40px;
+	font-size:18px;
+	color:white;
+	background-color:#00a368;
+	border-radius:5px;
+	font-weight:bold;
+}
+
+/* Search bar for mobile (hidden) */
+#searchPanel2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    z-index: 1;
+    opacity:0.9;
+}
+#closeButton2 img {
+    float: left;
+    margin: 10px 0 0 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#searchPanel2 table {
+	margin:auto;
+}
+#searchPanel2 tr {
+	width:100%;
+	text-align:center;
+	margin:30px 0 0 0;
+}
+#closeButton2 img {
+	margin:10px 0 0 10px;
+    height:30px;
+    width:30px;
+}
+#searchTextMobile {
+	width:66%;
+	font-size:16px;
+	margin:30px 0 0 0;
+	float:left;
+}
+#searchButtonMobile {
+	width:56px;
+	height:26px;
+	margin-top:30px;
+	font-size:12px;
+	font-weight:bold;
+	color:white;
+	background-color:#00a368;
+	border-radius:5px;
+	}
+	
+/**** content (food detail) ****/
+/*content header*/
+#foodContent {
+    width:80%;
+    margin: auto;
+    margin-top: 110px;
+}
+
+#foodTitle {
+	width:20%;
+	text-align:center;
+    font-size: 30px;
+    font-weight:bold;
+    color:white;
+	border-radius:5px;
+}
+#conHeader {
+	width:40%;
+    font-size: 30px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+	border-radius:5px;
+}
+
+
+/*short summary table*/
+
+#conResultTable {
+	margin:10px auto 20px auto;
+    width: 60%;
+    font-size: 26px;
+	border-collapse: collapse;
+	border-radius:10px;
+}
+#conResultTable td {
+    text-align: left;
+    padding-left: 10px;
+	border-bottom: 2px solid;
+    
+}
+#conResultTable tr:nth-child(even) {
+	background-color:white;
+} 
+
+/*Preservation methods*/
+#methodTable {
+    margin: auto;
+	padding:15px 0 15px 0;
+    width: 80%;
+	height:80%;
+    margin-top: 20px;
+	border:2px solid;
+	border-radius:10px;
+    
+}
+#methodTable tr {
+	height:30%;
+}
+#methodTable ul {
+	margin:10px 0 0 0;
+}
+#methodTable li {
+	list-style:decimal;
+	line-height:30px;
+}
+#methodTable .tdleft {
+	width:50%;
+	text-align:center;
+}
+#methodTable img {
+    width: 80%;
+    height: 160px;
+}
+#methodTable .tdright {
+	padding:0;
+	vertical-align:top;
+}
+#methodTable .methodCon {
+	width:80%;
+	font-size:22px;
+	padding-left:10px;
+}
+.methodHeader {
+	width:56%;
+	padding:0 10px 0 10px;
+	font-size: 24px;
+    color: white;  
+	border-radius:5px;
+}
+/*Setting color according to Food category*/
+/**color_set - food name & Method header, 
+tdcolor_set - background color of the summary table,
+letter_color - letter color of the summary table,
+border_color - border color of nav bar **/
+#color_con_vegi .color_set{
+	background-color: #00a368;
+}
+#color_con_vegi .tdcolor_set{
+	background-color: #ABE1C7;
+}
+#color_con_vegi .letter_color {
+	color:#339966;
+}
+#color_con_vegi .border_color {
+	color:#339966;
+}
+#color_con_meat .color_set{
+    background-color: #e3493b;
+}
+#color_con_meat .tdcolor_set{
+    background-color: #ffe6e6;
+}
+#color_con_meat .letter_color {
+	color: #e24536;
+}
+#color_con_meat .border_color {
+	color:#e3493b;
+}
+#color_con_daily .color_set{
+    background-color: #6599ff;
+} 
+#color_con_daily .tdcolor_set{
+    background-color: #e0eaff;
+}
+#color_con_daily .letter_color {
+	color: #3c5d99;
+}
+#color_con_daily .border_color {
+	color:#6599ff;
+}
+
+/**** affiliate page ****/
+#affiliatedContent {
+    width:80%;
+    margin: auto;
+    margin-top: 110px;
+}
+#affiliatedTitle {
+    padding: 40px 0;
+    text-align: center;
+    font-family: Papyrus;
+    font-size: 32px;
+    font-weight: 900;
+}
+#affiliatedTable {
+    margin: auto;
+    width: 70%;
+    display: block;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+#affiliatedTable tr {
+    height: 100px;
+}
+#affiliatedTable td:nth-of-type(1) {
+    width: 30%;
+}
+#affiliatedTable td:nth-of-type(2) {
+    width: 70%;
+    padding: 10px 0 10px 10px;
+}
+#affiliatedTable td img {
+    width: 150px;
+}
+.titleApp {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+.red {
+  color: #e3493b;  
+} 
+
+/******************************************** shared class ********************************************/
+
+.verticalTop {
+    vertical-align: top;
+}
+.spaceForFooter {
+    margin-top: 130px;
+}
+
+/******************************************** animation ********************************************/
+/* animation */
+.navButton:hover, #loginLabel:hover, #contents .panel img:hover, #closeButton img:hover {
+    opacity: 0.5;
+}
+/******************************************** responsible design ********************************************/
+/* responsible design */
+@media screen and (max-width: 1080px){
+    
+	/* navigation bar */
+	#mainNav {
+		height: 80px;
+	}
+	#navLogo img {
+		height:75px;
+	}
+	#searchText {
+		width:70%;
+		height:30px;
+		font-size:18px;
+	}
+	#searchButton {
+		width:80px;
+		height:40px;
+		margin-left:4px;
+		font-size:16px;
+	}
+	#categoryButton {
+		height:60px;
+		padding:10px;
+		font-size:26px;
+	}
+	/******************************************** components of each pages ********************************************/
+
+	/* search conditional panel (hiding) */
+	#searchConditionalTable {
+		font-size: 26px;
+	}
+	#searchConditionalTable input {
+		margin: 20px 0 20px 0;
+	}
+	#searchSubmit {
+		height:30px;
+		font-size:14px;
+	}
+	/**** content (food detail) ****/
+	/*content header*/
+	#foodContent {
+		margin-top: 100px;
+	}
+	#foodTitle {
+		font-size: 26px;
+	}
+	#conHeader {
+		font-size: 24px;
+	}
+	
+	/*short summary table*/
+	#conResultTable {
+		font-size: 22px;
+	}
+
+	/*Preservation methods*/
+	#methodTable {
+		width: 94%;
+	}
+	#methodTable tr {
+		height:30%;
+	}
+	#methodTable li {
+		font-size:20px;
+		line-height:28px;
+	}
+	#methodTable .methodCon {
+		padding-left:8px;
+	}
+	.methodHeader {
+		width:60%;
+		font-size: 22px;
+	}
+@media screen and (max-width: 768px){
+
+    /* navigation bar */
+    #mainNav {
+        height: 60px;
+    }
+	#navLogo {
+		margin:0;
+		width:50px;
+	}
+    #navLogo img {
+        height:60px;
+	}
+	#navSearch {
+		display:none;
+	}
+    #searchText {
+        display:none;
+    }
+    #searchButton {
+        display:none;
+    }
+	#navCategory {
+		width:80%;
+	}
+	#navCategory a {
+		margin: 0;
+	}
+    #glassIcon_img {
+		height:40px;
+        display:block;
+		cursor:pointer;
+    }
+    #categoryButton {
+        width:80px;
+        height:40px;
+        font-size:16px;
+	    float:right;	
+    }
+    /**** content (food detail) ****/
+    /*content header*/
+    #foodContent {
+		margin-top:90px;
+    }
+    #foodTitle {
+        width:36%;
+        font-size: 22px;
+    }
+    #conHeader {
+        width:200px;
+        font-size: 20px;
+    }
+
+    /*short summary table*/
+    #conResultTable {
+        width: 100%;
+        font-size: 18px;
+    }
+    #conResultTable td {
+        padding-left: 10px;
+    }
+
+    /*Preservation methods*/
+    #methodTable {
+        margin: 5px auto 0 auto ;
+        padding:10px 0 10px 0;
+        width: 100%;
+        height:80%;
+    }
+    #methodTable ul {
+        margin:5px 0 0 0;
+        padding:0;
+    }
+    #methodTable li {
+        line-height:14px;
+        margin-bottom:8px;
+		font-size:14px;
+    }
+    #methodTable .tdleft {
+        width:50%;
+    }
+    #methodTable img {
+        width: 100%;
+        height: 120px;
+    }
+    #methodTable .tdright {
+        padding:0 0 0 30px;
+    }
+    #methodTable .methodCon {
+        width:80%;
+        font-size:14px;
+        padding-left:0;
+    }
+    .methodHeader {
+        margin:0;
+        width:76%;
+        padding:0 10px 0 10px;
+        font-size: 14px;
+    }
+	
+    /*Hiding search panel*/
+    #searchPanel { height: 190px; }
+    #searchConditionalTable {
+        width: 350px;
+        font-size:20px;
+        display: block;
+		margin-top:5px;
+        padding: 0 0 0 80px;	
+    } 
+	#searchConditionalTable tr { 
+		width: 100%;
+	}
+    #searchConditionalTable td {
+        width: 30%;
+		line-height:30px;
+		display:inline;
+    }
+    #searchConditionalTable input {
+        margin: 10px 0 10px 0;
+    }
+	input#searchSubmit {
+		width:62px;
+		height:26px;
+		font-size:14px;
+		margin:0 0 0 20px;
+	}
+    #closeButton img {
+		margin-left:10px;
+        height:30px;
+        width:30px;
+    }
+	#searchConditionalTable .spaceForSearchPanel {
+		display:none;
+	}
+	/* Search bar for mobile page */
+	#searchPanel2 {
+		height:120px;
+	}
+	#searchPanel2 tr {
+		width:100%;
+		text-align:center;
+		margin:30px 0 0 0;
+	}
+    /**** affiliate page ****/
+    #affiliatedContent { width: 90%; }
+    #affiliatedTable { width: 100%; }
 }

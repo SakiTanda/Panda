@@ -19,7 +19,7 @@
     height: 85px;
 	text-align:center;
 	background-color:white;
-	border-bottom:3px solid;
+	border-bottom:3px solid black;
 }
 #navCon {
 	margin:0 auto auto auto;

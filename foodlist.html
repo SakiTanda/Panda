@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food List</title>
   <link rel="stylesheet" href="css/bootstrapxin.min.css">
+  <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/xin.css">
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -54,7 +55,10 @@
 
 
   <h2>Food List</h2> 
+  
+  
   <!--pc table -->
+  
   <div class="table-responsive">
   <table class="table table-bordered" id="pctable">
     <thead>
@@ -68,8 +72,8 @@
     <tbody>
 	<!----------1111------------> 
 	  <tr class="pc-title-vege">
-		<td rowspan=3>Tomato</td>
-        <td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+		<td rowspan=3><a href="content.html">Tomato</a></td>
+        <td rowspan=3><a href="content.html"><img class="img-responsive" src="images/meat.jpg"></a></td>
         <td>refrigerator</td> 
 		<td>3 - 4 days</td>
 	  </tr>
@@ -83,8 +87,8 @@
       </tr>
       <!----------222------------>
 	  <tr class="pc-title-meat">
-        <td rowspan=3>beef</td>
-        <td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+        <td rowspan=3><a href="content.html">Beef</a></td>
+        <td rowspan=3><a href="content.html"><img class="img-responsive" src="images/meat.jpg"></a></td>
         <td>refrigerator</td> 
 		<td>3 - 4 days</td>
 	  </tr>
@@ -98,8 +102,8 @@
       </tr>
 	  <!----------3333------------>
 	  <tr class="pc-title-dairy">
-        <td rowspan=3>egg</td>
-        <td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+        <td rowspan=3><a href="content.html">Egg</a></td>
+        <td rowspan=3><a href="content.html"><img class="img-responsive" src="images/meat.jpg"></a></td>
         <td>refrigerator</td> 
 		<td>3 - 4 days</td>
 	  </tr class="pc-title-dairy">
@@ -123,7 +127,7 @@
     <div class="panel-heading titlevege" role="tab" id="titlevege">
       <h4 class="panel-title">
 	  <div class="row">
-	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword">Tomato</span></div>
+	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Tomato</a></span></div>
 		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
           <!--arrow-->
 		  <img src="images/arrow-down-3-24.png" class="down" id="arrow" onclick="arrowchange('arrow')">
@@ -137,8 +141,7 @@
 			<table class="table table-bordered table-vege-color" id="mobiletable">
 				<tbody>
 				  <tr>
-					
-					<td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+					<td rowspan=3><a href="content.html"><img class="img-responsive" src="images/vege.jpg"></a></td>
 					<td>refrigerator</td> 
 					<td>3 - 4 days</td>
 				  </tr>
@@ -165,7 +168,7 @@
     <div class="panel-heading titlmeat" role="tab" id="titlmeat">
       <h4 class="panel-title">
 	  <div class="row">
-	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword">beef</span></div>
+	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Beef</a></span></div>
 		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
           <!--arrow-->
 		  <img src="images/arrow-down-3-24.png" class="down" id="meat" onclick="arrowchange('meat')">
@@ -180,7 +183,7 @@
 				<tbody>
 				  <tr>
 					
-					<td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+					<td rowspan=3><a href="content.html"><img class="img-responsive" src="images/meat.jpg"></a></td>
 					<td>refrigerator</td> 
 					<td>3 - 4 days</td>
 				  </tr>
@@ -206,7 +209,7 @@
     <div class="panel-heading titldairy" role="tab" id="titldairy">
       <h4 class="panel-title">
 	  <div class="row">
-	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword">beef</span></div>
+	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Egg</a></span></div>
 		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
           <!--arrow-->
 		  <img src="images/arrow-down-3-24.png" class="down" id="dairy" onclick="arrowchange('dairy')">
@@ -221,7 +224,7 @@
 				<tbody>
 				  <tr>
 					
-					<td rowspan=3><a href="#"><img class="img-responsive" src="images/meat.jpg"></a></td>
+					<td rowspan=3><a href="content.html"><img class="img-responsive" src="images/dairy.jpg"></a></td>
 					<td>refrigerator</td> 
 					<td>3 - 4 days</td>
 				  </tr>
@@ -276,14 +279,24 @@
 					</tr>
 				</table>
         </form>
+        
         <!-- footer -->
-        <div class="spaceForFooter">
-        <div id="conFooter" class="conFooter">
-            <a href="aboutus.html" id="conAboutus">About Freshness</a>
-			<a href="aboutus.html" id="conAboutus">Contact Us</a>
-            <p>Copyright &copy; 2017 Test company</p>
+        <div class="spaceForFooter"></div>
+        <div id="conFooter">
+            <table id="footerTable">
+                <tr>
+                    <td>
+                        <a href="aboutus.html" id="conAboutus">About</a>
+                    </td>
+                    <td>
+                        <a href="affiliate.html" id="conAboutus">Affiliates</a>
+                    </td>
+                    <td>
+                        <a href="aboutus.html" id="conAboutus">Contact Us</a>
+                    </td>
+                </tr>
+            </table>
         </div>
-		</div>
 		
 
 

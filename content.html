@@ -20,12 +20,11 @@
 			<table id="navCon">
 				<tr>
 					<td id="navLogo">
-						<a href="index.html"><img src="images/logo6.png"></a>
+						<a href="index.html"><img src="images/logo6.png" alt="applogo"></a>
 					</td>
 					
 					<td id="navSearch">
 						<form name="search1" method="post" action="list.php" id="searchBar">
-							<a id="glassIcon"><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
 							<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
 							<input type="submit" id="searchButton" value="Search">
 						</form>
@@ -33,6 +32,8 @@
 					
 					<td id="navCategory">
 						<a id="categoryButton">Category</a>
+						<a id="search_Mobile"><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
+						
 					</td>
 				
 				</tr>
@@ -112,18 +113,24 @@
                         <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
                     </td>
                     <td>
-                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Daily food</label>
-						<input type="submit" value="Search">
+                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dailyfood</label><br>
+						<input type="submit" id="searchSubmit" value="Search">
                     </td>
                 </tr>
             </table>
         </form>
 		
 		<!-- search bar (for mobile:hiding)-->
-		<a id="closeButton2"><img src="images/close.png" alt="close"></a>
-		<form name="search1" method="post" action="list.php" id="searchBar">
-			<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
-			<input type="submit" id="searchButton" value="Search">
+		<form name="search3" method="post" action="list.php" id="searchBarMobile">
+			<a id="closeButton2"><img src="images/close.png" alt="close"></a>
+				<table>
+					<tr>
+						<td>
+							<input type="text" name="searchText" id="searchTextMobile" size="30" placeholder="Which food?">
+							<input type="submit" id="searchButtonMobile" value="Search">
+						</td>
+					</tr>
+				</table>
 		</form>
 		
         <!-- footer -->
@@ -163,6 +170,22 @@
             
             $('#info').click(function() {
                 $('#test').slideToggle();
+            });
+        });
+		
+		$(document).ready(function() {
+            //Hidden search bar for mobile
+            // open the conditional panel
+            $('#search_Mobile').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton2').click(function() {
+                $('#search_Mobile').slideToggle();
+            });
+            $('#searchButtonMobile').click(function() {
+                $('#search_Mobile').slideToggle();
             });
         });
     </script>

@@ -113,20 +113,24 @@
                         <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
                     </td>
                     <td>
-                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dailyfood</label><br>
-						<input type="submit" id="searchSubmit" value="Search">
+                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dairy Product</label><br>
+						<input type="radio" name="category" id="ca1" value="all"><label for="ca1">All</label><br>
                     </td>
+					<td id="tdSubmitButton">
+						<div class="spaceForSearchPanel"></div>
+						<input type="submit" id="searchSubmit" value="Search">
+					</td>
                 </tr>
             </table>
         </form>
 		
 		<!-- search bar (for mobile:hiding)-->
         <form name="search3" method="post" action="list.php" id="searchPanel2">
-			<a id="closeButton2"><img src="images/close.png" alt="close"></a>
+			<a id="closeButton2"><img src="images/close.png" alt="close"></a><br>
 				<table>
 					<tr>
 						<td>
-							<input type="text" name="searchText" id="searchTextMobile" size="30" placeholder="Which food?">
+							<input type="text" name="searchText" id="searchTextMobile" placeholder="Which food?">
 							<input type="submit" id="searchButtonMobile" value="Search">
 						</td>
 					</tr>
@@ -153,18 +157,6 @@
             
             // close the conditional panel
             $('#closeButton').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cv1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cm1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cf1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cd1').click(function() {
                 $('#searchPanel').slideToggle();
             });
             

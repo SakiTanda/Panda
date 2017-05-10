@@ -139,14 +139,20 @@
     padding-top: 15px;
     color: #97A7A7;
 }
+#searchConditionalTable .spaceForSearchPanel {
+	height:30px;
+}
 #searchConditionalTable input {
     margin: 10px 0 30px 0;
 }
 #searchSubmit {
-	width:30%;
-	height:30px;
+	width:40%;
+	height:36px;
+	margin-top:40px;
 	font-size:18px;
-	background-color:white;
+	color:white;
+	background-color:#00a368;
+	border-radius:5px;
 	font-weight:bold;
 }
 
@@ -167,7 +173,36 @@
     width: 50px;
     cursor: pointer;
 }
-
+#searchPanel2 table {
+	margin:auto;
+}
+#searchPanel2 tr {
+	width:100%;
+	text-align:center;
+	margin:30px 0 0 0;
+}
+#closeButton2 img {
+	margin:10px 0 0 10px;
+    height:30px;
+    width:30px;
+}
+#searchTextMobile {
+	width:66%;
+	font-size:16px;
+	margin:30px 0 0 0;
+	float:left;
+}
+#searchButtonMobile {
+	width:56px;
+	height:26px;
+	margin-top:30px;
+	font-size:12px;
+	font-weight:bold;
+	color:white;
+	background-color:#00a368;
+	border-radius:5px;
+	}
+	
 /**** content (food detail) ****/
 /*content header*/
 #foodContent {
@@ -435,14 +470,14 @@ border_color - border color of nav bar **/
 
     /* navigation bar */
     #mainNav {
-        height: 75px;
+        height: 60px;
     }
 	#navLogo {
 		margin:0;
-		width:60px;
+		width:50px;
 	}
     #navLogo img {
-        height:65px;
+        height:60px;
 	}
 	#navSearch {
 		display:none;
@@ -532,41 +567,47 @@ border_color - border color of nav bar **/
     }
 	
     /*Hiding search panel*/
-    #searchPanel { height: 160px; }
+    #searchPanel { height: 190px; }
     #searchConditionalTable {
-        width: 250px;
-        font-size:16px;
+        width: 350px;
+        font-size:20px;
         display: block;
-        padding-top: 10px;
-        padding-left: 100px;
-		
+		margin-top:5px;
+        padding: 0 0 0 80px;	
     } 
-    #searchConditionalTable tr { display: block; }
+	#searchConditionalTable tr { 
+		width: 100%;
+	}
     #searchConditionalTable td {
-        display: inline-block;
-        width: 80%;
+        width: 30%;
+		line-height:30px;
+		display:inline;
     }
     #searchConditionalTable input {
         margin: 10px 0 10px 0;
     }
 	input#searchSubmit {
-		width:60px;
+		width:62px;
 		height:26px;
-		font-size:12px;
-		margin-left:10px;
+		font-size:14px;
+		margin:0 0 0 20px;
 	}
     #closeButton img {
+		margin-left:10px;
         height:30px;
         width:30px;
     }
-	
+	#searchConditionalTable .spaceForSearchPanel {
+		display:none;
+	}
 	/* Search bar for mobile page */
-	#searchBarMobile {
-		display:block;
+	#searchPanel2 {
+		height:120px;
 	}
-	#searchTextMobile {
-	}
-	#searchButtonMobile {
+	#searchPanel2 tr {
+		width:100%;
+		text-align:center;
+		margin:30px 0 0 0;
 	}
     /**** affiliate page ****/
     #affiliatedContent { width: 90%; }

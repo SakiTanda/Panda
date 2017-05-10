@@ -623,6 +623,7 @@ border_color - border color of nav bar **/
     /**** affiliate page ****/
     #affiliatedContent { width: 90%; }
     #affiliatedTable { width: 100%; }
+    /**** footer ****/
     #footerTable { width: 90%; }
-}
+
 }

@@ -12,11 +12,11 @@
 
     <!-- Body section -->
     <body id="mainBodyStyle">
-        <!--change color by this id -->
-        <div id="color_con_meat">
+		<!--change color by this id -->
+		<div id="color_con_daily">
         
- 		<!-- Navi -->
-        <nav id="mainNav" class="border_color">
+		<!-- Navi -->
+        <nav id="mainNav" class="border_color_common">
 			<table id="navCon">
 				<tr>
 					<td id="navLogo">
@@ -32,7 +32,7 @@
 					
 					<td id="navCategory">
 						<a id="categoryButton">Category</a>
-						<a><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
+						<a id="search_Mobile"><img src="images/glassicon.png" id="glassIcon_img" alt="glass_Icon"></a>
 						
 					</td>
 				
@@ -79,36 +79,52 @@
                 </tr>
             </table>
         </div>
-     </div>   
-     
-        <!-- search panel (hiding) -->
-        <div id="searchPanel">
-            <a id="closeButton"><img src="images/close.png" alt="close"></a>
+	 
+		<!-- search panel (hiding) -->
+        <form name="search2" method="post" action="list.php" id="searchPanel">
+			<a id="closeButton"><img src="images/close.png" alt="close"></a>
             <table id="searchConditionalTable">
-                <tr class="verticalTop">
+				<tr class="verticalTop">
                     <td>
-                        <label for="cv1"><input type="radio" name="category" id="cv1" value="vegi">Vegitables</label><br>
-                        <label for="cm1"><input type="radio" name="category" id="cm1" value="meat">Meats</label><br>
+                        <input type="radio" name="category" id="cv1" value="vege"><label for="cv1">Vegetable</label><br>
+                        <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
                     </td>
                     <td>
-                        <label for="cd1"><input type="radio" name="category" id="cd1" value="daily">Daily foods</label><br>
+                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dairy Product</label><br>
+						<input type="radio" name="category" id="ca1" value="all"><label for="ca1">All</label><br>
+                    </td>
+					<td id="tdSubmitButton">
+						<div class="spaceForSearchPanel"></div>
 						<input type="submit" id="searchSubmit" value="Search">
-                    </td>
+					</td>
                 </tr>
             </table>
-        </div>
-        
+        </form>
+		
+		<!-- search bar (for mobile:hiding)-->
+        <form name="search3" method="post" action="list.php" id="searchPanel2">
+			<a id="closeButton2"><img src="images/close.png" alt="close"></a><br>
+				<table>
+					<tr>
+						<td>
+							<input type="text" name="searchText" id="searchTextMobile" placeholder="Which food?">
+							<input type="submit" id="searchButtonMobile" value="Search">
+						</td>
+					</tr>
+				</table>
+        </form>
+
         <!-- footer -->
         <div class="spaceForFooter"></div>
         <div id="conFooter">
             <a href="aboutus.html" id="conAboutus">About Freshness</a>
-            <a href="aboutus.html" id="conAboutus">Contact Us</a>
+			<a href="aboutus.html" id="conAboutus">Contact Us</a>
             <p>Copyright &copy; 2017 Test company</p>
         </div>
                 
     </body>
-    
-    <script>            
+	
+	<script>            
         $(document).ready(function() {
             
             // open the conditional panel
@@ -120,23 +136,27 @@
             $('#closeButton').click(function() {
                 $('#searchPanel').slideToggle();
             });
-            $('#cv1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cm1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cf1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            $('#cd1').click(function() {
-                $('#searchPanel').slideToggle();
-            });
             
             $('#info').click(function() {
                 $('#test').slideToggle();
             });
+
+            //Hidden search bar for mobile
+            // open the conditional panel
+            $('#search_Mobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton2').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            $('#searchButtonMobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+
         });
+        
     </script>
 
 </html>

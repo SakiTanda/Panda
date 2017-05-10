@@ -7,6 +7,9 @@
   <title>Food List</title>
   <link rel="stylesheet" href="css/bootstrapxin.min.css">
   <link rel="stylesheet" href="css/xin.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/xin.js"></script>
 </head>
 
 <body>
@@ -239,6 +242,40 @@
   </div>
  </div>
 </div>
+
+		<!-- search panel (hiding) -->
+        <form name="search2" method="post" action="list.php" id="searchPanel">
+			<a id="closeButton"><img src="images/close.png" alt="close"></a>
+            <table id="searchConditionalTable">
+				<tr class="verticalTop">
+                    <td>
+                        <input type="radio" name="category" id="cv1" value="vege"><label for="cv1">Vegetable</label><br>
+                        <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
+                    </td>
+                    <td>
+                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dairy Product</label><br>
+						<input type="radio" name="category" id="ca1" value="all"><label for="ca1">All</label><br>
+                    </td>
+					<td id="tdSubmitButton">
+						<div class="spaceForSearchPanel"></div>
+						<input type="submit" id="searchSubmit" value="Search">
+					</td>
+                </tr>
+            </table>
+        </form>
+		
+		<!-- search bar (for mobile:hiding)-->
+        <form name="search3" method="post" action="list.php" id="searchPanel2">
+			<a id="closeButton2"><img src="images/close.png" alt="close"></a><br>
+				<table>
+					<tr>
+						<td>
+							<input type="text" name="searchText" id="searchTextMobile" placeholder="Which food?">
+							<input type="submit" id="searchButtonMobile" value="Search">
+						</td>
+					</tr>
+				</table>
+        </form>
         <!-- footer -->
         <div class="spaceForFooter">
         <div id="conFooter" class="conFooter">
@@ -247,8 +284,45 @@
             <p>Copyright &copy; 2017 Test company</p>
         </div>
 		</div>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/xin.js"></script>
+		
+
+
+
+<!--buttom-->	
+	<script>            
+        $(document).ready(function() {
+            
+            // open the conditional panel
+            $('#categoryButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            $('#info').click(function() {
+                $('#test').slideToggle();
+            });
+
+            //Hidden search bar for mobile
+            // open the conditional panel
+            $('#search_Mobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton2').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            $('#searchButtonMobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+
+        });
+        
+    </script>
+	
 </body>
 </html>

@@ -2,7 +2,7 @@ Freshness:
 Freshness provides the food preservation methods for you to keep the food fresh as long as you can.
 
 Pocket Pantry:
-Application designed to help you plan meals, automatically create grocery lists and reduce waste
+Application designed to help you plan meals, create grocery lists and reduce waste
 
 E-fridge:
 
@@ -15,3 +15,7 @@ Take 2 provide recipes for ingredient pairs.
 
 Wasted:
 http://students.bcitdev.com/A00989687/forAffiliates/WASTED.html#
+
+
+group 10 aka EcoList:
+a meal planner and shopping list app

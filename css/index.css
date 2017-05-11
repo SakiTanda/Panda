@@ -1,3 +1,8 @@
+/*extend bottom*/
+@media screen and (max-width: 994px) {
+#extend_bottom { margin-bottom:120px;}
+}
+
 #conFooter {
       position: fixed;
     bottom: 0;

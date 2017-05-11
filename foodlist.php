@@ -12,8 +12,14 @@
     }
     
     // get the search parameters (post)
-    $searchText = trim($_POST['searchText']);
-    $categoryValue = trim($_POST['category']);
+    $searchText = null;
+    $categoryValue = null;
+    if (isset($_POST['searchText'])) {
+        $searchText = trim($_POST['searchText']);
+    }
+    if (isset($_POST['category'])) {
+        $categoryValue = trim($_POST['category']);
+    }    
     
     if ($connectflag) {
         // create SELECT query

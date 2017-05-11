@@ -272,7 +272,7 @@
 #methodTable li {
 	list-style:decimal;
 	font-size:30px;
-	margin-top:10px;
+	margin-top:20px;
 	line-height:30px;
 }
 #methodTable .tdleft {
@@ -463,6 +463,7 @@ border_color - border color of nav bar **/
 	}
 	#methodTable li {
 		font-size:24px;
+		margin-top:10px;
 	}
 	#methodTable .methodCon {
 		padding-left:6px;

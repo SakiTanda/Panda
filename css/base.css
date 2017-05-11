@@ -1,4 +1,4 @@
-/******************************************** for common components ********************************************/
+﻿/******************************************** for common components ********************************************/
 /* body */
 #mainBodyStyle {
     margin:0;
@@ -6,6 +6,14 @@
     border: 0;
     width: 100%;
     height: 100%;
+    font-family:'Candara';
+}
+#mainBodyStyleforFoodList {
+    margin:0;
+    padding:0;
+    border: 0;
+    width: 100%;
+    height: 85px;
     font-family:'Candara';
 }
 
@@ -19,7 +27,7 @@
     height: 85px;
 	text-align:center;
 	background-color:white;
-	border-bottom:3px solid black;
+	border-bottom:3px solid;
 }
 #navCon {
 	margin:0 auto auto auto;
@@ -114,6 +122,7 @@
     padding: 1px 0 0 0;
 }
 
+
 /******************************************** components of each pages ********************************************/
 
 /* search conditional panel (hiding) */
@@ -125,7 +134,6 @@
     height: 150px;
     background-color: black;
     z-index: 1;
-    opacity:0.9;
 }
 #closeButton img {
     float: left;
@@ -201,7 +209,7 @@
 	float:left;
 }
 #searchButtonMobile {
-	width:56px;
+	width:60px;
 	height:26px;
 	margin-top:30px;
 	font-size:12px;
@@ -225,7 +233,7 @@
     font-size: 30px;
     font-weight:bold;
     color:white;
-	border-radius:5px;
+	border-radius:3px;
 }
 #conHeader {
 	width:40%;
@@ -233,14 +241,14 @@
 	font-weight:bold;
 	text-align:center;
 	color:white;
-	border-radius:5px;
+	border-radius:3px;
 }
 
 
 /*short summary table*/
 
 #conResultTable {
-	margin:10px auto 20px auto;
+	margin:10px auto 10px auto;
     width: 60%;
     font-size: 26px;
 	border-collapse: collapse;
@@ -264,17 +272,15 @@
 	height:80%;
     margin-top: 20px;
 	border:2px solid;
-	border-radius:10px;
-    
-}
-#methodTable tr {
-	height:30%;
+	border-radius:5px;  
 }
 #methodTable ul {
 	margin:10px 0 0 0;
 }
 #methodTable li {
 	list-style:decimal;
+	font-size:30px;
+	margin-top:20px;
 	line-height:30px;
 }
 #methodTable .tdleft {
@@ -282,24 +288,24 @@
 	text-align:center;
 }
 #methodTable img {
-    width: 80%;
-    height: 160px;
+    width:80%;
 }
 #methodTable .tdright {
 	padding:0;
 	vertical-align:top;
 }
 #methodTable .methodCon {
-	width:80%;
+	width:100%;
 	font-size:22px;
 	padding-left:10px;
 }
 .methodHeader {
-	width:56%;
-	padding:0 10px 0 10px;
-	font-size: 24px;
+	width:50%;
+	margin-left:40px;
+	padding:0 0 0 10px;
+	font-size: 28px;
     color: white;  
-	border-radius:5px;
+	border-radius:3px;
 }
 /*Setting color according to Food category*/
 /**color_set - food name & Method header, 
@@ -343,7 +349,7 @@ border_color - border color of nav bar **/
 	color:#6599ff;
 }
 .border_color_common {
-    color: #aaaaaa;
+    color: black;
 }
 
 /**** affiliate page ****/
@@ -425,7 +431,7 @@ border_color - border color of nav bar **/
 		font-size:16px;
 	}
 	#categoryButton {
-		height:60px;
+		height:30px;
 		padding:10px;
 		font-size:26px;
 	}
@@ -461,17 +467,14 @@ border_color - border color of nav bar **/
 
 	/*Preservation methods*/
 	#methodTable {
-		width: 94%;
-	}
-	#methodTable tr {
-		height:30%;
+		width: 100%;
 	}
 	#methodTable li {
-		font-size:20px;
-		line-height:28px;
+		font-size:24px;
+		margin-top:10px;
 	}
 	#methodTable .methodCon {
-		padding-left:8px;
+		padding-left:6px;
 	}
 	.methodHeader {
 		width:60%;
@@ -519,21 +522,31 @@ border_color - border color of nav bar **/
     /**** content (food detail) ****/
     /*content header*/
     #foodContent {
+		width:94%;
+		padding:0 auto 0 auto;
 		margin-top:90px;
     }
     #foodTitle {
-        width:36%;
+        width:80%;
+		text-align:left;
+		margin-left:10px;
+		padding-left:10px;
         font-size: 22px;
     }
     #conHeader {
-        width:200px;
+        width:80%;
+		padding:0 10px 0 10px;
+		text-align:left;
+		margin-left:10px;
         font-size: 20px;
+		line-height:28px;
     }
 
     /*short summary table*/
     #conResultTable {
-        width: 100%;
-        font-size: 18px;
+        width: 96%;
+        font-size: 22px;
+		margin:10px 0 40px 0 ;
     }
     #conResultTable td {
         padding-left: 10px;
@@ -541,9 +554,8 @@ border_color - border color of nav bar **/
 
     /*Preservation methods*/
     #methodTable {
-        margin: 5px auto 0 auto ;
+        margin: 10px auto 0 auto ;
         padding:10px 0 10px 0;
-        width: 100%;
         height:80%;
     }
     #methodTable ul {
@@ -551,30 +563,25 @@ border_color - border color of nav bar **/
         padding:0;
     }
     #methodTable li {
-        line-height:14px;
+        line-height:18px;
         margin-bottom:8px;
-		font-size:14px;
+		font-size:18px;
     }
     #methodTable .tdleft {
         width:50%;
     }
-    #methodTable img {
-        width: 100%;
-        height: 120px;
-    }
     #methodTable .tdright {
-        padding:0 0 0 30px;
+        padding:0 0 0 20px;
     }
     #methodTable .methodCon {
         width:80%;
-        font-size:14px;
         padding-left:0;
     }
     .methodHeader {
         margin:0;
-        width:76%;
-        padding:0 10px 0 10px;
-        font-size: 14px;
+        width:86%;
+        padding:5px 10px 5px 10px;
+        font-size: 20px;
     }
 	
     /*Hiding search panel*/
@@ -583,34 +590,34 @@ border_color - border color of nav bar **/
         width: 350px;
         font-size:20px;
         display: block;
-		margin-top:5px;
+	margin-top:5px;
         padding: 0 0 0 80px;	
     } 
-	#searchConditionalTable tr { 
-		width: 100%;
-	}
+    #searchConditionalTable tr { 
+	width: 100%;
+    }
     #searchConditionalTable td {
         width: 30%;
-		line-height:30px;
-		display:inline;
+	line-height:30px;
+	display:inline;
     }
     #searchConditionalTable input {
         margin: 10px 0 10px 0;
     }
-	input#searchSubmit {
-		width:62px;
-		height:26px;
-		font-size:14px;
-		margin:0 0 0 20px;
-	}
+    input#searchSubmit {
+	width:64px;
+	height:26px;
+	font-size:14px;
+	margin:0 0 0 20px;
+    }
     #closeButton img {
-		margin-left:10px;
+	margin-left:10px;
         height:30px;
         width:30px;
     }
-	#searchConditionalTable .spaceForSearchPanel {
-		display:none;
-	}
+    #searchConditionalTable .spaceForSearchPanel {
+	display:none;
+    }
 	/* Search bar for mobile page */
 	#searchPanel2 {
 		height:120px;
@@ -623,6 +630,4 @@ border_color - border color of nav bar **/
     /**** affiliate page ****/
     #affiliatedContent { width: 90%; }
     #affiliatedTable { width: 100%; }
-    #footerTable { width: 90%; }
-}
 }

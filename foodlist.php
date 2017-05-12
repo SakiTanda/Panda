@@ -76,12 +76,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/logo1.ico" />
   <title>Food List</title>
-  <link rel="stylesheet" href="css/bootstrapxin.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/xin.css">
+  <link rel="stylesheet" href="css/bootstrapxin.min.css">
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="js/panel.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/xin.js"></script>
 </head>
 
@@ -167,8 +165,8 @@
   
   <!--mobile version table -->
 <?php if ($result2->num_rows > 0) { ?>
-  <?php while ($row = $result2->fetch_assoc()) { ?>
   <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+  <?php while ($row = $result2->fetch_assoc()) { ?>  
   <div class="panel panel-default">
     <div class="panel-heading <?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>" role="tab" id="<?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>">
       <h4 class="panel-title">
@@ -176,12 +174,12 @@
 	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></span></div>
 		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $row["id"] ?>" aria-expanded="true" aria-controls="collapse<?php echo $row["id"] ?>">
           <!--arrow-->
-		  <img src="images/arrow-down-3-24.png" class="down" id="arrow" onclick="arrowchange('arrow')">
+		  <img src="images/arrow-down-3-24.png" class="down" id="<?php echo $row["name"] ?>" onclick="arrowchange('<?php echo $row["name"] ?>')">
         </a></div>
 		</div>
       </h4>
     </div>
-	<div id="collapse<?php echo $row["id"] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="<?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>">
+	<div id="collapse-<?php echo $row["name"] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="<?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>">
       <div class="panel-body">
         <div class="table-responsive">
 			<table class="table table-bordered table-<?php if ($row["category_id"] == 1){echo "vege";} elseif ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "dairy";} ?>-color" id="mobiletable">
@@ -206,8 +204,8 @@
 	  </div>
     </div>
   </div>
- </div>
  <?php } ?>
+ </div>
 <?php } ?>
 
 </div>

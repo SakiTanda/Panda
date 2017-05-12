@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/logo1.ico" />
   <title>Food List</title>
-  <link rel="stylesheet" href="css/bootstrapxin.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/xin.css">
-  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="js/panel.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/xin.js"></script>
+  <link rel="stylesheet" href="css/bootstrapxin.min.css">
+  
 </head>
 
 <body>
@@ -124,20 +120,20 @@
   <!--mobile version table-->
   
 			<!--vegetables-->
-  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" id="mobiletable">
   <div class="panel panel-default">
     <div class="panel-heading titlevege" role="tab" id="titlevege">
       <h4 class="panel-title">
 	  <div class="row">
 	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Tomato</a></span></div>
-		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+		<div class="col-xs-2 col-sm-2 col-md-2">
           <!--arrow-->
-		  <img src="images/arrow-down-3-24.png" class="down" id="arrow" onclick="arrowchange('arrow')">
-        </a></div>
+		  <img src="images/arrow-down-3-24.png" class="down" id="tomato" onclick="arrowchange('tomato')">
+        </div>
 		</div>
       </h4>
     </div>
-	<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titlevege">
+	<div id="collapse-tomato" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titlevege">
       <div class="panel-body">
         <div class="table-responsive">
 			<table class="table table-bordered table-vege-color" id="mobiletable">
@@ -162,23 +158,23 @@
 	  </div>
     </div>
   </div>
- </div>
+ 
   
 			<!--meat-->
-<div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+
   <div class="panel panel-default">
     <div class="panel-heading titlmeat" role="tab" id="titlmeat">
       <h4 class="panel-title">
 	  <div class="row">
 	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Beef</a></span></div>
-		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+		<div class="col-xs-2 col-sm-2 col-md-2">
           <!--arrow-->
-		  <img src="images/arrow-down-3-24.png" class="down" id="meat" onclick="arrowchange('meat')">
-        </a></div>
+		  <img src="images/arrow-down-3-24.png" class="down" id="beef" onclick="arrowchange('beef')">
+        </div>
 		</div>
       </h4>
     </div>
-	<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titlmeat">
+	<div id="collapse-beef" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titlmeat">
       <div class="panel-body">
         <div class="table-responsive">
 			<table class="table table-bordered table-meat-color" id="mobiletable">
@@ -204,22 +200,22 @@
 	  </div>
     </div>
   </div>
- </div>
+ 
   <!--dairy-->
-  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+  
   <div class="panel panel-default">
     <div class="panel-heading titldairy" role="tab" id="titldairy">
       <h4 class="panel-title">
 	  <div class="row">
 	    <div class="col-xs-10 col-sm-10 col-md-10"><span class="titleword"><a href="content.html">Egg</a></span></div>
-		<div class="col-xs-2 col-sm-2 col-md-2"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+		<div class="col-xs-2 col-sm-2 col-md-2">
           <!--arrow-->
-		  <img src="images/arrow-down-3-24.png" class="down" id="dairy" onclick="arrowchange('dairy')">
-        </a></div>
+		  <img src="images/arrow-down-3-24.png" class="down" id="egg" onclick="arrowchange('egg')">
+        </div>
 		</div>
       </h4>
     </div>
-	<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titldairy">
+	<div id="collapse-egg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titldairy">
       <div class="panel-body">
         <div class="table-responsive">
 			<table class="table table-bordered table-dairy-color" id="mobiletable">
@@ -245,8 +241,10 @@
 	  </div>
     </div>
   </div>
- </div>
+ </div> 
 </div>
+
+ 
 
 		<!-- search panel (hiding) -->
         <form name="search2" method="post" action="list.php" id="searchPanel">
@@ -299,6 +297,50 @@
                 </tr>
             </table>
         </div>
-	
+
+		
+
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="js/panel.js"></script>
+  <script src="js/xin.js"></script>
+
+<!--buttom-->	
+	<script>            
+        $(document).ready(function() {
+            
+            // open the conditional panel
+            $('#categoryButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton').click(function() {
+                $('#searchPanel').slideToggle();
+            });
+            
+            $('#info').click(function() {
+                $('#test').slideToggle();
+            });
+
+            //Hidden search bar for mobile
+            // open the conditional panel
+            $('#search_Mobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            
+            // close the conditional panel
+            $('#closeButton2').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+            $('#searchButtonMobile').click(function() {
+                $('#searchPanel2').slideToggle();
+            });
+
+        });
+		
+		
+        
+    </script>
+
 	</body>
 </html>

@@ -28,3 +28,16 @@ a meal planner and shopping list app
 
 *FridgeMates(Kenny):
 Web app to keep track of leftover meals inside of multiple fridges a user has access to.
+
+*Scavange(Sam31)
+Scavange is a web app that finds simple recipes from your leftovers. We hope to create a friendly community where people can share their recipes with each other.
+
+*Vegi-Smart(group 23 Jason Kim)
+Food Waste Manager for Fruits and Veggies
+Mobile focused web app which allows users to manage shopping lists and keep track of the fruits and veggies in their fridge. The app will generate reports to give the user feedback on how much food they've wasted.
+
+
+
+vegi (#00a368 ) meat (#e3493b ) Daily(#6599ff )
+vegi (#ABE1C7 ) meat (#ffe6e6 ) Daily(#e0eaff )
+vegi (#339966 ) meat (#e24536 ) Daily(#3c5d99 ;)

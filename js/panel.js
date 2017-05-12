@@ -25,8 +25,4 @@
             $('#closeButton2').click(function() {
                 $('#searchPanel2').slideToggle();
             });
-            $('#searchButtonMobile').click(function() {
-                $('#searchPanel2').slideToggle();
-            });
-
         });

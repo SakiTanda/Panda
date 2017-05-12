@@ -10,6 +10,7 @@ Food smart:
 Food Smart can keep the grocey item on track(days left to expire), we have tracking list and provide report for period of time.
 
 Take 2:
+http://www.take2foods.com
 Take2 helps inexperience users figure out what recipes to make with their ingredients. It prevents users from wasting their food because they're unsure of what to do with it. 
 Take 2 provide recipes for ingredient pairs.
 

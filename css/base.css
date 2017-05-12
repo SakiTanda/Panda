@@ -224,34 +224,35 @@
     width:80%;
     margin: auto;
     margin-top: 110px;
+	text-align:center;
 }
 
 #foodTitle {
-	width:20%;
+	width:100%;
 	text-align:center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight:bold;
     color:white;
+	line-height:60px;
 	border-radius:3px;
 }
 #conHeader {
-	width:40%;
-    font-size: 30px;
+	width:100%;
+    font-size: 40px;
 	font-weight:bold;
 	text-align:center;
 	color:white;
+	line-height:60px;
 	border-radius:3px;
 }
 
-
 /*short summary table*/
-
 #conResultTable {
-	margin:10px auto 10px auto;
-    width: 60%;
-    font-size: 26px;
+	margin:20px auto 20px auto;
+    width:60%;
+    font-size: 30px;
 	border-collapse: collapse;
-	border-radius:10px;
+	border-radius:3px;
 }
 #conResultTable td {
     text-align: left;
@@ -267,7 +268,7 @@
 #methodTable {
     margin: auto;
 	padding:15px 0 15px 0;
-    width: 80%;
+    width: 100%;
 	height:80%;
     margin-top: 20px;
 	border:2px solid;
@@ -316,6 +317,7 @@ border_color - border color of nav bar **/
 }
 #color_con_vegi .tdcolor_set{
 	background-color: #ABE1C7;
+	color:#339966;
 }
 #color_con_vegi .letter_color {
 	color:#339966;

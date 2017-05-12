@@ -80,7 +80,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-        <link rel="stylesheet" href="css/base.css">
+        <script type="text/javascript" src="js/panel.js"></script>
+		<link rel="stylesheet" href="css/base.css">
     </head>
 
     <!-- Body section -->
@@ -98,7 +99,7 @@
 					
 					<td id="navSearch">
 						<form name="search1" method="post" action="foodlist.php" id="searchBar">
-							<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?">
+							<input type="text" name="searchText" id="searchText" size="40" placeholder="Which food?" required>
 							<input type="submit" id="searchButton" value="Search">
 						</form>
 					</td>
@@ -214,7 +215,7 @@
             <table id="searchConditionalTable">
 				<tr class="verticalTop">
                     <td>
-                        <input type="radio" name="category" id="cv1" value="vege"><label for="cv1">Vegetable</label><br>
+                        <input type="radio" name="category" id="cv1" value="vege" required><label for="cv1">Vegetable</label><br>
                         <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
                     </td>
                     <td>
@@ -235,7 +236,7 @@
 				<table>
 					<tr>
 						<td>
-							<input type="text" name="searchText" id="searchTextMobile" placeholder="Which food?">
+							<input type="text" name="searchText" id="searchTextMobile" placeholder="Which food?" required>
 							<input type="submit" id="searchButtonMobile" value="Search">
 						</td>
 					</tr>
@@ -261,40 +262,5 @@
 		</div>
                 
     </body>
-	
-	<script>            
-        $(document).ready(function() {
-            
-            // open the conditional panel
-            $('#categoryButton').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            
-            // close the conditional panel
-            $('#closeButton').click(function() {
-                $('#searchPanel').slideToggle();
-            });
-            
-            $('#info').click(function() {
-                $('#test').slideToggle();
-            });
-
-            //Hidden search bar for mobile
-            // open the conditional panel
-            $('#search_Mobile').click(function() {
-                $('#searchPanel2').slideToggle();
-            });
-            
-            // close the conditional panel
-            $('#closeButton2').click(function() {
-                $('#searchPanel2').slideToggle();
-            });
-            $('#searchButtonMobile').click(function() {
-                $('#searchPanel2').slideToggle();
-            });
-
-        });
-        
-    </script>
 
 </html>

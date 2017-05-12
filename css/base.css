@@ -597,7 +597,7 @@ border_color - border color of nav bar **/
 	width: 100%;
     }
     #searchConditionalTable td {
-        width: 30%;
+        width: 50%;
 	line-height:30px;
 	display:inline;
     }

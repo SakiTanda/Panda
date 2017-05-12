@@ -10,10 +10,6 @@
             $('#closeButton').click(function() {
                 $('#searchPanel').slideToggle();
             });
-            
-            $('#info').click(function() {
-                $('#test').slideToggle();
-            });
 
             //Hidden search bar for mobile
             // open the conditional panel

@@ -369,10 +369,16 @@ border_color - border color of nav bar **/
     width: 70%;
     display: block;
     border-collapse: separate;
-    border-spacing: 1px;
+    border-spacing: 0;
 }
-#affiliatedTable tr {
-    height: 100px;
+#affiliatedTable tr:nth-of-type(3n-2) {
+    height: 50px;
+}
+#affiliatedTable tr:nth-of-type(3n-1) {
+    height: 40px;
+}
+#affiliatedTable tr:nth-of-type(3n) {
+    height: 200px;
 }
 #affiliatedTable td:nth-of-type(1) {
     width: 30%;
@@ -383,6 +389,23 @@ border_color - border color of nav bar **/
 }
 #affiliatedTable td img {
     width: 150px;
+}
+#affiliatedTable .step {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: tahoma;
+    background-color: #00a368;
+}
+#affiliatedTable .stepTitle {
+    width: 100%;
+    text-align: center;
+    color: #339966;
+    font-size: 26px;
+    font-family: tahoma;
+    background-color: #abe1c7;
 }
 .titleApp {
     margin: 0;

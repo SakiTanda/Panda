@@ -161,8 +161,10 @@
     </tbody>
   </table>
   </div>
+<?php } else { ?>
+  <div class="errorMessage">No result</div>
 <?php } ?>
-  
+
   <!--mobile version table -->
 <?php if ($result2->num_rows > 0) { ?>
   <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>

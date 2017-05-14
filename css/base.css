@@ -418,7 +418,7 @@ border_color - border color of nav bar **/
     font-size: 28px;
 }
 .red {
-  color: #e3493b;  
+    color: #e3493b;  
 } 
 
 /******************************************** shared class ********************************************/
@@ -429,7 +429,11 @@ border_color - border color of nav bar **/
 .spaceForFooter {
     margin-top: 130px;
 }
-
+.errorMessage {
+    margin: 50px;
+    font-size: 32px;
+    color: #e3493b;  
+}
 /******************************************** animation ********************************************/
 /* animation */
 .navButton:hover, #loginLabel:hover, #contents .panel img:hover, #closeButton img:hover {

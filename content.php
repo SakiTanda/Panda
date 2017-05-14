@@ -119,41 +119,17 @@
                     
         <!-- contents -->
         <div id="foodContent">
-            <div id="dailyContent">
-               
+		
 			   <!-- title -->
                 <div id="foodTitle" class="color_set"><?php echo $row["name"] ?></div>
-               
-			   <!-- summary table -->
-                <table id="conResultTable" class="tdcolor_set letter_color">
-                    <?php if ($row["fridge_days"] != null) { ?>
-                    <tr>
-                        <td >Refrigerator</td>
-                        <td><?php echo $row["fridge_days"] ?> days</td>
-                    </tr>
-                    <?PHP } ?>
-                    <?php if ($row["room_days"] != null) { ?>
-                    <tr>
-                        <td>Room tempeture</td>
-                        <td><?php echo $row["room_days"] ?> days</td>
-                    </tr>
-                    <?PHP } ?>
-                    <?php if ($row["freezer_days"] != null) { ?>
-                    <tr>
-                        <td>Freezer</td>
-                        <td><?php echo $row["freezer_days"] ?> days</td>
-                    </tr>
-                    <?PHP } ?>
-                </table>
-				
+
                 <!-- preservation methods -->
-                <div id="conHeader" class="color_set">Preservation Methods</div>
                 
 				<table id="methodTable" class="letter_color">
                     <?php if ($row["fridge_days"] != null) { ?>
                     <tr>
-						<td>
-							<div class="methodHeader color_set">Refrigerator</div>
+						<td colspan="2">
+							<div class="methodHeader tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> </span></span></div>
 						</td>
 					</tr>
 					<tr>
@@ -170,8 +146,8 @@
 					
                     <?php if ($row["room_days"] != null) { ?>
 					<tr>
-						<td>
-							<div class="methodHeader color_set">Room tempeture</div>
+						<td colspan="2">
+							<div class="methodHeader tdcolor_set"><span>Room teperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> </span></span></div>
 						</td>
 					</tr>
                     <tr>
@@ -188,8 +164,8 @@
                     
                     <?php if ($row["freezer_days"] != null) { ?>
 					<tr>
-						<td>
-							<div class="methodHeader color_set">Freezer</div>
+						<td colspan="2">
+							<div class="methodHeader tdcolor_set"><span>Freezer<span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> </span></span></div>
 						</td>
 					</tr>
                     <tr>
@@ -205,7 +181,6 @@
                     <?PHP } ?>
 					
                 </table>
-            </div>
         </div>
      </div>   
 	 

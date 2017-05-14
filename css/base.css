@@ -223,31 +223,25 @@
 #foodContent {
     width:70%;
     margin: auto;
-    margin-top: 110px;
-	text-align:center;
+    margin-top: 100px;
+	text-align:left;
+    font-family: tahoma;
 }
 
 #foodTitle {
 	width:100%;
-    font-size: 40px;
+    font-size: 42px;
     font-weight:bold;
     color:white;
-	line-height:60px;
+	line-height:70px;
 	border-radius:3px;
 }
-/*#conHeader {
-	width:100%;
-    font-size: 40px;
-	font-weight:bold;
-	text-align:center;
-	color:white;
-	line-height:60px;
-	border-radius:3px;
-}*/
-
+#foodTitle span {
+    padding-left: 20px;     
+}
 /*short summary table*/
 #conResultTable {
-	margin:30px auto 30px auto;
+	margin:20px auto;
     width:90%;
     font-size: 30px;
 	border-collapse: collapse;
@@ -265,46 +259,44 @@
 /*Preservation methods*/
 #methodTable {
     margin: auto;
+    padding-bottom: 15px;
 	text-align:center;
-	padding:15px 0 15px 0;
     width: 100%;
-	height:80%;
-    margin-top: 40px;
+    margin-top: 25px;
 	border:2px solid;
 	border-radius:5px;  
 }
-#methodTable ul {
-	margin:0;
-}
 #methodTable li {
 	list-style:decimal;
-	font-size:30px;
-	margin-top:30px;
-	line-height:30px;
+	font-size:28px;
+	line-height:50px;
 }
 #methodTable .tdleft {
-	width:50%;
+    padding: 0 0 0 30px;
+	width:40%;
 }
 #methodTable img {
-    width:80%;
+    width: 100%;
 }
 #methodTable .tdright {
-	padding:0;
+    padding: 0 30px 0 30px;
 	text-align:left;
-	vertical-align:top;
-}
-#methodTable .methodCon {
-	width:100%;
-	font-size:22px;
-	padding-left:10px;
 }
 .methodHeader {
-	width:90%;
-	margin:0 auto 0 auto;
+    height: 40px;
+	margin:15px 30px;
 	font-size: 30px;
 	font-weight:bold;
+    text-align: left;
     color: white;
 	border: 2px solid #339966;
+}
+.methodHeader span {
+    padding: 0 20px;
+}
+.methodHeaderDays {
+    font-weight: 300;
+    font-size: 27px;
 }
 /*Setting color according to Food category*/
 /**color_set - food name & Method header, 
@@ -482,13 +474,7 @@ border_color - border color of nav bar **/
 	/**** content (food detail) ****/
 	/*content header*/
 	#foodContent {
-		margin-top: 100px;
-	}
-	#foodTitle {
-		font-size: 26px;
-	}
-	#conHeader {
-		font-size: 24px;
+        width: 80%;
 	}
 	
 	/*short summary table*/
@@ -496,21 +482,6 @@ border_color - border color of nav bar **/
 		font-size: 22px;
 	}
 
-	/*Preservation methods*/
-	#methodTable {
-		width: 100%;
-	}
-	#methodTable li {
-		font-size:24px;
-		margin-top:10px;
-	}
-	#methodTable .methodCon {
-		padding-left:6px;
-	}
-	.methodHeader {
-		width:60%;
-		font-size: 22px;
-	}
 @media screen and (max-width: 768px){
 
     /* navigation bar */
@@ -553,68 +524,46 @@ border_color - border color of nav bar **/
     /**** content (food detail) ****/
     /*content header*/
     #foodContent {
-		width:94%;
-		padding:0 auto 0 auto;
-		margin-top:90px;
+		width:92%;
+		margin-top:65px;
     }
     #foodTitle {
-        width:80%;
-		text-align:left;
-		margin-left:10px;
-		padding-left:10px;
-        font-size: 22px;
-    }
-    #conHeader {
-        width:80%;
-		padding:0 10px 0 10px;
-		text-align:left;
-		margin-left:10px;
-        font-size: 20px;
-		line-height:28px;
-    }
-
-    /*short summary table*/
-    #conResultTable {
-        width: 96%;
-        font-size: 22px;
-		margin:10px 0 40px 0 ;
-    }
-    #conResultTable td {
-        padding-left: 10px;
+        font-size: 30px;
+        line-height: 40px;
     }
 
     /*Preservation methods*/
     #methodTable {
-        margin: 10px auto 0 auto ;
-        padding:10px 0 10px 0;
-        height:80%;
-    }
-    #methodTable ul {
-        margin:5px 0 0 0;
-        padding:0;
-    }
-    #methodTable li {
-        line-height:18px;
-        margin-bottom:8px;
-		font-size:18px;
-    }
-    #methodTable .tdleft {
-        width:50%;
-    }
-    #methodTable .tdright {
-        padding:0 0 0 20px;
-    }
-    #methodTable .methodCon {
-        width:80%;
-        padding-left:0;
+        padding-bottom: 0px;
     }
     .methodHeader {
-        margin:0;
-        width:86%;
-        padding:5px 10px 5px 10px;
-        font-size: 20px;
+        margin: 10px;
+		padding-top:5px;
+		width:92%;
+        height: 30px;
+        font-size: 18px;
     }
-	
+    .methodHeader span {
+        padding: 0 5px;
+    }
+    .methodHeaderDays {
+        font-size: 18px;
+    }
+    #methodTable ul {
+        margin: 0;
+        padding-left: 40px;        
+    }
+    #methodTable li {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    #methodTable .tdleft {
+        padding-left: 10px;
+        width: 35%;
+    }
+    #methodTable .tdright {
+        padding-right: 10px;
+    }
     /*Hiding search panel*/
     #searchPanel { height: 190px; }
     #searchConditionalTable {

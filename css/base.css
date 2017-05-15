@@ -271,6 +271,10 @@
 	font-size:28px;
 	line-height:50px;
 }
+#methodTable .tdletter_size {
+	font-size:28px;
+	line-height:50px;
+}
 #methodTable .tdleft {
     padding: 0 0 0 30px;
 	width:40%;
@@ -289,7 +293,7 @@
 	font-weight:bold;
     text-align: left;
     color: white;
-	border: 2px solid #339966;
+	border: 2px solid;
 }
 .methodHeader span {
     padding: 0 20px;
@@ -481,6 +485,7 @@ border_color - border color of nav bar **/
 	#conResultTable {
 		font-size: 22px;
 	}
+}
 
 @media screen and (max-width: 768px){
 
@@ -554,6 +559,10 @@ border_color - border color of nav bar **/
         padding-left: 40px;        
     }
     #methodTable li {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    #methodTable .tdletter_size {
         font-size: 18px;
         line-height: 20px;
     }

@@ -67,7 +67,6 @@
     }
 ?>
 
-
 <!doctype html>
 <html lang="en">
 
@@ -75,19 +74,19 @@
     <head>
 		<link rel="shortcut icon" href="image/logo1.ico" />
 		<link rel="shortcut icon" href="images/logo1.ico" />
-		<link rel="shortcut icon" href="images/logo1.ico" />
+		<link rel="shortcut icon" href="images/logo1.ico" /
         <title>Freshness</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-        <script type="text/javascript" src="js/panel.js"></script>
-		<link rel="stylesheet" href="css/base.css">
+		<script type="text/javascript" src="js/panel.js"></script>
+        <link rel="stylesheet" href="css/base.css">
     </head>
 
     <!-- Body section -->
     <body id="mainBodyStyle">
 		<!--change color by this id -->
-		<div id="color_con_<?php if ($row["category_id"] == 1){echo "daily";} elseif ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "dairy";} ?>">
+		<div id="color_con_<?php if ($row["category_id"] == 1){echo "vegi";} elseif ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "daily";} ?>">
         
 		<!-- Navi -->
         <nav id="mainNav" class="border_color">
@@ -119,68 +118,69 @@
                     
         <!-- contents -->
         <div id="foodContent">
-		
-			   <!-- title -->
-                <div id="foodTitle" class="color_set"><?php echo $row["name"] ?></div>
-
-                <!-- preservation methods -->
+               
+           <!-- title -->
+            <div id="foodTitle" class="color_set"><span><?php echo $row["name"] ?></span></div>
+            
+            <!-- preservation methods -->
+            <!--<div id="conHeader" class="color_set">Preservation Methods</div>-->
+            
+            <table id="methodTable" class="letter_color">
+                <?php if ($row["fridge_days"] != null) { ?>
+                <tr>
+                    <td colspan="2">
+                        <div class="methodHeader letter_color tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> days</span></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdleft">
+                        <img src="food-images/<?php echo $row["fridge_pic"] ?>" alt="method1">
+                    </td>
+                    <td class="tdright">
+                        <div class="letter_color tdletter_size">
+                            <?php echo nl2br($row["fridge_detail"]) ?>
+                        </div>
+                    </td>
+                </tr>
+                <?PHP } ?>
                 
-				<table id="methodTable" class="letter_color">
-                    <?php if ($row["fridge_days"] != null) { ?>
-                    <tr>
-						<td colspan="2">
-							<div class="methodHeader tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> </span></span></div>
-						</td>
-					</tr>
-					<tr>
-                        <td class="tdleft">
-                            <img src="food-images/<?php echo $row["fridge_pic"] ?>" alt="method1">
-                        </td>
-                        <td class="tdright">
-                            <div class="methodCon letter_color">
-								<?php echo nl2br($row["fridge_detail"]) ?>
-							</div>
-                        </td>
-                    </tr>
-                    <?PHP } ?>
-					
-                    <?php if ($row["room_days"] != null) { ?>
-					<tr>
-						<td colspan="2">
-							<div class="methodHeader tdcolor_set"><span>Room teperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> </span></span></div>
-						</td>
-					</tr>
-                    <tr>
-                        <td class="tdleft">
-                            <img src="food-images/<?php echo $row["room_pic"] ?>" alt="method2">
-                        </td>
-                        <td class="tdright">
-							<div class="methodCon letter_color">
-								<?php echo nl2br($row["room_detail"]) ?>
-							</div>
-                        </td>
-                    </tr>
-                    <?PHP } ?>
-                    
-                    <?php if ($row["freezer_days"] != null) { ?>
-					<tr>
-						<td colspan="2">
-							<div class="methodHeader tdcolor_set"><span>Freezer<span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> </span></span></div>
-						</td>
-					</tr>
-                    <tr>
-                        <td class="tdleft">
-                            <img src="food-images/<?php echo $row["freezer_pic"] ?>" alt="method3">
-                        </td>
-                        <td class="tdright">
-							<div class="methodCon letter_color">
-								<?php echo nl2br($row["freezer_detail"]) ?>
-							</div>
-                        </td>
-                    </tr>
-                    <?PHP } ?>
-					
-                </table>
+                <?php if ($row["room_days"] != null) { ?>
+                <tr>
+                    <td colspan="2">
+                        <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdleft">
+                        <img src="food-images/<?php echo $row["room_pic"] ?>" alt="method2">
+                    </td>
+                    <td class="tdright">
+                        <div class="letter_color tdletter_size">
+                            <?php echo nl2br($row["room_detail"]) ?>
+                        </div>
+                    </td>
+                </tr>
+                <?PHP } ?>
+                
+                <?php if ($row["freezer_days"] != null) { ?>
+                <tr>
+                    <td colspan="2">
+                        <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> days</span></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdleft">
+                        <img src="food-images/<?php echo $row["freezer_pic"] ?>" alt="method2">
+                    </td>
+                    <td class="tdright">
+                        <div class="letter_color tdletter_size">
+                            <?php echo nl2br($row["freezer_detail"]) ?>
+                        </div>
+                    </td>
+                </tr>
+                <?PHP } ?>
+                
+            </table>
         </div>
      </div>   
 	 
@@ -194,7 +194,7 @@
                         <input type="radio" name="category" id="cm1" value="meat"><label for="cm1">Meat</label><br>
                     </td>
                     <td>
-                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dairy Product</label><br>
+                        <input type="radio" name="category" id="cd1" value="dairy"><label for="cd1">Dairy</label><br>
 						<input type="radio" name="category" id="ca1" value="all"><label for="ca1">All</label><br>
                     </td>
 					<td id="tdSubmitButton">

@@ -307,21 +307,17 @@
 tdcolor_set - background color of the summary table,
 letter_color - letter color of the summary table,
 border_color - border color of nav bar **/
-#color_con_vegi .color_set{
+#color_con_vege .color_set{
 	background-color: #00a368;
 }
-#color_con_vegi .tdcolor_set{
+#color_con_vege .tdcolor_set{
 	background-color: #ABE1C7;
 	color:#339966;
 }
-#color_con_vegi .method2_color {
-	background-color:white;
+#color_con_vege .letter_color {
 	color:#339966;
 }
-#color_con_vegi .letter_color {
-	color:#339966;
-}
-#color_con_vegi .border_color {
+#color_con_vege .border_color {
 	color:#339966;
 }
 #color_con_meat .color_set{

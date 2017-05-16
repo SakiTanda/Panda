@@ -33,6 +33,18 @@
     height: 100%;
     font-family:'Candara';
 }
+/*easter egg*/
+.form_format { margin:0 35% 0 35%}
+
+.addinf {
+	color:#3F5A5E;
+}
+div.error {
+display:block;
+padding:0 10% 0 7%;
+border:1px solid #F9B9B2;
+background-color: #FFDFDF;
+}
 
 /* navigation bar */
 #mainNav {

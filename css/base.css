@@ -552,7 +552,7 @@ border_color - border color of nav bar **/
     }
     #methodTable ul {
         margin: 0;
-        padding-left: 40px;        
+        padding-left: 20px;        
     }
     #methodTable li {
         font-size: 18px;
@@ -567,7 +567,7 @@ border_color - border color of nav bar **/
         width: 35%;
     }
     #methodTable .tdright {
-        padding-right: 10px;
+        padding: 0 10px;
     }
     /*Hiding search panel*/
     #searchPanel { height: 190px; }

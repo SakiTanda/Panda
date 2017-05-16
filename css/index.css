@@ -164,5 +164,14 @@ padding-right:23%}
 
 #egg_invis{color:black}
 
+@media screen and (max-width: 768px){
+    #conFooter {
+        padding: 15px 5px;
+    }
+    #footerTable {
+        padding-right: 0;
+        width: 100%;
+    }
+}
 
 

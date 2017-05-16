@@ -90,19 +90,6 @@ a:active {
     padding-right: 15px;
     width: 50%;
 }
-@media screen and (max-width: 768px){
-
-    #categoryButton {
-        width:80px;
-        height:40px;
-        font-size:16px;
-	    float:right;	
-    }
-	#footerTable{ 
-		width: 90%; 
-	}
-}
-
 #footerTable td{
     width: 30%;
 }
@@ -120,4 +107,25 @@ a:active {
     font-weight: 400;
     color: white;
     background-color: black;
+}
+
+@media screen and (max-width: 768px){
+
+    #categoryButton {
+        width:80px;
+        height:40px;
+        font-size:16px;
+	    float:right;	
+    }
+	#footerTable{ 
+		width: 90%; 
+	}
+    #conFooter {
+        padding: 15px 5px;
+    }
+    #footerTable {
+        padding-right: 0;
+        width: 100%;
+    }
+
 }

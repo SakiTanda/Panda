@@ -438,7 +438,7 @@ border_color - border color of nav bar **/
     
 	/* navigation bar */
 	#mainNav {
-		height: 80px;
+		height: 85px;
 	}
 	#navLogo img {
 		height:75px;

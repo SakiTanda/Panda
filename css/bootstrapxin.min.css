@@ -14,25 +14,26 @@
 	display:block;
 	
 }
-#nav{
-	height:60px;
-}
 #title-container{
-	top:60px;
+	margin-top:0px;
 	width:100%;
 	margin-top:0px;
 	margin-bottom:10px;
 	display:block;
 	height:70px;
-}
-#title{
+	}
+	#title{
 	width:96%;
-	margin:0px 2% 10px 2%;
+	margin:25px 2% 10px 2%;
 	position:fixed;
 	border-bottom:1px solid #ddd;
 	z-index:1;
 	background-color:white;
 	}
+#nav{
+	height:60px;
+}
+
 .mobiletable{
 	display:none;
 }
@@ -67,7 +68,9 @@ a:hover {
 a:active {
 	color:white;	
 }
-
+#pctable{
+	padding-top:20px;
+}
 
 #pctable img{
 	width:100%
@@ -88,6 +91,22 @@ a:active {
 @media screen and (max-width: 768px){
 	#pctable{
 		display:none;
+	}
+	#title-container{
+	top:60px;
+	width:100%;
+	margin-top:0px;
+	margin-bottom:10px;
+	display:block;
+	height:70px;
+	}
+	#title{
+	width:96%;
+	margin:0px 2% 10px 2%;
+	position:fixed;
+	border-bottom:1px solid #ddd;
+	z-index:1;
+	background-color:white;
 	}
 	#accordion{
 		top:100px;

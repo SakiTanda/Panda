@@ -27,6 +27,7 @@
 	text-align:center;
 	background-color:white;
 	border-bottom:3px solid;
+	z-index:1;
 }
 #navCon {
 	margin:0 auto auto auto;

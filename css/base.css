@@ -616,4 +616,8 @@ border_color - border color of nav bar **/
     /**** affiliate page ****/
     #affiliatedContent { width: 90%; }
     #affiliatedTable { width: 100%; }
+    #footerTable {
+        padding-right: 20px;
+        width: 100%;
+    }
 }

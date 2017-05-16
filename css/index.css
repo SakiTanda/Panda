@@ -140,7 +140,12 @@ padding-right:23%}
   -ms-transform: translate(-50%, -50%);
 }
 
-
+@media screen and (max-width: 768px){
+    #footerTable {
+        padding-right: 0;
+        width: 100%;
+    }
+}
 
 
 

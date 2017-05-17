@@ -42,3 +42,5 @@ Mobile focused web app which allows users to manage shopping lists and keep trac
 vegi (#00a368 ) meat (#e3493b ) Daily(#6599ff )
 vegi (#ABE1C7 ) meat (#ffe6e6 ) Daily(#e0eaff )
 vegi (#339966 ) meat (#e24536 ) Daily(#3c5d99 ;)
+
+210*240

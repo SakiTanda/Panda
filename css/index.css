@@ -3,6 +3,10 @@
 #extend_bottom { margin-bottom:120px;}
 }
 
+@media screen and (max-width: 1300px) {
+#extend_bottom { margin-bottom:120px;}
+}
+
 #conFooter {
       position: fixed;
     bottom: 0;

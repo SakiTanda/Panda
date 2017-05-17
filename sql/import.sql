@@ -47,52 +47,52 @@ create table methods (
 
 ----------------------------------------------------
 [lettuce]
-insert into foods (food_name, picture, category_id) select 'Lettuce', 'lettuce.jpg', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Lettuce', 'Lettuce.JPG', category_id from categories where category_name = 'Vegitables';
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Refrigeraor';
 insert into periods (days, food_id, place_id) select 14, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Freezer';
-insert into methods (method_picture, detail, food_id, place_id) select 'lettuce1.jpg', '1. Do not cut the lettuce
+insert into methods (method_picture, detail, food_id, place_id) select 'Lettuce1.JPG', '1. Do not cut the lettuce
 2. Dry and wrap it in paper towel
 3. Store it in a plastic bag in refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Refrigeraor';
-insert into methods (method_picture, detail, food_id, place_id) select 'lettuce2.jpg', '1. Shred the lettuce
+insert into methods (method_picture, detail, food_id, place_id) select 'Lettuce2.JPG', '1. Shred the lettuce
 2. Wash and dry it 
 3. Store it in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Freezer';
 
 [Broccoli]
-insert into foods (food_name, picture, category_id) select 'Broccoli', 'Broccoli.jpg', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Broccoli', 'Broccoli.JPG', category_id from categories where category_name = 'Vegitables';
 insert into periods (days, food_id, place_id) select 3, foods.food_id, places.place_id from foods, places where foods.food_name = 'Broccoli' and places.place_name = 'Refrigeraor';
 insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Broccoli' and places.place_name = 'Freezer';
-insert into methods (method_picture, detail, food_id, place_id) select 'Broccoli1.jpg', '1. Wash the broccoli
+insert into methods (method_picture, detail, food_id, place_id) select 'Broccoli1.JPG', '1. Wash the broccoli
 2. Loosely wrap the broccoli in damp paper towels
 3. Store it in the refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Broccoli' and places.place_name = 'Refrigeraor';
-insert into methods (method_picture, detail, food_id, place_id) select 'Broccoli2.jpg', '1. Cut the broccoli into smaller pieces
+insert into methods (method_picture, detail, food_id, place_id) select 'Broccoli2.JPG', '1. Cut the broccoli into smaller pieces
 2. Boil them for three minutes
 3. Dump them into ice-cold water
 4. Drain and dry them
 5. Store them in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Broccoli' and places.place_name = 'Freezer';
 
 [Apple]
-insert into foods (food_name, picture, category_id) select 'Apple', 'Apple.jpg', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Apple', 'Apple.JPG', category_id from categories where category_name = 'Vegitables';
 insert into periods (days, food_id, place_id) select 14, foods.food_id, places.place_id from foods, places where foods.food_name = 'Apple' and places.place_name = 'Refrigeraor';
 insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Apple' and places.place_name = 'Freezer';
-insert into methods (method_picture, detail, food_id, place_id) select 'Apple1.jpg', '1. Store the Apple in a plastic bag in refrigerator (or at room tempeture out of direct sunlight)', foods.food_id, places.place_id from foods, places where foods.food_name = 'Apple' and places.place_name = 'Refrigeraor';
-insert into methods (method_picture, detail, food_id, place_id) select 'Apple2.jpg', "1. Slice the apple
+insert into methods (method_picture, detail, food_id, place_id) select 'Apple1.JPG', '1. Store the Apple in a plastic bag in refrigerator (or at room tempeture out of direct sunlight)', foods.food_id, places.place_id from foods, places where foods.food_name = 'Apple' and places.place_name = 'Refrigeraor';
+insert into methods (method_picture, detail, food_id, place_id) select 'Apple2.JPG', "1. Slice the apple
 2. Place them on a cookie sheet in freezer
 3. When they're frozen, store them in a plastic bag", foods.food_id, places.place_id from foods, places where foods.food_name = 'Apple' and places.place_name = 'Freezer';
 
 [Orange]
-insert into foods (food_name, picture, category_id) select 'Orange', 'Orange.jpg', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Orange', 'Orange.JPG', category_id from categories where category_name = 'Vegitables';
 insert into periods (days, food_id, place_id) select 14, foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Refrigeraor';
 insert into periods (days, food_id, place_id) select 28, foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Freezer';
-insert into methods (method_picture, detail, food_id, place_id) select 'Orange1.jpg', '1. Store the Orange in refrigerator (or at room tempeture out of direct sunlight)', foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Refrigeraor';
-insert into methods (method_picture, detail, food_id, place_id) select 'Orange2.jpg', '1. Store the orange in any way in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Freezer';
+insert into methods (method_picture, detail, food_id, place_id) select 'Orange1.JPG', '1. Store the Orange in refrigerator (or at room tempeture out of direct sunlight)', foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Refrigeraor';
+insert into methods (method_picture, detail, food_id, place_id) select 'Orange2.JPG', '1. Store the orange in any way in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Orange' and places.place_name = 'Freezer';
 
 [Leek]
-insert into foods (food_name, picture, category_id) select 'Leek', 'Leek.jpg', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Leek', 'Leek.JPG', category_id from categories where category_name = 'Vegitables';
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Refrigeraor';
 insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Freezer';
-insert into methods (method_picture, detail, food_id, place_id) select 'Leek1.jpg', '1. Wrap the leek in damp paper towels
+insert into methods (method_picture, detail, food_id, place_id) select 'Leek1.JPG', '1. Wrap the leek in damp paper towels
 2. Store the Leek in a plastic bag in refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Refrigeraor';
-insert into methods (method_picture, detail, food_id, place_id) select 'Leek2.jpg', '1. Wash, dry and slice the leek
+insert into methods (method_picture, detail, food_id, place_id) select 'Leek2.JPG', '1. Wash, dry and slice the leek
 2. Store it in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Freezer';
 
 [Tomato]

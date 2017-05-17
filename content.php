@@ -267,7 +267,7 @@
     <?php if ($row["detail"] != null) { ?>
         <script>
             function openFlower1() {
-                document.getElementById("flower1").setAttribute('class', 'easter1');
+                document.getElementById("flower1").setAttribute('class', 'flower1');
                 $("#flower1").fadeIn("slow");
             }
             function openFlower2() {

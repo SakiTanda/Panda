@@ -155,7 +155,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Ginger1.
 2. Seal the bag(suck out as much excess air as possible)
 3. Place it in dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Room temperature';
 /* for the picture & detail of refrigerator */
-insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Place it in dark place in a room 
+insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Put them in a sealable plastic bag 
 2. Seal the bag(suck out as much excess air as possible)
 3. Put it in a Fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Refrigeraor';
 
@@ -186,7 +186,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Onion1.J
 /* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'Onion2.JPG', '1. Slice or chop it into small pieces
 2. Put it into sealable bag
-3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Freezer';
+3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Freezer';
 
 
 [beef]
@@ -207,9 +207,11 @@ insert into methods (method_picture, detail, food_id, place_id) select 'beef2.jp
 /* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Egg', 'egg.jpg', category_id from categories where category_name = 'Daily products';
 /* for the days of refrigerator */
-insert into periods (days, food_id, place_id) select 24, foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
+insert into periods (days, food_id, place_id) select 40, foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
 /* for the picture & detail of refrigerator */
-insert into methods (method_picture, detail, food_id, place_id) select 'egg1.jpg', '1. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
+insert into methods (method_picture, detail, food_id, place_id) select 'egg1.jpg', '1.Use airtight bags and put eggs in(2-5 degree).
+2.Blunt side up and sharp side down.
+3.Don’t ever wash eggs.', foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
 
 [Fiddle Heads] (for easter egg)
 insert into foods (food_name, picture, category_id) select 'Fiddle Heads', 'Fiddle.JPG', category_id from categories where category_name = 'Spring Vegitables';
@@ -254,3 +256,45 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Spotpraw
 insert into methods (method_picture, detail, food_id, place_id) select 'Spotprawn2.jpg', '1. Put in a box which is filled with icy water
 2. Put into freezer as soon as possible', foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Freezer';
 /*End (Easter egg contents)*/
+
+/*--------------------------Dairy----------------------------------------*/
+[Cheese]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Cheese', 'Cheese.jpg', category_id from categories where category_name = 'Daily products';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 180, foods.food_id, places.place_id from foods, places where foods.food_name = 'Cheese' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Cheese1.jpg', '1.Cut whole cheese to small part about 225g-500g(option)
+2.Cover with airtight plastic bag(-1-1degree)
+3.Use food expire date tracker to track food', foods.food_id, places.place_id from foods, places where foods.food_name = 'Cheese' and places.place_name = 'Refrigeraor';
+
+[Milk]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Milk', 'Milk.jpg', category_id from categories where category_name = 'Daily products';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 3, foods.food_id, places.place_id from foods, places where foods.food_name = 'Milk' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Milk1.jpg', '1.Store mile in a container
+2.Keep milk away from any light during storing(2-6 degree)
+3.Heat milk fast before drinking it', foods.food_id, places.place_id from foods, places where foods.food_name = 'Milk' and places.place_name = 'Refrigeraor';
+
+[Cream]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Cream', 'Cream.jpg', category_id from categories where category_name = 'Daily products';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Cream' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Cream1.jpg', '1.Clean up cream around the open after finish using cream.
+2.Press the air out and seal the box.
+3.Put it in the regenerator in around 3 degree.', foods.food_id, places.place_id from foods, places where foods.food_name = 'Cream' and places.place_name = 'Refrigeraor';
+
+[Butter]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Butter', 'Butter.jpg', category_id from categories where category_name = 'Daily products';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 365, foods.food_id, places.place_id from foods, places where foods.food_name = 'Butter' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Butter1.jpg', '1.Always store in proper under proper temperature(2-8 degree).
+2.Cover with tin foil or plastic wrap.', foods.food_id, places.place_id from foods, places where foods.food_name = 'Butter' and places.place_name = 'Refrigeraor';
+
+/*---------------------Daiy----------------------------------------------*/

@@ -157,7 +157,7 @@ padding-right:23%}
 .text_overlay {
   white-space: nowrap; 
   color: white;
-  font-size: 400%;
+  font-size: 200%;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -178,4 +178,11 @@ padding-right:23%}
     }
 }
 
+@media screen and (max-width: 320px){
+	#searchText { width:65%;}
+	
+	
+	
+	
+}
 

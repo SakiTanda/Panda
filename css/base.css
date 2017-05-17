@@ -430,6 +430,21 @@ border_color - border color of nav bar **/
     bottom: 70px;
     left: 10px;
 }
+#flower1 {
+    position: fixed;
+    top: 90px;
+    left: 220px;
+}
+#flower1 img {
+    width: 80%;
+}
+#flower2 img {
+    width: 100%;
+}
+#flower3 img {
+    width: 80%;
+}
+
 .easterTitle {
     text-align: center;
     font-size: 30px;
@@ -445,8 +460,8 @@ border_color - border color of nav bar **/
     text-align: center;
     font-size: 17px;
     font-weight: bold;
-    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(1, #f22) );
-    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(1, #f22) );
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -666,13 +681,13 @@ border_color - border color of nav bar **/
         font-weight: 500;
     }
     #flower1 img {
-        width: 100%;
+        width: 80%;
     }
     #flower2 img {
         width: 50%;
     }
     #flower3 img {
-        width: 80%;
+        width: 30%;
     }
 
 }

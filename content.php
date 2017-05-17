@@ -166,7 +166,7 @@
                 <?php if ($row["room_days"] != null) { ?>
                 <tr>
                     <td colspan="2">
-                        <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span></div>
+                        <div class="methodHeader letter_color tdcolor_set"><span>Room temperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span></div>
                     </td>
                 </tr>
                 <tr>
@@ -239,10 +239,11 @@
 
         <!-- easter -->           
         <div id="easter" class="easter0"><a href="content.php?id=<?php echo $easterID ?>"><img src="images/006-fruit.png" alt="easter"></a></div>
+        <?php if ($row["detail"] != null) { ?>
         <div id="flower1" class="easter0"><img src="images/005-rose.png" alt="flower1"></div>
         <div id="flower2" class="easter0"><img src="images/001-nature.png" alt="flower2"></div>
         <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3"></div>
-
+        <?php } ?>
         
                <!-- footer -->
         <div class="spaceForFooter"></div>
@@ -267,7 +268,7 @@
     <?php if ($row["detail"] != null) { ?>
         <script>
             function openFlower1() {
-                document.getElementById("flower1").setAttribute('class', 'easter1');
+                document.getElementById("flower1").setAttribute('class', 'flower1');
                 $("#flower1").fadeIn("slow");
             }
             function openFlower2() {

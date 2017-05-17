@@ -85,9 +85,9 @@
 
 <body>
 
-<div id="mainBodyStyleforFoodList">
+<div id="nav">
 		<!--change color by this id -->
-		<div id="color_con_daily">
+		
 		<!-- Navi -->
         <nav id="mainNav" class="border_color_common">
 			<table id="navCon">
@@ -115,16 +115,16 @@
 			</table>
 			
         </nav>
-	</div>
-</div>
 
+</div>
+<div id="title-container"><div id="title"><h2>Food List</h2></div></div>
 <div class="container" id="container-xin">
 
 <!-- Body section -->
     
 
 
-  <h2>Food List</h2> 
+  
   
   
   <!--pc table -->  

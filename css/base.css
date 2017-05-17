@@ -414,6 +414,23 @@ border_color - border color of nav bar **/
     color: #e3493b;  
 } 
 
+/* Easter egg */
+.easter1 {
+    position: fixed;
+    top: 130px;
+    right: 10px;
+}
+.easter2 {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
+.easter3 {
+    position: fixed;
+    bottom: 70px;
+    left: 10px;
+}
+
 /******************************************** shared class ********************************************/
 
 .verticalTop {

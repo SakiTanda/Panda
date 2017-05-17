@@ -5,6 +5,9 @@ create table categories (
 insert into categories (category_name) values ('Vegitables');
 insert into categories (category_name) values ('Meats');
 insert into categories (category_name) values ('Daily products');
+insert into categories (category_name) values ('Spring Vegitables');
+insert into categories (category_name) values ('Spring Meats');
+
 
 ----------------------------------------------------
 
@@ -220,7 +223,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Fiddle2.
 /*Haruna : Easter Egg contents*/
 [Bamboo shoot]
 /* for the picture on foodlist page */
-insert into foods (food_name, picture, category_id) select 'Bamboo shoot', 'Bambooshoot.JPG', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'Bamboo shoot', 'Bambooshoot.JPG', category_id from categories where category_name = 'Spring Vegitables';
 /* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Bamboo shoot' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
@@ -238,7 +241,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Bamboosh
 
 [Spot prawn]
 /* for the picture on foodlist page */
-insert into foods (food_name, picture, category_id) select 'Spot prawn', 'Spotprawn.jpg', category_id from categories where category_name = 'Meats';
+insert into foods (food_name, picture, category_id) select 'Spot prawn', 'Spotprawn.jpg', category_id from categories where category_name = 'Spring Meats';
 /* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 3, foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */

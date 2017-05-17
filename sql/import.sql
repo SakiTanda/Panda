@@ -145,4 +145,14 @@ insert into periods (days, food_id, place_id) select 24, foods.food_id, places.p
 /* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'egg1.jpg', '1. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
 
+[Fiddle Heads] (for easter egg)
+insert into foods (food_name, picture, category_id) select 'Fiddle Heads', 'Fiddle.JPG', category_id from categories where category_name = 'Spring Vegitables';
+insert into periods (days, food_id, place_id) select 3, foods.food_id, places.place_id from foods, places where foods.food_name = 'Fiddle Heads' and places.place_name = 'Refrigeraor';
+insert into periods (days, food_id, place_id) select 60, foods.food_id, places.place_id from foods, places where foods.food_name = 'Fiddle Heads' and places.place_name = 'Freezer';
+insert into methods (method_picture, detail, food_id, place_id) select 'Fiddle1.JPG', '1. Wrap the Fiddle Heads in damp paper towels
+2. Store the Fiddle Heads in a plastic bag in refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Fiddle Heads' and places.place_name = 'Refrigeraor';
+insert into methods (method_picture, detail, food_id, place_id) select 'Fiddle2.JPG', '1. Boil the fiddle Heads for one minute
+2. Drain and Place them on a cookie sheet in freezer
+3. Store them in a plastic bag', foods.food_id, places.place_id from foods, places where foods.food_name = 'Fiddle Heads' and places.place_name = 'Freezer';
+
 

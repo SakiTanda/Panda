@@ -51,7 +51,7 @@ create table methods (
 There is some sample of sql
 If you want to see the item of dairy product, look at [egg].
 If you want to see the item of meat product, look at [beef].
-If you want to see the room temperature, look at [tomato]. 
+If you want to see the room temperature, look at [Tomato]. 
 */
 
 [lettuce]
@@ -108,20 +108,82 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Leek1.JP
 insert into methods (method_picture, detail, food_id, place_id) select 'Leek2.JPG', '1. Wash, dry and slice the leek
 2. Store it in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Freezer';
 
+[Green Pepper]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Green pepper', 'Greenpepper.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Greenpepper1.JPG', '1. Dry it well, put it into a seal bag
+2. Not fresh one should be removed from the bag(It affects others)
+3. Put into a fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'Greenpepper2.JPG', '1. Cut into a half, remove stem end, and inside of it
+2. Put it into a seal bag or wrap it 
+3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Freezer';
 [Tomato]
 /* for the picture on foodlist page */
-insert into foods (food_name, picture, category_id) select 'Tomato', 'tomato.jpg', category_id from categories where category_name = 'Vegitables';
-/* for the days of room temperature */
-insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Room temperature';
+insert into foods (food_name, picture, category_id) select 'Tomato', 'Tomato.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
 insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Freezer';
-/* for the picture & detail of room temperature */
-insert into methods (method_picture, detail, food_id, place_id) select 'tomato1.jpg', '1. Wash and dry
-2. Keep in the shade', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Room temperature';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Tomato1.JPG', '1. Put them in a sealable plastic bag
+2. Seal the bag(suck out as much excess air as possible)
+3. Put it in a fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Refrigeraor';
 /* for the picture & detail of freezer */
-insert into methods (method_picture, detail, food_id, place_id) select 'tomato2.jpg', '1. Wash and dry
-2. Put into a plastic bag
-3. Put into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Freezer';
+insert into methods (method_picture, detail, food_id, place_id) select 'Tomato2.JPG', '1. Put them in a sealable plastic bag
+2. Seal the bag(suck out as much excess air as possible) 
+3. Put it in a freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Freezer';
+
+[Ginger]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Ginger', 'Ginger.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of room temperature */
+insert into periods (days, food_id, place_id) select 10, foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Room temperature';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of room temperature */
+insert into methods (method_picture, detail, food_id, place_id) select 'Ginger1.JPG', '1. Put them in a sealable plastic bag
+2. Seal the bag(suck out as much excess air as possible)
+3. Place it in dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Room temperature';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Place it in dark place in a room 
+2. Seal the bag(suck out as much excess air as possible)
+3. Put it in a Fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Refrigeraor';
+
+[Chinese Cabbage]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Chinese cabbage', 'Chinesecabbage.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of room temperature */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chinese cabbage' and places.place_name = 'Room temperature';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 21, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chinese cabbage' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of room temperature */
+insert into methods (method_picture, detail, food_id, place_id) select 'Chinesecabbage1.jPG', '1. Wrap it by newspaper or a plastic wrap
+2. Place it in the dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Chinese cabbage' and places.place_name = 'Room temperature';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Chinesecabbage2.JPG', '1. Wrap it by newspaper or a plastic wrap
+2. Put it into fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Chinese cabbage' and places.place_name = 'Refrigeraor';
+
+[Onion]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Onion', 'Onion.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of room temperature */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Room temperature';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 14, foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Freezer';
+/* for the picture & detail of room temperature */
+insert into methods (method_picture, detail, food_id, place_id) select 'Onion1.JPG', '1. Wrap it one by one by newspaper
+2.Place it in the dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Room temperature';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'Onion2.JPG', '1. Slice or chop it into small pieces
+2. Put it into sealable bag
+3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Freezer';
+
 
 [beef]
 /* for the picture on foodlist page */

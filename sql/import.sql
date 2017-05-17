@@ -155,4 +155,36 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Fiddle2.
 2. Drain and Place them on a cookie sheet in freezer
 3. Store them in a plastic bag', foods.food_id, places.place_id from foods, places where foods.food_name = 'Fiddle Heads' and places.place_name = 'Freezer';
 
+/*Haruna : Easter Egg contents*/
+[Bamboo shoot]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Bamboo shoot', 'Bambooshoot.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Bamboo shoot' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Bamboo shoot' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Bambooshoot1.JPG', '1. Boil it first
+2. After boiled it, remain it into water until it becomes cold
+3. Remove peers. Put it into sealable container with water
+4. Put it into a fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Bamboo shoot' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'Bambooshoot2.JPG', '1.After removing harshness, slice it
+2. Make it dry 
+3. Put it into a sealable plastic bag
+4. Put it into a freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Bamboo shoot' and places.place_name = 'Freezer';
 
+[Spot prawn]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Spot prawn', 'Spotprawn.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 3, foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'Spotprawn1.jpg', '1.Put in a box which is filled with icy water 
+2. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'Spotprawn2.jpg', '1. Put in a box which is filled with icy water
+2. Put into freezer as soon as possible', foods.food_id, places.place_id from foods, places where foods.food_name = 'Spot prawn' and places.place_name = 'Freezer';
+/*End (Easter egg contents)*/

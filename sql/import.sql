@@ -126,6 +126,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Greenpep
 insert into methods (method_picture, detail, food_id, place_id) select 'Greenpepper2.JPG', '1. Cut into a half, remove stem end, and inside of it
 2. Put it into a seal bag or wrap it 
 3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Freezer';
+
 [Tomato]
 /* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Tomato', 'Tomato.JPG', category_id from categories where category_name = 'Vegitables';

@@ -129,8 +129,8 @@
   
   <!--pc table -->  
 <?php if ($result->num_rows > 0) { ?>
-  <div class="table-responsive">
-  <table class="table table-bordered" id="pctable">
+  <div class="table-responsive" id="pctable">
+  <table class="table table-bordered" >
     <thead>
       <tr>
         <th>Name</th>

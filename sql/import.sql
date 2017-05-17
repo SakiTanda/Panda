@@ -45,14 +45,27 @@ create table methods (
     foreign key(place_id) references places(place_id)
 );
 
+
 ----------------------------------------------------
+/* 
+There is some sample of sql
+If you want to see the item of dairy product, look at [egg].
+If you want to see the item of meat product, look at [beef].
+If you want to see the room temperature, look at [tomato]. 
+*/
+
 [lettuce]
+/* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Lettuce', 'Lettuce.JPG', category_id from categories where category_name = 'Vegitables';
+/* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
 insert into periods (days, food_id, place_id) select 14, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'Lettuce1.JPG', '1. Do not cut the lettuce
 2. Dry and wrap it in paper towel
 3. Store it in a plastic bag in refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'Lettuce2.JPG', '1. Shred the lettuce
 2. Wash and dry it 
 3. Store it in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lettuce' and places.place_name = 'Freezer';
@@ -96,27 +109,40 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Leek2.JP
 2. Store it in a plastic bag in freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Leek' and places.place_name = 'Freezer';
 
 [Tomato]
+/* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Tomato', 'tomato.jpg', category_id from categories where category_name = 'Vegitables';
+/* for the days of room temperature */
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Room temperature';
+/* for the days of freezer */
 insert into periods (days, food_id, place_id) select 30, foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Freezer';
+/* for the picture & detail of room temperature */
 insert into methods (method_picture, detail, food_id, place_id) select 'tomato1.jpg', '1. Wash and dry
 2. Keep in the shade', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Room temperature';
+/* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'tomato2.jpg', '1. Wash and dry
 2. Put into a plastic bag
 3. Put into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Tomato' and places.place_name = 'Freezer';
 
 [beef]
+/* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Beef', 'beef.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 5, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
 insert into periods (days, food_id, place_id) select 25, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'beef1.jpg', '1. Wrap by rap
 2. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'beef2.jpg', '1. Wrap by rap
 2. Put into freezer as soon as possible', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
 
 [egg]
+/* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Egg', 'egg.jpg', category_id from categories where category_name = 'Daily products';
+/* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 24, foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'egg1.jpg', '1. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Egg' and places.place_name = 'Refrigeraor';
 
 

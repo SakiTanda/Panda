@@ -43,7 +43,9 @@
                 $sql .= "   AND f.category_id = 2 ";
             } elseif ($categoryValue == "dairy") {
                 $sql .= "   AND f.category_id = 3 ";
-            } 
+            } elseif ($categoryValue == "all") {
+                $sql .= "   AND f.category_id BETWEEN 1 AND 3 ";                
+            }
         }
         $sql .= "LEFT OUTER JOIN periods p1 ";
         $sql .= "   ON f.food_id = p1.food_id ";

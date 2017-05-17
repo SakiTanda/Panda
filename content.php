@@ -86,7 +86,7 @@
     <!-- Body section -->
     <body id="mainBodyStyle">
 		<!--change color by this id -->
-		<div id="color_con_<?php if ($row["category_id"] == 1){echo "vege";} elseif ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "daily";} ?>">
+		<div id="color_con_<?php if ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "daily";} else {echo "vege";} ?>">
         
 		<!-- Navi -->
         <nav id="mainNav" class="border_color">

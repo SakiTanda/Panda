@@ -20,6 +20,7 @@
         $sql .= "SELECT ";
         $sql .= "   f.food_name as name, ";
         $sql .= "   f.picture as picture, ";
+        $sql .= "   f.detail as detail, ";
         $sql .= "   c.category_id as category_id, ";
         $sql .= "   c.category_name as category_name, ";
         $sql .= "   p1.days as fridge_days, ";        
@@ -65,6 +66,17 @@
         $conn->close();
         
     }
+    
+    // easter
+    // create food id of special food in random
+    $easterID = (rand(1,3));
+    if ($easterID == 1) {
+        $easterID = 9;
+    } else if ($easterID == 2) {
+        $easterID = 10;
+    } else {
+        $easterID = 11;
+    }
 ?>
 
 <!doctype html>
@@ -87,7 +99,7 @@
     <!-- Body section -->
     <body id="mainBodyStyle">
 		<!--change color by this id -->
-		<div id="color_con_<?php if ($row["category_id"] == 2){echo "meat";} elseif ($row["category_id"] == 3){echo "daily";} else {echo "vege";} ?>">
+		<div id="color_con_<?php if ($row["category_id"] == 2 || $row["category_id"] == 5){echo "meat";} elseif ($row["category_id"] == 3){echo "daily";} else {echo "vege";} ?>">
         
 		<!-- Navi -->
         <nav id="mainNav" class="border_color">
@@ -120,6 +132,12 @@
         <!-- contents -->
         <div id="foodContent">
                
+            <!-- easter -->
+            <?php if ($row["detail"] != null) { ?>
+            <div class="easterTitle"><?php echo $row["category_name"] ?></div>
+            <div class="easterSubTitle"><?php echo $row["detail"] ?></div>
+            <?php } ?>
+
            <!-- title -->
             <div id="foodTitle" class="color_set"><span><?php echo $row["name"] ?></span></div>
             
@@ -220,7 +238,11 @@
         </form>
 
         <!-- easter -->           
-        <div id="easter" class="easter0"><a href="http://xyz-online.xyz/content.php?id=9"><img src="images/006-fruit.png" alt="easter"></a></div>
+        <div id="easter" class="easter0"><a href="content.php?id=<?php echo $easterID ?>"><img src="images/006-fruit.png" alt="easter"></a></div>
+        <div id="flower1" class="easter0"><img src="images/005-rose.png" alt="flower1"></div>
+        <div id="flower2" class="easter0"><img src="images/001-nature.png" alt="flower2"></div>
+        <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3"></div>
+
         
                <!-- footer -->
         <div class="spaceForFooter"></div>
@@ -241,5 +263,38 @@
 		</div>
                 
     </body>
-
+    
+    <?php if ($row["detail"] != null) { ?>
+        <script>
+            function openFlower1() {
+                document.getElementById("flower1").setAttribute('class', 'easter1');
+                $("#flower1").fadeIn("slow");
+            }
+            function openFlower2() {
+                document.getElementById("flower2").setAttribute('class', 'easter3');
+                $("#flower2").fadeIn("slow");
+            }
+            function openFlower3() {
+                document.getElementById("flower3").setAttribute('class', 'easter2');
+                $("#flower3").fadeIn("slow");
+            }
+            function hideFlower1(){
+                $("#flower1").fadeOut("slow");
+            }
+            function hideFlower2(){
+                $("#flower2").fadeOut("slow");
+            }
+            function hideFlower3(){
+                $("#flower3").fadeOut("slow");
+            }
+            setTimeout("openFlower1()", 0);
+            setTimeout("hideFlower1()", 500);
+            setTimeout("openFlower2()", 100);
+            setTimeout("hideFlower2()", 600);
+            setTimeout("openFlower3()", 300);
+            setTimeout("hideFlower3()", 800);
+            
+        </script>
+    <?PHP } ?>
+    
 </html>

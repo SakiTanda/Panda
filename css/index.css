@@ -178,4 +178,11 @@ padding-right:23%}
     }
 }
 
+@media screen and (max-width: 320px){
+	#searchText { width:65%;}
+	
+	
+	
+	
+}
 

@@ -155,7 +155,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Ginger1.
 2. Seal the bag(suck out as much excess air as possible)
 3. Place it in dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Room temperature';
 /* for the picture & detail of refrigerator */
-insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Place it in dark place in a room 
+insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Put them in a sealable plastic bag 
 2. Seal the bag(suck out as much excess air as possible)
 3. Put it in a Fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Refrigeraor';
 
@@ -186,7 +186,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Onion1.J
 /* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'Onion2.JPG', '1. Slice or chop it into small pieces
 2. Put it into sealable bag
-3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Freezer';
+3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Freezer';
 
 
 [beef]

@@ -77,78 +77,80 @@ padding-right:23%}
 
 .overlay {
   position: absolute;
-  bottom: 0;
+  bottom: -20%;
   left: 100%;
   right: 0;
   background-color: #e3493b;
   overflow: hidden;
   width: 0;
-  height: 30%;
+  height: 29%;
   transition: .5s ease;
 }
 
 .overlay_1 
 	{
   position: absolute;
-  bottom: 0;
+  bottom:-20%;
   left: 100%;
   right: 0;
   background-color: #00a368;
   overflow: hidden;
   width: 0;
-  height: 30%;
+  height: 29%;
   transition: .5s ease;
 }
 
 .overlay_2 
 	{
   position: absolute;
-  bottom: 0;
+  bottom:-20%;
   left: 100%;
   right: 0;
   background-color: #6599ff;
   overflow: hidden;
   width: 0;
-  height: 30%;
+  height: 29%;
   transition: .5s ease;
 }
 
 .overlay_3{
   position: absolute;
-  bottom: 0;
+  bottom: -20%;;
   left: 100%;
   right: 0;
   background-color: #ffb412;
   overflow: hidden;
   width: 0;
-  height: 30%;
+  height: 29%;
   transition: .5s ease;
 }
 
+.container_overlay { margin-bottom: 7%}
+
 .container_overlay:hover .overlay {
-  width: 100%;
-  left: 0;
+  width: 80%;
+  left: 10%;
   opacity:0.6;
   cursor:pointer
 }
 
 .container_overlay:hover .overlay_1 {
-  width: 100%;
-  left: 0;
+  width: 80%;
+  left: 10%;
   opacity:0.6;
   cursor:pointer
 }
 
 .container_overlay:hover .overlay_2 {
-  width: 100%;
-  left: 0;
+  width: 80%;
+  left: 10%;
   opacity:0.6;
   cursor:pointer
 }
 
 .container_overlay:hover .overlay_3 {
-  width: 100%;
-  left: 0;
+  width: 80%;
+  left: 10%;
   opacity:0.6;
   cursor:pointer
 }

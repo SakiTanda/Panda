@@ -32,7 +32,7 @@
 </div>
   
 <div class="container">  
-  <h4 class="text-center">Or search by category:</h4>  
+  <h4 class="text-center">Or search by <b>category</b>:</h4>  
   <form action="foodlist.php" method="post" id = "extend_bottom">
 
   <div class="row"> 
@@ -40,9 +40,10 @@
                
         
 		 <input type="image" src="images/meat.jpg" alt="SubmitImg" style="width:100%" id = "cMeat" class="img-responsive" name = "category" value = "meat">
-		<a href="index.html"><div class="overlay">
-		<div class="text_overlay">Meat</div>
-		</div></a>
+		<div class="overlay" name = "category" value = "meat">
+		<div class="text_overlay" value = "meat">Meat</div>
+		</div>
+		
       </div>
    
     <div class="col-xs-6 col-sm-3 container_overlay"> 

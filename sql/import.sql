@@ -113,7 +113,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Leek2.JP
 
 [Green Pepper]
 /* for the picture on foodlist page */
-insert into foods (food_name, picture, category_id) select 'Green pepper', 'Greenpepper.JPG', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'GreenPepper', 'Greenpepper.JPG', category_id from categories where category_name = 'Vegitables';
 /* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Green pepper' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
@@ -161,7 +161,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.
 
 [Chinese Cabbage]
 /* for the picture on foodlist page */
-insert into foods (food_name, picture, category_id) select 'Chinese cabbage', 'Chinesecabbage.JPG', category_id from categories where category_name = 'Vegitables';
+insert into foods (food_name, picture, category_id) select 'ChineseCabbage', 'Chinesecabbage.JPG', category_id from categories where category_name = 'Vegitables';
 /* for the days of room temperature */
 insert into periods (days, food_id, place_id) select 7, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chinese cabbage' and places.place_name = 'Room temperature';
 /* for the days of refrigerator */

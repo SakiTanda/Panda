@@ -8,7 +8,9 @@
 
 
 /******************Xin-css***********************/
-
+table td{
+	vertical-align:center;
+}
 #container-xin{
 	margin-top:10px;
 	display:block;

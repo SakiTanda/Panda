@@ -120,15 +120,10 @@
 
 </div>
 <div id="title-container"><div id="title"><h2>Food List</h2></div></div>
+
 <div class="container" id="container-xin">
 
-<!-- Body section -->
-    
 
-
-  
-  
-  
   <!--pc table -->  
 <?php if ($result->num_rows > 0) { ?>
   <div class="table-responsive" id="pctable">
@@ -169,7 +164,7 @@
 
   <!--mobile version table -->
 <?php if ($result2->num_rows > 0) { ?>
-  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true" mobiletable>
+  <div class="panel-group mobiletable" id="accordion" role="tablist" aria-multiselectable="true">
   <?php while ($row = $result2->fetch_assoc()) { ?>  
   <div class="panel panel-default">
     <div class="panel-heading <?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>" role="tab" id="<?php if ($row["category_id"] == 1){echo "titlevege";} elseif ($row["category_id"] == 2){echo "titlmeat";} elseif ($row["category_id"] == 3){echo "titldairy";} ?>">

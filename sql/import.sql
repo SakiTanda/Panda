@@ -155,7 +155,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Ginger1.
 2. Seal the bag(suck out as much excess air as possible)
 3. Place it in dark place in a room', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Room temperature';
 /* for the picture & detail of refrigerator */
-insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Place it in dark place in a room 
+insert into methods (method_picture, detail, food_id, place_id) select 'Ginger2.JPG', '1. Put them in a sealable plastic bag 
 2. Seal the bag(suck out as much excess air as possible)
 3. Put it in a Fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Refrigeraor';
 
@@ -186,7 +186,7 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Onion1.J
 /* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'Onion2.JPG', '1. Slice or chop it into small pieces
 2. Put it into sealable bag
-3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Ginger' and places.place_name = 'Freezer';
+3. Put it into freezer', foods.food_id, places.place_id from foods, places where foods.food_name = 'Onion' and places.place_name = 'Freezer';
 
 
 [beef]
@@ -197,11 +197,75 @@ insert into periods (days, food_id, place_id) select 5, foods.food_id, places.pl
 /* for the days of freezer */
 insert into periods (days, food_id, place_id) select 25, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
 /* for the picture & detail of refrigerator */
-insert into methods (method_picture, detail, food_id, place_id) select 'beef1.jpg', '1. Wrap by rap
-2. Put into refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
+insert into methods (method_picture, detail, food_id, place_id) select 'beef1.jpg', '1. slices into the quantity of each time you want to eat
+2. get a good tight wrap of plastic wrap around it and store in the bottom of your fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
 /* for the picture & detail of freezer */
 insert into methods (method_picture, detail, food_id, place_id) select 'beef2.jpg', '1. Wrap by rap
 2. Put into freezer as soon as possible', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
+
+[lamb]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Lamb', 'lamb.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lamb' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 85, foods.food_id, places.place_id from foods, places where foods.food_name = 'Lamb' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'lamb1.jpg', '1. Fresh lamb should be refrigerated at or below 4 degrees
+2. Ground lamb and stew meat should be used within 2 days
+3. Use chops and roasts in 3 to 5 days', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lamb' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'lamb2.jpg', '1. wrap it in its original packaging with airtight freezer wrap
+2. place it in an airtight freezer bag to prevent freezer burn
+3. use frozen lamb in 3 to 4 months', foods.food_id, places.place_id from foods, places where foods.food_name = 'Lamb' and places.place_name = 'Freezer';
+
+[pork]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Pork', 'pork.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 1, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 10, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'pork1.jpg', '1. Split the packaging of pre-packaged fresh meats to allow air to circulate
+2. Place raw meat in a container, cover loosely with plastic wrap and place on the lowest shelf
+3. Put cooked meats on a plate, cover loosely and place on a high shelf, well away from raw meat', foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'pork2.jpg', '1. use packaging recommended for freezers such as heavy duty plastic bags
+2. Remove the air and seal with a twist tie
+3. Do not use thin plastic wrap, greaseproof or brown paper, unless the package is placed in a plastic bag
+4. Label and date all foods before freezing', foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Freezer';
+
+[salmon]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Salmon', 'salmon.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Salmon' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 60, foods.food_id, places.place_id from foods, places where foods.food_name = 'Salmon' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'salmon1.jpg', '1. Unwrap the salmon, and gently pat dry
+2. Put two or three slices of lemon on top of the fish and wrap tightly in plastic wrap
+3. Store the fish in the bottom of the refrigerator', foods.food_id, places.place_id from foods, places where foods.food_name = 'Salmon' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'salmon2.jpg', '1. The lower the temperature you can keep the fish at, the longer it will keep', foods.food_id, places.place_id from foods, places where foods.food_name = 'Salmon' and places.place_name = 'Freezer';
+
+[chicken]
+/* for the picture on foodlist page */
+insert into foods (food_name, picture, category_id) select 'Chicken', 'chicken.jpg', category_id from categories where category_name = 'Meats';
+/* for the days of refrigerator */
+insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Refrigeraor';
+/* for the days of freezer */
+insert into periods (days, food_id, place_id) select 10, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Freezer';
+/* for the picture & detail of refrigerator */
+insert into methods (method_picture, detail, food_id, place_id) select 'chicken1.jpg', '1. Uncooked chicken meat should be stored in a refrigerator at a maximum temperature of 4 degrees
+2. being wrapped in plastic
+3. raw meats should be placed on a tray or plate
+4. placed on a lower shelf in the fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Refrigeraor';
+/* for the picture & detail of freezer */
+insert into methods (method_picture, detail, food_id, place_id) select 'chicken2.jpg', '1. Do not freeze raw meat which is not completely fresh
+2. put in plastic', 
+foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Freezer';
 
 [egg]
 /* for the picture on foodlist page */

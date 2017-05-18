@@ -193,9 +193,9 @@ insert into methods (method_picture, detail, food_id, place_id) select 'Onion2.J
 /* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Beef', 'beef.jpg', category_id from categories where category_name = 'Meats';
 /* for the days of refrigerator */
-insert into periods (days, food_id, place_id) select 5, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
+insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
-insert into periods (days, food_id, place_id) select 25, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
+insert into periods (days, food_id, place_id) select 180, foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Freezer';
 /* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'beef1.jpg', '1. slices into the quantity of each time you want to eat
 2. get a good tight wrap of plastic wrap around it and store in the bottom of your fridge', foods.food_id, places.place_id from foods, places where foods.food_name = 'Beef' and places.place_name = 'Refrigeraor';
@@ -223,9 +223,9 @@ insert into methods (method_picture, detail, food_id, place_id) select 'lamb2.jp
 /* for the picture on foodlist page */
 insert into foods (food_name, picture, category_id) select 'Pork', 'pork.jpg', category_id from categories where category_name = 'Meats';
 /* for the days of refrigerator */
-insert into periods (days, food_id, place_id) select 1, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Refrigeraor';
+insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
-insert into periods (days, food_id, place_id) select 10, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Freezer';
+insert into periods (days, food_id, place_id) select 180, foods.food_id, places.place_id from foods, places where foods.food_name = 'Pork' and places.place_name = 'Freezer';
 /* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'pork1.jpg', '1. Split the packaging of pre-packaged fresh meats to allow air to circulate
 2. Place raw meat in a container, cover loosely with plastic wrap and place on the lowest shelf
@@ -256,7 +256,7 @@ insert into foods (food_name, picture, category_id) select 'Chicken', 'chicken.j
 /* for the days of refrigerator */
 insert into periods (days, food_id, place_id) select 2, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Refrigeraor';
 /* for the days of freezer */
-insert into periods (days, food_id, place_id) select 10, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Freezer';
+insert into periods (days, food_id, place_id) select 180, foods.food_id, places.place_id from foods, places where foods.food_name = 'Chicken' and places.place_name = 'Freezer';
 /* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'chicken1.jpg', '1. Uncooked chicken meat should be stored in a refrigerator at a maximum temperature of 4 degrees
 2. being wrapped in plastic

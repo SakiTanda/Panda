@@ -265,7 +265,7 @@ insert into foods (food_name, picture, category_id) select 'Cheese', 'Cheese.jpg
 insert into periods (days, food_id, place_id) select 180, foods.food_id, places.place_id from foods, places where foods.food_name = 'Cheese' and places.place_name = 'Refrigeraor';
 /* for the picture & detail of refrigerator */
 insert into methods (method_picture, detail, food_id, place_id) select 'Cheese1.jpg', '1.Cut whole cheese to small part about 225g-500g(option)
-2.Cover with airtight plastic bag(-1-1degree)
+2.Cover with airtight plastic bag(-1-1 degree)
 3.Use food expire date tracker to track food', foods.food_id, places.place_id from foods, places where foods.food_name = 'Cheese' and places.place_name = 'Refrigeraor';
 
 [Milk]

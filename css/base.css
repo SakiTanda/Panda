@@ -414,6 +414,59 @@ border_color - border color of nav bar **/
     color: #e3493b;  
 } 
 
+/* Easter egg */
+.easter1 {
+    position: fixed;
+    top: 130px;
+    right: 10px;
+}
+.easter2 {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
+.easter3 {
+    position: fixed;
+    bottom: 70px;
+    left: 10px;
+}
+#flower1 {
+    position: fixed;
+    top: 90px;
+    left: 220px;
+}
+#flower1 img {
+    width: 80%;
+}
+#flower2 img {
+    width: 100%;
+}
+#flower3 img {
+    width: 80%;
+}
+
+.easterTitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.easterSubTitle {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 /******************************************** shared class ********************************************/
 
 .verticalTop {
@@ -583,7 +636,7 @@ border_color - border color of nav bar **/
 		width: 100%;
     }
     #searchConditionalTable td {
-        width: 50%;
+        width: 60%;
 		line-height:30px;
 		display:inline-block;
 
@@ -621,4 +674,20 @@ border_color - border color of nav bar **/
         padding-right: 20px;
         width: 100%;
     }
+    /**** easter ****/
+    .easterSubTitle {
+        margin: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    #flower1 img {
+        width: 80%;
+    }
+    #flower2 img {
+        width: 50%;
+    }
+    #flower3 img {
+        width: 30%;
+    }
+
 }

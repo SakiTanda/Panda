@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="js/panel.js"></script>
+        <script type="text/javascript" src="js/easter.js"></script>
         <link rel="stylesheet" href="css/base.css">
     </head>
 
@@ -49,10 +50,14 @@
                     
         <!-- contents -->
         <div id="foodContent">
-               
+
+            <!-- easter -->
+            <div class="easterTitle">Spring vegitables</div>
+            <div class="easterSubTitle">You can enjoy these ferns a very short season in spring so you have to be quick. Their taste quite similar to asparagus. Also, they offer many health benefits, such as vitamin A, vitamin C, and some fiber.</div>
+        
            <!-- title -->
             <div id="foodTitle" class="color_set"><span>Lettus</span></div>
-            
+                        
             <table id="methodTable" class="letter_color">
                 <tr>
                     <td colspan="2">
@@ -132,6 +137,12 @@
 				</table>
         </form>
 
+        <!-- easter -->           
+        <div id="easter" class="easter0"><a href="http://xyz-online.xyz/content.php?id=9"><img src="images/006-fruit.png" alt="easter"></a></div>
+        <div id="flower1" class="easter0"><img src="images/005-rose.png" alt="flower1"></div>
+        <div id="flower2" class="easter0"><img src="images/001-nature.png" alt="flower2"></div>
+        <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3"></div>
+        
                <!-- footer -->
         <div class="spaceForFooter"></div>
         <div id="conFooter">
@@ -151,5 +162,36 @@
 		</div>
                 
     </body>
+    
+    <script>
+        function openFlower1() {
+            document.getElementById("flower1").setAttribute('class', 'flower1');
+            $("#flower1").fadeIn("slow");
+        }
+        function openFlower2() {
+            document.getElementById("flower2").setAttribute('class', 'easter3');
+            $("#flower2").fadeIn("slow");
+        }
+        function openFlower3() {
+            document.getElementById("flower3").setAttribute('class', 'easter2');
+            $("#flower3").fadeIn("slow");
+        }
+        function hideFlower1(){
+            $("#flower1").fadeOut("slow");
+        }
+        function hideFlower2(){
+            $("#flower2").fadeOut("slow");
+        }
+        function hideFlower3(){
+            $("#flower3").fadeOut("slow");
+        }
+        setTimeout("openFlower1()", 0);
+        setTimeout("hideFlower1()", 500);
+        setTimeout("openFlower2()", 100);
+        setTimeout("hideFlower2()", 600);
+        setTimeout("openFlower3()", 300);
+        setTimeout("hideFlower3()", 800);
+        
+    </script>
 
 </html>

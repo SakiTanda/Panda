@@ -134,12 +134,17 @@
                
             <!-- easter -->
             <?php if ($row["detail"] != null) { ?>
-            <div class="easterTitle"><?php echo $row["category_name"] ?></div>
-            <div class="easterSubTitle"><?php echo $row["detail"] ?></div>
+            <div class="easterTitle">Congratulation</div>
+            <div class="easterSubTitle">You can get special food infomation in Spring!!!</div>
             <?php } ?>
 
            <!-- title -->
-            <div id="foodTitle" class="color_set"><span><?php echo $row["name"] ?></span></div>
+            <div id="foodTitle" class="color_set">
+                <span><?php echo $row["name"] ?></span>
+                <?php if ($row["detail"] != null) { ?>
+                <div id="subTitleEaster"><?php echo $row["detail"] ?></div>
+                <?php } ?>
+            </div>
             
             <!-- preservation methods -->
             <!--<div id="conHeader" class="color_set">Preservation Methods</div>-->
@@ -237,9 +242,10 @@
 				</table>
         </form>
 
-        <!-- easter -->           
+        <!-- easter -->         
+        <?php if ($row["detail"] == null) { ?>
         <div id="easter" class="easter0"><a href="content.php?id=<?php echo $easterID ?>"><img src="images/006-fruit.png" alt="easter"></a></div>
-        <?php if ($row["detail"] != null) { ?>
+        <?php } else { ?>
         <div id="flower1" class="easter0"><img src="images/005-rose.png" alt="flower1"></div>
         <div id="flower2" class="easter0"><img src="images/001-nature.png" alt="flower2"></div>
         <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3"></div>

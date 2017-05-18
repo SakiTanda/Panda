@@ -240,6 +240,8 @@
 #foodTitle span {
     padding-left: 20px;     
 }
+
+
 /*short summary table*/
 #conResultTable {
 	margin:20px auto;
@@ -436,7 +438,7 @@ border_color - border color of nav bar **/
     left: 220px;
 }
 #flower1 img {
-    width: 80%;
+    width: 60%;
 }
 #flower2 img {
     width: 100%;
@@ -447,7 +449,7 @@ border_color - border color of nav bar **/
 
 .easterTitle {
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
     background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
@@ -458,13 +460,19 @@ border_color - border color of nav bar **/
 .easterSubTitle {
     margin: 30px 0;
     text-align: center;
-    font-size: 17px;
+    font-size: 28px;
     font-weight: bold;
     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
     background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(1, #f22) );
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+#subTitleEaster {
+    padding: 0 20px 20px 20px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
 }
 
 /******************************************** shared class ********************************************/
@@ -675,10 +683,19 @@ border_color - border color of nav bar **/
         width: 100%;
     }
     /**** easter ****/
+    .easterTitle {
+        font-size: 35px;
+    }
     .easterSubTitle {
-        margin: 10px;
-        font-size: 15px;
-        font-weight: 500;
+        margin: 10px 0 20px 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #subTitleEaster {
+        padding: 10px 20px 20px 20px;
+        font-size: 17px;
+        font-weight: 100;
+        line-height: 20px;
     }
     #flower1 img {
         width: 80%;

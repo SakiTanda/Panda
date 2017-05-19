@@ -544,7 +544,7 @@ border_color - border color of nav bar **/
 		font-size: 22px;
 	}
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 992px){
 
     /* navigation bar */
     #mainNav {

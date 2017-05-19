@@ -91,7 +91,7 @@ a:active {
 	color:white;
 	vertical-align:middle;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 992px){
     #container-xin{
         width:100%;
     }

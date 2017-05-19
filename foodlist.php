@@ -119,7 +119,7 @@
         </nav>
 
 </div>
-<div id="title-container"><div id="title"><h2>Food List</h2></div></div>
+<div id="title-container"><div id="title"><h2 id="foodlist">Food List</h2></div></div>
 
 <div class="container" id="container-xin">
 

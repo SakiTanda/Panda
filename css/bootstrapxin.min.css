@@ -11,6 +11,9 @@
 table td{
 	vertical-align:center;
 }
+#foodlist{
+	padding-left:10px;
+}
 #container-xin{
 	margin-top:10px;
 	display:block;
@@ -26,8 +29,9 @@ table td{
 	height:70px;
 	}
 	#title{
-	width:96%;
-	margin:25px 2% 10px 2%;
+	width:100%;
+	margin-top:25px;
+	margin-bottom:10px;
 	position:fixed;
 	border-bottom:1.5px solid #ddd;
 	z-index:1;
@@ -107,8 +111,9 @@ a:active {
 	height:70px;
 	}
 	#title{
-	width:96%;
-	margin:0px 2% 10px 2%;
+	width:100%;
+	margin-top:0px;
+	margin-bottom:10px;
 	position:fixed;
 	border-bottom:1.5px solid #ddd;
 	z-index:1;
@@ -150,8 +155,9 @@ a:active {
 	height:70px;
 	}
 	#title{
-	width:96%;
-	margin:0px 2% 10px 2%;
+	width:100%;
+	margin-top:0px;
+	margin-bottom:10px;
 	position:fixed;
 	border-bottom:1.5px solid #ddd;
 	z-index:1;

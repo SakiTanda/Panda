@@ -9,13 +9,14 @@
 
 /******************Xin-css***********************/
 table td{
-	vertical-align:middle;
+	vertical-align:center;
 }
 #container-xin{
 	margin-top:10px;
 	display:block;
 	width:75%;
 }
+
 #title-container{
 	margin-top:0px;
 	width:100%;
@@ -23,16 +24,15 @@ table td{
 	margin-bottom:10px;
 	display:block;
 	height:70px;
-}
-
-#title{
+	}
+	#title{
 	width:96%;
 	margin:25px 2% 10px 2%;
 	position:fixed;
 	border-bottom:1.5px solid #ddd;
 	z-index:1;
 	background-color:white;
-}
+	}
 #nav{
 	height:60px;
 }
@@ -90,6 +90,49 @@ a:active {
 	font-size:2.5em;
 	color:white;
 	vertical-align:middle;
+}
+@media screen and (max-width: 1000px){
+    #container-xin{
+        width:100%;
+    }
+	#pctable{
+		display:none;
+	}
+	#title-container{
+	top:60px;
+	width:100%;
+	margin-top:0px;
+	margin-bottom:10px;
+	display:block;
+	height:70px;
+	}
+	#title{
+	width:96%;
+	margin:0px 2% 10px 2%;
+	position:fixed;
+	border-bottom:1.5px solid #ddd;
+	z-index:1;
+	background-color:white;
+	}
+	#accordion{
+		top:100px;
+	}
+	.mobiletable{
+		display:block;
+	}	
+	.titleword{
+		color:white;
+		font-size:1.5em;
+	}
+	#accordion .panel .titlevege{
+		background-color:#00a368;
+	}
+	#accordion .panel .titlmeat{
+		background-color:#e3493b;
+	}
+	#accordion .panel .titldairy{
+		background-color:#6599ff;
+	}
 }
 @media screen and (max-width: 768px){
     #container-xin{
@@ -158,7 +201,26 @@ a:active {
     color: white;
     background-color: black;
 }
+@media screen and (max-width: 1000px){
 
+    #categoryButton {
+        width:80px;
+        height:40px;
+        font-size:16px;
+	    float:right;	
+    }
+	#footerTable{ 
+		width: 90%; 
+	}
+    #conFooter {
+        padding: 15px 5px;
+    }
+    #footerTable {
+        padding-right: 0;
+        width: 100%;
+    }
+
+}
 @media screen and (max-width: 768px){
 
     #categoryButton {

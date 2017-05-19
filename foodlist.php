@@ -138,21 +138,36 @@
     </thead>
     <tbody>
     
-    <?php while ($row = $result->fetch_assoc()) { ?>
+    <?php while ($row = $result->fetch_assoc()) { 
+            $numCol = 0;
+            if ($row["fridge_days"] != null) {
+                $itemList[$numCol]['category'] = "Refrigerator";
+                $itemList[$numCol]['days'] = $row["fridge_days"];
+                $numCol++;
+            }
+            if ($row["freezer_days"] != null) {
+                $itemList[$numCol]['category'] = "Freezer";
+                $itemList[$numCol]['days'] = $row["freezer_days"];
+                $numCol++;
+            }
+            if ($row["room_days"] != null) {
+                $itemList[$numCol]['category'] = "Room temperature";
+                $itemList[$numCol]['days'] = $row["room_days"];
+                $numCol++;
+            }
+    ?>
 	  <tr class="<?php if ($row["category_id"] == 1){echo "pc-title-vege";} elseif ($row["category_id"] == 2){echo "pc-title-meat";} elseif ($row["category_id"] == 3){echo "pc-title-dairy";} ?>">
-		<td rowspan=3><a href="content.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></td>
-        <td rowspan=3><a href="content.php?id=<?php echo $row["id"] ?>"><img class="img-responsive" src="food-images/<?php echo $row["picture"] ?>"></a></td>
-        <td>Refrigerator</td> 
-		<td><?php if ($row["fridge_days"] != null) {echo $row["fridge_days"] . " days";} else {echo '-';} ?></td>
+		<td rowspan=<?php echo $numCol ?>><a href="content.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></td>
+        <td rowspan=<?php echo $numCol ?>><a href="content.php?id=<?php echo $row["id"] ?>"><img class="img-responsive" src="food-images/<?php echo $row["picture"] ?>"></a></td>
+        <td><?php echo $itemList[0]['category'] ?></td>
+		<td><?php echo $itemList[0]['days'] ?></td>
 	  </tr>
+      <?php if ($numCol == 2) { ?>
 	  <tr class="<?php if ($row["category_id"] == 1){echo "pc-title-vege";} elseif ($row["category_id"] == 2){echo "pc-title-meat";} elseif ($row["category_id"] == 3){echo "pc-title-dairy";} ?>">
-		<td>Freezer</td> 
-		<td><?php if ($row["freezer_days"] != null) {echo $row["freezer_days"] . " days";} else {echo '-';} ?></td>
+        <td><?php echo $itemList[1]['category'] ?></td>
+		<td><?php echo $itemList[1]['days'] ?></td>
 	  </tr>
-	  <tr class="<?php if ($row["category_id"] == 1){echo "pc-title-vege";} elseif ($row["category_id"] == 2){echo "pc-title-meat";} elseif ($row["category_id"] == 3){echo "pc-title-dairy";} ?>">
-		<td>Room temperature</td> 
-		<td><?php if ($row["room_days"] != null) {echo $row["room_days"] . " days";} else {echo '-';} ?></td>
-      </tr>
+      <?php } ?>
     <?php } ?>
     
     </tbody>

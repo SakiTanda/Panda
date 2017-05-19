@@ -11,6 +11,32 @@ insert into categories (category_name) values ('Spring Meats');
 
 ----------------------------------------------------
 
+create table temperatures (
+    category_id int not null,
+    place_id int not null,
+    detail text,
+    PRIMARY KEY(category_id, place_id),
+    foreign key(category_id) references categories(category_id),
+    foreign key(place_id) references places(place_id)
+);
+insert into temperatures (category_id, place_id, detail) value ('1', '1', 'Temperature: around 6 degree');
+insert into temperatures (category_id, place_id, detail) value ('1', '2', 'Temperature: around -18 degree');
+insert into temperatures (category_id, place_id, detail) value ('1', '3', 'Temperature: around 10 to 14 degree');
+insert into temperatures (category_id, place_id, detail) value ('2', '1', 'Temperature: around 0 degree');
+insert into temperatures (category_id, place_id, detail) value ('2', '2', 'Temperature: around -18 degree');
+insert into temperatures (category_id, place_id, detail) value ('2', '3', 'Temperature: around 10 to 14 degree');
+insert into temperatures (category_id, place_id, detail) value ('3', '1', 'Temperature: around 3 degree');
+insert into temperatures (category_id, place_id, detail) value ('3', '2', 'Temperature: around -18 degree');
+insert into temperatures (category_id, place_id, detail) value ('3', '3', 'Temperature: around 10 to 14 degree');
+insert into temperatures (category_id, place_id, detail) value ('4', '1', 'Temperature: around 6 degree');
+insert into temperatures (category_id, place_id, detail) value ('4', '2', 'Temperature: around -18 degree');
+insert into temperatures (category_id, place_id, detail) value ('4', '3', 'Temperature: around 10 to 14 degree');
+insert into temperatures (category_id, place_id, detail) value ('5', '1', 'Temperature: around 0 degree');
+insert into temperatures (category_id, place_id, detail) value ('5', '2', 'Temperature: around -18 degree');
+insert into temperatures (category_id, place_id, detail) value ('5', '3', 'Temperature: around 10 to 14 degree');
+
+----------------------------------------------------
+
 create table places (
     place_id int not null auto_increment primary key,
     place_name varchar(20) not null

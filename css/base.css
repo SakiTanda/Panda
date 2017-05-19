@@ -282,7 +282,7 @@
     padding: 0 0 0 30px;
 	width:40%;
 }
-#methodTable img {
+.tdleft img {
     width: 100%;
 }
 #methodTable .tdright {
@@ -299,11 +299,16 @@
 	border: 2px solid;
 }
 .methodHeader span {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .methodHeaderDays {
     font-weight: 300;
     font-size: 27px;
+}
+.methodHeader img {
+	width:25px;
+	height:25px;
+	cursor:pointer;
 }
 /*Setting color according to Food category*/
 /**color_set - food name & Method header, 
@@ -775,6 +780,11 @@ border_color - border color of nav bar **/
     .methodHeaderDays {
         font-size: 18px;
     }
+	.methodHeader img {
+		width:20px;
+		height:20px;
+		cursor:pointer;
+	}
     #methodTable ul {
         margin: 0;
         padding-left: 20px;        

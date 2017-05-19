@@ -93,6 +93,8 @@
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="js/panel.js"></script>
         <script type="text/javascript" src="js/easter.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/jquery.balloon.js"></script>
         <link rel="stylesheet" href="css/base.css">
     </head>
 
@@ -153,7 +155,9 @@
                 <?php if ($row["fridge_days"] != null) { ?>
                 <tr>
                     <td colspan="2">
-                        <div class="methodHeader letter_color tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> days</span></span></div>
+                        <div class="methodHeader letter_color tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> days</span></span>
+							<a href="#" class="fridgeBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+						</div>
                     </td>
                 </tr>
                 <tr>
@@ -171,7 +175,9 @@
                 <?php if ($row["room_days"] != null) { ?>
                 <tr>
                     <td colspan="2">
-                        <div class="methodHeader letter_color tdcolor_set"><span>Room temperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span></div>
+                        <div class="methodHeader letter_color tdcolor_set"><span>Room temperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span>
+							<a href="#" class="roomBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+						</div>
                     </td>
                 </tr>
                 <tr>
@@ -189,7 +195,9 @@
                 <?php if ($row["freezer_days"] != null) { ?>
                 <tr>
                     <td colspan="2">
-                        <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> days</span></span></div>
+                        <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> days</span></span>
+							<a href="#" class="freezerBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+						</div>
                     </td>
                 </tr>
                 <tr>
@@ -270,6 +278,64 @@
 		</div>
                 
     </body>
+	
+			<!--Jquery for popup baloon-->
+			<script>
+			$(function() {	
+						$('.fridgeBaloon').balloon({
+							tipSize: 20,
+							position: "top",
+							
+							css: {
+								width:'150px',
+								border: 'solid 4px #5baec0',
+								padding: '10px',
+								fontSize: '18px',
+								fontWeight: 'bold',
+								backgroundColor: 'white',
+								color: 'black',
+								opacity:'1'
+							}
+						});
+			});
+			
+			$(function() {	
+						$('.roomBaloon').balloon({
+							tipSize: 20,
+							position: "top",
+							
+							css: {
+								width:'150px',
+								border: 'solid 4px #5baec0',
+								padding: '10px',
+								fontSize: '18px',
+								fontWeight: 'bold',
+								backgroundColor: 'white',
+								color: 'black',
+								opacity:'1'
+							}
+						});
+			});
+			$(function() {	
+						$('.freezerBaloon').balloon({
+							tipSize: 20,
+							position: "top",
+							
+							css: {
+								width:'150px',
+								border: 'solid 4px #5baec0',
+								padding: '10px',
+								fontSize: '18px',
+								fontWeight: 'bold',
+								backgroundColor: 'white',
+								color: 'black',
+								opacity:'1'
+							}
+				});
+			});
+		</script>
+		
+		
     
     <?php if ($row["detail"] != null) { ?>
         <script>

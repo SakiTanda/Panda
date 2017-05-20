@@ -27,8 +27,8 @@ table td{
 	margin-bottom:10px;
 	display:block;
 	height:70px;
-	}
-	#title{
+}
+#title{
 	width:100%;
 	margin-top:25px;
 	margin-bottom:10px;
@@ -36,7 +36,14 @@ table td{
 	border-bottom:1.5px solid #ddd;
 	z-index:1;
 	background-color:white;
-	}
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0 30px;
+}
+#resultNumText{
+    font-size: 20px;
+    padding-left: 35px;
+}
 #nav{
 	height:60px;
 }

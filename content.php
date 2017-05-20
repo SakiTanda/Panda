@@ -149,7 +149,6 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="js/jquery.balloon.js"></script>
         <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/csshake.min.css">
     </head>
 
     <!-- Body section -->
@@ -210,7 +209,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> days</span></span>
-							<div class="shake-slow"><a href="#" class="fridgeBaloon" title="<?php echo nl2br($row_fridge["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
+							<a href="#" class="fridgeBaloon" title="<?php echo nl2br($row_fridge["detail"]) ?>"><img src="images/lightBulb.png"></a>
 						</div>
                     </td>
                 </tr>
@@ -230,7 +229,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Room temperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span>
-							<div class="shake-slow"><a href="#" class="roomBaloon" title="<?php echo nl2br($row_room["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
+							<a href="#" class="roomBaloon" title="<?php echo nl2br($row_room["detail"]) ?>"><img src="images/lightBulb.png"></a>
 						</div>
                     </td>
                 </tr>
@@ -250,7 +249,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> days</span></span>
-							<div class="shake-slow"><a href="#" class="freezerBaloon" title="<?php echo nl2br($row_freezer["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
+							<a href="#" class="freezerBaloon" title="<?php echo nl2br($row_freezer["detail"]) ?>"><img src="images/lightBulb.png"></a>
 						</div>
                     </td>
                 </tr>

@@ -119,7 +119,8 @@
         </nav>
 
 </div>
-<div id="title-container"><div id="title"><h2 id="foodlist">Food List</h2></div></div>
+
+<div id="title-container"><div id="title">Food List<span id="resultNumText"><?php if ($result->num_rows > 1) { echo $result->num_rows . " Results"; } else { echo $result->num_rows . " Result"; } ?><span></div></div>
 
 <div class="container" id="container-xin">
 

@@ -63,6 +63,59 @@
             $row = $result->fetch_assoc();
         }
 
+        // create SELECT query for light bulb
+        // fridge
+        if ($row["fridge_days"] != null) {
+            $sql_fridge = "";
+            $sql_fridge .= "SELECT ";
+            $sql_fridge .= "   t.detail as detail ";
+            $sql_fridge .= "FROM temperatures t ";
+            $sql_fridge .= "WHERE t.category_id = ";
+            $sql_fridge .=    $row["category_id"];
+            $sql_fridge .= "  AND t.place_id = 1";
+            
+            $result_fridge = $conn->query($sql_fridge);
+            if ($result_fridge->num_rows == 0) {
+                echo('Error: No such data.');
+            } else {
+                $row_fridge = $result_fridge->fetch_assoc();
+            }
+        }
+        // freezer
+        if ($row["freezer_days"] != null) {
+            $sql_freezer = "";
+            $sql_freezer .= "SELECT ";
+            $sql_freezer .= "   t.detail as detail ";
+            $sql_freezer .= "FROM temperatures t ";
+            $sql_freezer .= "WHERE t.category_id = ";
+            $sql_freezer .=    $row["category_id"];
+            $sql_freezer .= "  AND t.place_id = 2";
+            
+            $result_freezer = $conn->query($sql_freezer);
+            if ($result_freezer->num_rows == 0) {
+                echo('Error: No such data.');
+            } else {
+                $row_freezer = $result_freezer->fetch_assoc();
+            }
+        }
+        // room
+        if ($row["room_days"] != null) {
+            $sql_room = "";
+            $sql_room .= "SELECT ";
+            $sql_room .= "   t.detail as detail ";
+            $sql_room .= "FROM temperatures t ";
+            $sql_room .= "WHERE t.category_id = ";
+            $sql_room .=    $row["category_id"];
+            $sql_room .= "  AND t.place_id = 3";
+            
+            $result_room = $conn->query($sql_room);
+            if ($result_room->num_rows == 0) {
+                echo('Error: No such data.');
+            } else {
+                $row_room = $result_room->fetch_assoc();
+            }
+        }
+
         $conn->close();
         
     }
@@ -96,6 +149,7 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="js/jquery.balloon.js"></script>
         <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/csshake.min.css">
     </head>
 
     <!-- Body section -->
@@ -156,7 +210,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Refrigerator <span class="methodHeaderDays">: <?php echo $row["fridge_days"] ?> days</span></span>
-							<a href="#" class="fridgeBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+							<div class="shake-slow"><a href="#" class="fridgeBaloon" title="<?php echo nl2br($row_fridge["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
 						</div>
                     </td>
                 </tr>
@@ -176,7 +230,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Room temperature <span class="methodHeaderDays">: <?php echo $row["room_days"] ?> days</span></span>
-							<a href="#" class="roomBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+							<div class="shake-slow"><a href="#" class="roomBaloon" title="<?php echo nl2br($row_room["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
 						</div>
                     </td>
                 </tr>
@@ -196,7 +250,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="methodHeader letter_color tdcolor_set"><span>Freezer <span class="methodHeaderDays">: <?php echo $row["freezer_days"] ?> days</span></span>
-							<a href="#" class="freezerBaloon" title="Temperature : <br>around 6 degree"><img src="images/lightBulb.png"></a>
+							<div class="shake-slow"><a href="#" class="freezerBaloon" title="<?php echo nl2br($row_freezer["detail"]) ?>"><img src="images/lightBulb.png"></a></div>
 						</div>
                     </td>
                 </tr>

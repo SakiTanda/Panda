@@ -35,7 +35,9 @@
 }
 
 
-
+.aboutus { margin-left:20%;
+           margin-right:20%;
+		  }
 
 /*easter egg*/
 .form_format { margin:0 35% 0 35%}

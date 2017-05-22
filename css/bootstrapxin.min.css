@@ -11,6 +11,10 @@
 table td{
 	vertical-align:center;
 }
+#pctable .table-bordered td {
+    padding: 4px 8px;
+    font-size: 30px;
+}
 #foodlist{
 	padding-left:10px;
 }

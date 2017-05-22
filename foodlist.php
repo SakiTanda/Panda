@@ -161,12 +161,12 @@
 		<td rowspan=<?php echo $numCol ?>><a href="content.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></td>
         <td rowspan=<?php echo $numCol ?>><a href="content.php?id=<?php echo $row["id"] ?>"><img class="img-responsive" src="food-images/<?php echo $row["picture"] ?>"></a></td>
         <td><?php echo $itemList[0]['category'] ?></td>
-		<td><?php echo $itemList[0]['days'] ?></td>
+		<td><?php echo $itemList[0]['days'] ?> days</td>
 	  </tr>
       <?php if ($numCol == 2) { ?>
 	  <tr class="<?php if ($row["category_id"] == 1){echo "pc-title-vege";} elseif ($row["category_id"] == 2){echo "pc-title-meat";} elseif ($row["category_id"] == 3){echo "pc-title-dairy";} ?>">
         <td><?php echo $itemList[1]['category'] ?></td>
-		<td><?php echo $itemList[1]['days'] ?></td>
+		<td><?php echo $itemList[1]['days'] ?> days</td>
 	  </tr>
       <?php } ?>
     <?php } ?>

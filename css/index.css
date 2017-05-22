@@ -1,3 +1,37 @@
+/*social media*/
+#sm {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#sm img {
+    margin-left: 5px;
+    width: 40px;
+}
+#sm img:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transition: all 0.1s linear;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+}
+
+@media screen and (max-width: 768px){
+    #sm {
+        top: 5px;
+        right: 5px;
+    }    
+    #sm img {
+        margin: 0;
+        width: 30px;
+    }
+}
+
 /*extend bottom*/
 @media screen and (max-width: 994px) {
 #extend_bottom { margin-bottom:120px;}

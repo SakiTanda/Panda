@@ -51,45 +51,21 @@
      </div> 
 	 
 <div id= "container_top_1"></div>
-<div class="container text-center" id="container_top">
-<p>Location:Vancouver, Canada</p>
-      <p>TelePhone: +1 1234567891</p>
-      <p>Email: what@gmail.com</p>
-</div>
-<div id = "contact_form">
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="text-center">
-      <p>Contact us and give us your opinions</p>
-      
-    </div>
-	<form name="contactus" action="email.php" method="post"> 
-    <div class="text-center form_contact">
-      <div class="row">
-        
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-         <input type="submit" class="btn-default" value="Send">
-		  <!--<button type="button" class="btn-default"
-    onclick="document.getElementById('thank').innerHTML = 'Thanks for your opinion'">Send</button>-->
-	<input type="reset" class="btn-default" value="Reset">
-	</form>
-	  <p id="thank"></p>
-        </div>
-      </div>
-    </div>
-	</form>
-	
-	
-	
-  </div>
-  </div>
+<div class="text-center">
+<?php
+
+$to = "wxh52794@gmail.com";
+$subject = "User Opinions";
+$email = $_REQUEST['email'];
+$message = $_REQUEST['comments'];
+$headers = "From:$email";
+$sent = mail($to,$subject,$message,$headers);
+if($sent)
+{print('<a href="http://xyz-online.xyz/index.html">Thank you for your opinion.Click here to go to the home page</a>');}
+else
+{print"We encountered an error sending your email";}
+
+?>
 </div>
 		<!-- search panel (hiding) -->
         <form name="search2" method="post" action="foodlist.php" id="searchPanel">
@@ -145,21 +121,7 @@
     </body>
 
 </html>
-<html>
-<body>
-<?php
 
-$to = "wxh52794@gmail.com";
-$subject = "User Opinions";
-$email = $_REQUEST['email'];
-$message = $_REQUEST['comments'];
-$headers = "From:$email";
-$sent = mail($to,$subject,$message,$headers);
-if($sent)
-{print('<a href="http://xyz-online.xyz/index.html">Thank you for your opinion.Click here to go to the home page</a>');}
-else
-{print"We encountered an error sending your email";}
 
-?>
-</body>
-</html>
+
+

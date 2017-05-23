@@ -6,7 +6,22 @@
 #container_top_1 {margin-top:140px;}
 				  
 #container_bot { margin-bottom:120px;}
-				  
+			
+.form-group input{width:60%; margin-left:auto;margin-right:auto;}
+
+.form-group_1 {padding-bottom:4px;}
+
+.textwidth { width:60;}
+			
+.form_contact { 
+padding-left:5%;
+padding-right:5%;
+z-index:-1;}
+
+.display label { 
+display:inline;
+margin-left:2px;margin-right:2px;}
+
 
 
 .text-center{text-align:center;}
@@ -15,7 +30,7 @@
 
 .row{margin-right:-15px;margin-left:-15px}
 
-.form-group{margin-bottom:15px}
+.form-group{margin-bottom:15px;}
 
 .col-sm-6{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
 
@@ -40,7 +55,7 @@
 		  }
 
 /*easter egg*/
-.form_format { margin:0 35% 0 35%}
+.form_format { margin:0 16% 0 16%}
 
 .addinf {
 	color:#3F5A5E;
@@ -692,5 +707,10 @@ border_color - border color of nav bar **/
     padding-right: 15px;
     width: 100%;
 }
+
+@media screen and (max-width: 768px){
+.form_format { margin:0 12% 0 12%}
+}
+	
 	
 }

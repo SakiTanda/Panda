@@ -322,7 +322,7 @@
                         <a href="affiliate.html" id="conAboutus">Affiliates</a>
                     </td>
                     <td>
-                        <a href="aboutus.html" id="conAboutus">Contact Us</a>
+                        <a href="contactus.html" id="conAboutus">Contact Us</a>
                     </td>
                 </tr>
             </table>

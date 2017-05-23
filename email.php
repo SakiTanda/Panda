@@ -56,10 +56,14 @@
 
 $to = "wxh52794@gmail.com";
 $subject = "User Opinions";
+$userreply="Freshness reply";
 $email = $_REQUEST['email'];
 $message = $_REQUEST['comments'];
+$note = "Thanks for your opinion, we will contact you soon";
 $headers = "From:$email";
+$headers2="From:$to";
 $sent = mail($to,$subject,$message,$headers);
+$reply = mail($email,$userreply,$note,$headers2);
 if($sent)
 {print('<a href="http://xyz-online.xyz/index.html">Thank you for your opinion.Click here to go to the home page</a>');}
 else

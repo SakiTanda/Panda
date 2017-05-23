@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $connectflag = true;
 
     // include database connection details
@@ -11,16 +12,32 @@
         $connectflag = false;
     }
     
-    // get the search parameters (post)
+    // get the sort value (get parameter)
+    $sortId = null;
+    if (isset($_GET['sort'])) {
+        $sortId = trim($_GET['sort']);    
+    } else {
+        session_destroy();
+        session_start();
+    }
+    
+    // get the search parameters (post or session)
     $searchText = null;
     $categoryValue = null;
-    if (isset($_POST['searchText'])) {
-        $searchText = trim($_POST['searchText']);
+    if ($sortId == null) {
+        if (isset($_POST['searchText'])) {
+            $searchText = trim($_POST['searchText']);
+            $_SESSION['searchText'] = $searchText;
+        }
+        if (isset($_POST['category'])) {
+            $categoryValue = trim($_POST['category']);
+            $_SESSION['category'] = $categoryValue;
+        }
+    } else {
+        $searchText = $_SESSION['searchText'];
+        $categoryValue = $_SESSION['category'];
     }
-    if (isset($_POST['category'])) {
-        $categoryValue = trim($_POST['category']);
-    }    
-    
+        
     if ($connectflag) {
         // create SELECT query
         $sql = "";
@@ -46,6 +63,8 @@
             } elseif ($categoryValue == "all") {
                 $sql .= "   AND f.category_id BETWEEN 1 AND 3 ";                
             }
+        } else {
+            $sql .= "   AND f.category_id BETWEEN 1 AND 3 ";
         }
         $sql .= "LEFT OUTER JOIN periods p1 ";
         $sql .= "   ON f.food_id = p1.food_id ";
@@ -61,7 +80,18 @@
             $sql .= $searchText;
             $sql .= "%' ";
         }
-        $sql .= "ORDER BY f.food_name";
+        $sql .= "ORDER BY ";
+        if ($sortId == "sort2") {
+            $sql .= "f.food_name DESC";
+        } elseif ($sortId == "sort3") {
+            $sql .= "p1.days DESC, f.food_name";
+        } elseif ($sortId == "sort4") {
+            $sql .= "p2.days DESC, f.food_name";
+        } elseif ($sortId == "sort5") {
+            $sql .= "p3.days DESC, f.food_name";
+        } else {
+            $sql .= "f.food_name";
+        }
         
         $result = $conn->query($sql);
         $result2 = $conn->query($sql);
@@ -83,6 +113,14 @@
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="js/panel.js"></script>
   <script src="js/xin.js"></script>
+  <script>
+    function changeSort(){
+        obj = document.getElementById("sort");
+        index = obj.selectedIndex;
+        sortValue = obj.options[index].value;
+        location.href = "foodlist.php?sort=" + sortValue;
+    }
+  </script>
 </head>
 
 <body>
@@ -120,7 +158,20 @@
 
 </div>
 
-<div id="title-container"><div id="title">Food List<span id="resultNumText"><?php if ($result->num_rows > 1) { echo $result->num_rows . " Results"; } else { echo $result->num_rows . " Result"; } ?><span></div></div>
+<div id="title-container">
+    <div id="title">
+        <span class="searchText"><?php if ($result->num_rows > 1) { echo $result->num_rows . " Results"; } else { echo $result->num_rows . " Result"; } ?></span>        
+        <span class="searchText">Sort by:
+            <select name="sort" id="sort" onChange="changeSort()">
+                <option value="sort1">Food name A-Z</option>
+                <option value="sort2" <?php if ($sortId == "sort2") { echo "selected"; } ?>>Food name Z-A</option>
+                <option value="sort3" <?php if ($sortId == "sort3") { echo "selected"; } ?>>Longest period of fridge</option>
+                <option value="sort4" <?php if ($sortId == "sort4") { echo "selected"; } ?>>Longest period of freezer</option>
+                <option value="sort5" <?php if ($sortId == "sort5") { echo "selected"; } ?>>Longest period of room</option>
+            </select>
+        </span>
+    </div>
+</div>
 
 <div class="container" id="container-xin">
 

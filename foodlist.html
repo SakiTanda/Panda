@@ -8,7 +8,16 @@
   <title>Food List</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/bootstrapxin.min.css">
-  
+  <script>
+    function changeSort(){
+      obj = document.getElementById("sort");
+      index = obj.selectedIndex;
+      if (index != 0){
+        sortValue = obj.options[index].value;
+        location.href = "foodlist.html?sort=" + sortValue;
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -46,7 +55,21 @@
 	
 </div>
 
-<div id="title-container"><div id="title">Food List<span id="resultNumText">5 Results<span></div></div>
+<div id="title-container">
+    <div id="title">
+        <span class="searchText">5 Results</span>
+        <span class="searchText">Sort by:
+            <select name="sort" id="sort" onChange="changeSort()">
+                <option value="sort1">Food name A-Z</option>
+                <option value="sort2">Food name Z-A</option>
+                <option value="sort3">Longest period of fridge</option>
+                <option value="sort4">Longest period of freezer</option>
+                <option value="sort5">Longest period of room</option>
+            </select>
+        </span>
+    </div>
+</div>
+
 
 <div class="container" id="container-xin">
 

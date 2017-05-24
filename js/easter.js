@@ -33,11 +33,11 @@ $(document).ready(function() {
     }
     // autumn
     if (month >= 9 && month <= 11) {
-        easterTarget.href = "content.php?id=24";
+        easterTarget.href = "content.php?id=25";
     }
     // winter
     if (month == 12 || month <= 2) {
-        easterTarget.href = "content.php?id=24";
+        easterTarget.href = "content.php?id=26";
     }
     
 });

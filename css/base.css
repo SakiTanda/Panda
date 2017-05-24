@@ -443,7 +443,7 @@ border_color - border color of nav bar **/
     left: 220px;
 }
 #flower1 img {
-    width: 60%;
+    width: 120%;
 }
 #flower2 img {
     width: 100%;
@@ -701,15 +701,6 @@ border_color - border color of nav bar **/
         font-weight: 100;
         line-height: 20px;
     }
-    #flower1 img {
-        width: 80%;
-    }
-    #flower2 img {
-        width: 50%;
-    }
-    #flower3 img {
-        width: 30%;
-    }
 
 }
 
@@ -871,7 +862,7 @@ border_color - border color of nav bar **/
         line-height: 20px;
     }
     #flower1 img {
-        width: 80%;
+        width: 100%;
     }
     #flower2 img {
         width: 50%;

@@ -119,17 +119,6 @@
         $conn->close();
         
     }
-    
-    // easter
-    // create food id of special food in random
-    $easterID = (rand(1,3));
-    if ($easterID == 1) {
-        $easterID = 9;
-    } else if ($easterID == 2) {
-        $easterID = 10;
-    } else {
-        $easterID = 11;
-    }
 ?>
 
 <!doctype html>
@@ -190,7 +179,7 @@
             <!-- easter -->
             <?php if ($row["detail"] != null) { ?>
             <div class="easterTitle">Congratulation</div>
-            <div class="easterSubTitle">You can get special food infomation in Spring!!!</div>
+            <div class="easterSubTitle">You can get special food infomation about <?php echo $row["category_name"]; ?>!!</div>
             <?php } ?>
 
            <!-- title -->
@@ -305,11 +294,11 @@
 
         <!-- easter -->         
         <?php if ($row["detail"] == null) { ?>
-        <div id="easter" class="easter0"><a href="content.php?id=<?php echo $easterID ?>"><img src="images/006-fruit.png" alt="easter"></a></div>
+        <div id="easter" class="easter0"><a href="content.php?id=24" id="easterPath"><img src="images/006-fruit.png" alt="easter"></a></div>
         <?php } else { ?>
-        <div id="flower1" class="easter0"><img src="images/005-rose.png" alt="flower1"></div>
-        <div id="flower2" class="easter0"><img src="images/001-nature.png" alt="flower2"></div>
-        <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3"></div>
+        <div id="flower1" class="easter0"><img src="images/005-cherry-blossom.png" alt="flower1" id="specialImage1"></div>
+        <div id="flower2" class="easter0"><img src="images/001-animal.png" alt="flower2" id="specialImage2"></div>
+        <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3" id="specialImage3"></div>
         <?php } ?>
         
                <!-- footer -->
@@ -391,36 +380,62 @@
 		
     
     <?php if ($row["detail"] != null) { ?>
-        <script>
-            function openFlower1() {
-                document.getElementById("flower1").setAttribute('class', 'flower1');
-                $("#flower1").fadeIn("slow");
-            }
-            function openFlower2() {
-                document.getElementById("flower2").setAttribute('class', 'easter3');
-                $("#flower2").fadeIn("slow");
-            }
-            function openFlower3() {
-                document.getElementById("flower3").setAttribute('class', 'easter2');
-                $("#flower3").fadeIn("slow");
-            }
-            function hideFlower1(){
-                $("#flower1").fadeOut("slow");
-            }
-            function hideFlower2(){
-                $("#flower2").fadeOut("slow");
-            }
-            function hideFlower3(){
-                $("#flower3").fadeOut("slow");
-            }
-            setTimeout("openFlower1()", 0);
-            setTimeout("hideFlower1()", 500);
-            setTimeout("openFlower2()", 100);
-            setTimeout("hideFlower2()", 600);
-            setTimeout("openFlower3()", 300);
-            setTimeout("hideFlower3()", 800);
+    <script>
+        function initImage() {
+            // get date
+            var day = new Date();
+            var month = day.getMonth() + 1;
             
-        </script>
+            // summer
+            if (month >= 6 && month <= 8) {
+                document.getElementById("specialImage1").setAttribute('src', 'images/016-summer.png');
+                document.getElementById("specialImage2").setAttribute('src', 'images/007-animals.png');
+                document.getElementById("specialImage3").setAttribute('src', 'images/017-palm-tree.png');
+            }
+            // autumn
+            if (month >= 9 && month <= 11) {
+                document.getElementById("specialImage1").setAttribute('src', 'images/009-leaves.png');
+                document.getElementById("specialImage2").setAttribute('src', 'images/005-mushrooms.png');
+                document.getElementById("specialImage3").setAttribute('src', 'images/006-gardening-1.png');
+            }
+            // winter
+            if (month == 12 || month <= 2) {
+                document.getElementById("specialImage1").setAttribute('src', 'images/012-snowflake.png');
+                document.getElementById("specialImage2").setAttribute('src', 'images/011-mistletoe.png');
+                document.getElementById("specialImage3").setAttribute('src', 'images/010-mitten.png');
+            }
+        }
+        initImage();
+
+        function openFlower1() {
+            document.getElementById("flower1").setAttribute('class', 'flower1');
+            $("#flower1").fadeIn("slow");
+        }
+        function openFlower2() {
+            document.getElementById("flower2").setAttribute('class', 'easter3');
+            $("#flower2").fadeIn("slow");
+        }
+        function openFlower3() {
+            document.getElementById("flower3").setAttribute('class', 'easter2');
+            $("#flower3").fadeIn("slow");
+        }
+        function hideFlower1(){
+            $("#flower1").fadeOut("slow");
+        }
+        function hideFlower2(){
+            $("#flower2").fadeOut("slow");
+        }
+        function hideFlower3(){
+            $("#flower3").fadeOut("slow");
+        }
+        setTimeout("openFlower1()", 50);
+        setTimeout("hideFlower1()", 550);
+        setTimeout("openFlower2()", 150);
+        setTimeout("hideFlower2()", 650);
+        setTimeout("openFlower3()", 250);
+        setTimeout("hideFlower3()", 850);
+        
+    </script>
     <?PHP } ?>
     
 </html>

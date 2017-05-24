@@ -147,6 +147,12 @@
     width: 600px;
     font-size: 30px;
 }
+.searchConditionalTable {
+    margin: auto;
+    padding-top: 30px;
+    width: 600px;
+    font-size: 30px;
+}
 #searchConditionalTable td {
     width: 25%;
     color: white;
@@ -643,6 +649,14 @@ border_color - border color of nav bar **/
         display: block;
 		margin-top:5px;
         padding: 0 0 0 80px;
+    } 
+	.searchConditionalTable {
+        width: 350px;
+        font-size:20px;
+        display: block;
+		margin-top:5px;
+        padding: 0 0 0 80px;
+		margin:0px;
     } 
     #searchConditionalTable tr { 
 		width: 100%;

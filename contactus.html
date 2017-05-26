@@ -148,20 +148,3 @@
 
 </html>
 <html>
-<body>
-<?php
-
-$to = "wxh52794@gmail.com";
-$subject = "User Opinions";
-$email = $_REQUEST['email'];
-$message = $_REQUEST['comments'];
-$headers = "From:$email";
-$sent = mail($to,$subject,$message,$headers);
-if($sent)
-{print('<a href="http://xyz-online.xyz/index.html">Thank you for your opinion.Click here to go to the home page</a>');}
-else
-{print"We encountered an error sending your email";}
-
-?>
-</body>
-</html>

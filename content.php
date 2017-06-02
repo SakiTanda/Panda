@@ -435,11 +435,11 @@
             $("#flower3").fadeOut("slow");
         }
         setTimeout("openFlower1()", 50);
-        setTimeout("hideFlower1()", 550);
-        setTimeout("openFlower2()", 150);
-        setTimeout("hideFlower2()", 650);
+        setTimeout("hideFlower1()", 650);
+        setTimeout("openFlower2()", 200);
+        setTimeout("hideFlower2()", 800);
         setTimeout("openFlower3()", 250);
-        setTimeout("hideFlower3()", 850);
+        setTimeout("hideFlower3()", 950);
         
     </script>
     <?PHP } ?>

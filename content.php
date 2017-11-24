@@ -76,7 +76,7 @@
             
             $result_fridge = $conn->query($sql_fridge);
             if ($result_fridge->num_rows == 0) {
-                echo('Error: No such data.');
+                echo('Error: No such data about fridge.');
             } else {
                 $row_fridge = $result_fridge->fetch_assoc();
             }
@@ -93,7 +93,7 @@
             
             $result_freezer = $conn->query($sql_freezer);
             if ($result_freezer->num_rows == 0) {
-                echo('Error: No such data.');
+                echo('Error: No such data about freezer.');
             } else {
                 $row_freezer = $result_freezer->fetch_assoc();
             }
@@ -110,7 +110,7 @@
             
             $result_room = $conn->query($sql_room);
             if ($result_room->num_rows == 0) {
-                echo('Error: No such data.');
+                echo('Error: No such data about room.');
             } else {
                 $row_room = $result_room->fetch_assoc();
             }
@@ -296,9 +296,9 @@
         <?php if ($row["detail"] == null) { ?>
         <div id="easter" class="easter0"><a href="content.php?id=24" id="easterPath"><img src="images/006-fruit.png" alt="easter"></a></div>
         <?php } else { ?>
-        <div id="flower1" class="easter0"><img src="images/005-cherry-blossom.png" alt="flower1" id="specialImage1"></div>
-        <div id="flower2" class="easter0"><img src="images/001-animal.png" alt="flower2" id="specialImage2"></div>
-        <div id="flower3" class="easter0"><img src="images/004-poppy.png" alt="flower3" id="specialImage3"></div>
+        <div id="flower1" class="easter0"><img src="#" alt="flower1" id="specialImage1"></div>
+        <div id="flower2" class="easter0"><img src="#" alt="flower2" id="specialImage2"></div>
+        <div id="flower3" class="easter0"><img src="#" alt="flower3" id="specialImage3"></div>
         <?php } ?>
         
                <!-- footer -->
@@ -386,6 +386,12 @@
             var day = new Date();
             var month = day.getMonth() + 1;
             
+            // spring
+            if (month >= 3 && month <= 5) {
+                document.getElementById("specialImage1").setAttribute('src', 'images/005-cherry-blossom.png');
+                document.getElementById("specialImage2").setAttribute('src', 'images/001-animal.png');
+                document.getElementById("specialImage3").setAttribute('src', 'images/004-poppy.png');
+            }
             // summer
             if (month >= 6 && month <= 8) {
                 document.getElementById("specialImage1").setAttribute('src', 'images/016-summer.png');
@@ -401,8 +407,8 @@
             // winter
             if (month == 12 || month <= 2) {
                 document.getElementById("specialImage1").setAttribute('src', 'images/012-snowflake.png');
-                document.getElementById("specialImage2").setAttribute('src', 'images/011-mistletoe.png');
-                document.getElementById("specialImage3").setAttribute('src', 'images/010-mitten.png');
+                document.getElementById("specialImage2").setAttribute('src', 'images/003-nature.png');
+                document.getElementById("specialImage3").setAttribute('src', 'images/001-snowman.png');
             }
         }
         initImage();
